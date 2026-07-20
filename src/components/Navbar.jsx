@@ -21,8 +21,8 @@ function Navbar() {
     <nav
   className={`sticky top-0 z-50 transition-all duration-300 ${
     scrolled
-      ? "bg-[#FAFAF8] shadow-lg"
-      : "bg-[#FAFAF8] shadow-none"
+      ? "bg-[#FFF4ED] shadow-lg"
+      : "bg-[#FFF4ED] shadow-none"
   }`}
 >
       <div className="max-w-7xl mx-auto px-6 h-18 flex justify-between items-center">

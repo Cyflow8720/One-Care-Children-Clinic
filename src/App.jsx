@@ -1,12 +1,11 @@
 import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
 
 function App() {
   return (
     <>
       <Navbar />
-      <div className="h-[2000px] bg-gray-100 flex justify-center items-center">
-        <h1 className="text-4xl">Scroll Down 👇</h1>
-      </div>
+      <Hero />
     </>
   );
 }
