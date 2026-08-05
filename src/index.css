@@ -1,24 +1,13 @@
-@import "tailwindcss";
-html {
-  scroll-behavior: smooth;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-/* Floating Animation */
-@keyframes floating {
-  0% {
-    transform: translateY(0px);
-  }
+body{
 
-  50% {
-    transform: translateY(-12px);
-  }
+    font-family:'Poppins',sans-serif;
 
-  100% {
-    transform: translateY(0px);
-  }
+    background:#f8fafc;
+
 }
-
-.animate-floating {
-  animation: floating 4s ease-in-out infinite;
-}
-

@@ -1,129 +1,166 @@
-import { useState, useEffect } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { useState } from "react";
+import "../styles/Navbar.css";
 import logo from "../assets/logo.png";
+import { FaChevronDown } from "react-icons/fa";
+import { FiPhoneCall } from "react-icons/fi";
+
 function Navbar() {
-     const [isOpen, setIsOpen] = useState(false);
-     const [scrolled, setScrolled] = useState(false);
-     useEffect(() => {
-  const handleScroll = () => {
-    if (window.scrollY > 50) {
-      setScrolled(true);
-    } else {
-      setScrolled(false);
-    }
+
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+
+  const closeMenu = () => {
+    setMenuOpen(false);
+    setServicesOpen(false);
   };
 
-  window.addEventListener("scroll", handleScroll);
-
-  return () => window.removeEventListener("scroll", handleScroll);
-}, []);
   return (
-    <nav
-  className={`sticky top-0 z-50 transition-all duration-300 ${
-    scrolled
-      ? "bg-[#FFF4ED] shadow-lg"
-      : "bg-[#FFF4ED] shadow-none"
-  }`}
+    <header className="navbar">
+
+      {/* Logo */}
+      <div className="logo">
+        <img src={logo} alt="One Care Children's Clinic" />
+      </div>
+
+
+      {/* Navigation */}
+      <nav className={menuOpen ? "mobile-nav-open" : ""}>
+
+        <ul className="nav-menu">
+
+          <li>
+            <a href="#" onClick={closeMenu}>
+              Home
+            </a>
+          </li>
+
+
+          <li>
+            <a href="#" onClick={closeMenu}>
+              About us
+            </a>
+          </li>
+
+
+          {/* SERVICES DROPDOWN */}
+          <li className="services-dropdown">
+
+            <div className="services-link">
+
+              <a
+                href="#"
+                onClick={(e) => e.preventDefault()}
+              >
+                Services
+              </a>
+
+              <button
+  className={`dropdown-arrow ${servicesOpen ? "open" : ""}`}
+  onClick={() => setServicesOpen(!servicesOpen)}
+  aria-label="Open services menu"
 >
-      <div className="max-w-7xl mx-auto px-6 h-18 flex justify-between items-center">
-
-        {/* Logo */}
-        <div className="flex items-center gap-3">
- <img
-  src={logo}
-  alt="One Care Children Clinic"
-  className="h-28 md:h-20 w-auto"
-/>
-
-  
-</div>
-
-        {/* Navigation Links */}
-        <div className="hidden md:flex items-center gap-8">
-
-          <a href="#home" className="text-[#0B2C6B] hover:text-[#B86A4D]">
-            Home
-          </a>
-
-          <a href="#about" className="text-[#0B2C6B] hover:text-[#B86A4D]">
-            About
-          </a>
-
-          <a href="#services" className="text-[#0B2C6B] hover:text-[#B86A4D]">
-            Services
-          </a>
-
-          <a href="#appointment" className="text-[#0B2C6B] hover:text-[#B86A4D]">
-            Appointment
-          </a>
-
-          <a href="#testimonials" className="text-[#0B2C6B] hover:text-[#B86A4D]">
-            Testimonials
-          </a>
-
-          <a href="#contact" className="text-[#0B2C6B] hover:text-[#B86A4D]">
-            Contact
-          </a>
-
-        </div>
-
-        {/* Book Appointment Button */}
-        {/* Desktop Button */}
-<button className="hidden md:block bg-[#0B2C6B] text-white px-6 py-2 rounded-full hover:bg-[#B86A4D] transition duration-300">
-  Book Appointment
+  <FaChevronDown />
 </button>
 
-{/* Mobile Menu Button */}
-<div className="md:hidden">
-  <button onClick={() => setIsOpen(!isOpen)}>
-    {isOpen ? (
-      <FaTimes className="text-2xl text-[#0B2C6B]" />
-    ) : (
-      <FaBars className="text-2xl text-[#0B2C6B]" />
-    )}
-  </button>
+            </div>
+
+
+            {/* Dropdown */}
+            {servicesOpen && (
+              <ul className="services-menu">
+
+                <li>
+                  <a href="#" onClick={closeMenu}>
+                    Pediatric Consultation
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" onClick={closeMenu}>
+                    Vaccination
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" onClick={closeMenu}>
+                    Child Development
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" onClick={closeMenu}>
+                    Newborn Care
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" onClick={closeMenu}>
+                    Nutrition & Growth
+                  </a>
+                </li>
+
+              </ul>
+            )}
+
+          </li>
+
+
+          {/* Mobile Appointment */}
+          <li className="mobile-appointment">
+
+            <button className="btn">
+              Schedule appointment
+            </button>
+
+          </li>
+
+
+          <li>
+            <a href="#" onClick={closeMenu}>
+              Attachments
+            </a>
+          </li>
+
+
+          <li>
+            <a href="#" onClick={closeMenu}>
+              Testimonials 
+            </a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+      {/* Right Side */}
+      <div className="right-section">
+
+        <div className="phone">
+  <div className="phone-text">
+    <span>Call us</span>
+    <h4>+91 88793 33393</h4>
+  </div>
+
+  <FiPhoneCall className="phone-icon" />
 </div>
 
+        <button className="btn">
+          Appointment
+        </button>
+
       </div>
-      {/* Mobile Navigation */}
-{isOpen && (
-  <div className="md:hidden bg-[#FAFAF8] shadow-md">
-    <div className="flex flex-col items-center gap-6 py-6">
 
-      <a href="#home" className="text-[#0B2C6B] hover:text-[#B86A4D]">
-        Home
-      </a>
 
-      <a href="#about" className="text-[#0B2C6B] hover:text-[#B86A4D]">
-        About
-      </a>
-
-      <a href="#services" className="text-[#0B2C6B] hover:text-[#B86A4D]">
-        Services
-      </a>
-
-      <a href="#appointment" className="text-[#0B2C6B] hover:text-[#B86A4D]">
-        Appointment
-      </a>
-
-      <a href="#testimonials" className="text-[#0B2C6B] hover:text-[#B86A4D]">
-        Testimonials
-      </a>
-
-      <a href="#contact" className="text-[#0B2C6B] hover:text-[#B86A4D]">
-        Contact
-      </a>
-
-      <button className="bg-[#0B2C6B] text-white px-6 py-2 rounded-full hover:bg-[#B86A4D] transition duration-300">
-        Book Appointment
+      {/* Mobile Menu */}
+      <button
+        className="menu-toggle"
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
+        {menuOpen ? "✕" : "☰"}
       </button>
 
-    </div>
-  </div>
-)}
-
-    </nav>
-
+    </header>
   );
 }
 

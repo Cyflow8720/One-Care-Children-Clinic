@@ -1,0 +1,923 @@
+/* ===========================
+   NAVBAR
+=========================== */
+
+.navbar {
+    width: 100%;
+    height: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #FFFDF7;
+
+    border-bottom: 1px solid #e5e5e5;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    
+}
+
+
+/* ===========================
+   LOGO
+=========================== */
+
+.logo {
+    height: 100%;
+    width: 230px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-right: 1px solid #e5e5e5;
+}
+
+.logo img {
+    height: 120px;
+    width: auto;
+    object-fit: contain;
+}
+
+
+/* ===========================
+   MENU
+=========================== */
+
+nav {
+    flex: 1;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 38px;
+
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu a {
+    text-decoration: none;
+
+    color: #0B2E6D;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #B8735A;
+}
+
+
+/* ===========================
+   SERVICES DROPDOWN
+=========================== */
+
+.services-dropdown {
+    position: relative;
+}
+
+.services-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.dropdown-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: transparent;
+    border: none;
+
+    color: #0B2E6D;
+
+    padding: 0;
+    margin: 0;
+
+    cursor: pointer;
+
+    font-size: 9px;
+
+    transition: transform 0.3s ease;
+}
+
+.dropdown-arrow svg {
+    width: 9px;
+    height: 9px;
+}
+
+.dropdown-arrow.open {
+    transform: rotate(180deg);
+}
+
+
+/* ===========================
+   DROPDOWN MENU
+=========================== */
+
+.services-menu {
+    position: absolute;
+
+    top: calc(100% + 15px);
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 230px;
+
+    background: #FFFDF7;
+
+    list-style: none;
+
+    margin: 0;
+    padding: 8px 0;
+
+    border: 1px solid #e5e5e5;
+
+    border-radius: 8px;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
+
+    z-index: 1001;
+}
+
+.services-menu li a {
+    display: block;
+    width: auto;
+
+    padding: 11px 18px;
+
+    color: #0B2E6D;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    text-decoration: none;
+    white-space: nowrap;
+
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.services-menu li a {
+    display: block;
+    width: auto;
+
+    padding: 11px 18px;
+
+    color: #0B2E6D;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    text-decoration: none;
+    white-space: nowrap;
+
+    transition: transform 0.2s ease;
+}
+
+.services-menu li a {
+    display: block;
+    width: auto;
+
+    padding: 11px 18px;
+
+    color: #0B2E6D;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    text-decoration: none;
+    white-space: nowrap;
+
+    background: transparent !important;
+
+    transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.services-menu li a:hover {
+    background: transparent !important;
+    color: #B8735A !important;
+    transform: translateX(6px);
+}
+
+/* =========================================
+   MOBILE SERVICES - FINAL FIX
+========================================= */
+
+@media (max-width: 768px) {
+
+    nav.mobile-nav-open .services-dropdown {
+        width: 100%;
+    }
+
+    /* Services + arrow together */
+    nav.mobile-nav-open .services-link {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        width: fit-content !important;
+        margin: 0 auto !important;
+
+        gap: 6px !important;
+    }
+
+    /* Services text */
+    nav.mobile-nav-open .services-link > a {
+        display: inline-block !important;
+
+        width: auto !important;
+
+        padding: 14px 0 !important;
+
+        margin: 0 !important;
+    }
+
+    /* Arrow button */
+    nav.mobile-nav-open .services-link .dropdown-arrow {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        width: 16px !important;
+        height: 16px !important;
+
+        padding: 0 !important;
+        margin: 0 !important;
+
+        background: transparent !important;
+
+        border: none !important;
+        outline: none !important;
+
+        appearance: none !important;
+        -webkit-appearance: none !important;
+
+        color: #0B2E6D !important;
+
+        cursor: pointer;
+
+        box-shadow: none !important;
+    }
+
+    /* Actual chevron */
+    nav.mobile-nav-open .services-link .dropdown-arrow svg {
+        width: 9px !important;
+        height: 9px !important;
+
+        display: block !important;
+    }
+
+    /* Rotate arrow */
+    nav.mobile-nav-open .services-link .dropdown-arrow.open {
+        transform: rotate(180deg);
+    }
+
+    /* Dropdown */
+    nav.mobile-nav-open .services-menu {
+        position: static !important;
+
+        transform: none !important;
+
+        width: 90% !important;
+
+        margin: 0 auto 10px !important;
+
+        padding: 5px 0 !important;
+
+        background: #f9f7f1 !important;
+
+        border: 1px solid #e5e5e5 !important;
+
+        border-radius: 6px !important;
+
+        box-shadow: none !important;
+
+        list-style: none !important;
+    }
+
+    nav.mobile-nav-open .services-menu li a {
+        display: block !important;
+
+        width: 100% !important;
+
+        padding: 11px 10px !important;
+
+        font-size: 14px !important;
+
+        text-align: center !important;
+
+        color: #0B2E6D !important;
+    }
+}
+/* ===========================
+   RIGHT SECTION
+=========================== */
+
+.right-section {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 25px;
+
+    padding-left: 35px;
+    padding-right: 30px;
+
+    border-left: 1px solid #e5e5e5;
+}
+
+
+/* ===========================
+   PHONE
+=========================== */
+
+.phone {
+    text-align: center;
+}
+
+.phone span {
+    display: block;
+
+    color: #6b7280;
+
+    font-size: 13px;
+}
+
+.phone h4 {
+    color: #0B2E6D;
+
+    font-size: 16px;
+
+    margin-top: 4px;
+}
+
+
+/* ===========================
+   BUTTON
+=========================== */
+
+.btn {
+    background: #0B2E6D;
+
+    color: white;
+
+    border: none;
+
+    padding: 14px 30px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #B8735A;
+}
+
+
+/* ===========================
+   HAMBURGER
+=========================== */
+
+.menu-toggle {
+    display: none;
+
+    background: none;
+    border: none;
+
+    color: #0B2E6D;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    margin-right: 25px;
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 1100px) {
+
+    .logo {
+        width: 190px;
+    }
+
+    .logo img {
+        height: 85px;
+    }
+
+    .nav-menu {
+        gap: 22px;
+    }
+
+    .nav-menu a {
+        font-size: 15px;
+    }
+
+    .right-section {
+        gap: 15px;
+
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .btn {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+
+}
+
+
+/* ==================================================
+   TABLET / SMALL LAPTOP
+================================================== */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        height: 75px;
+    }
+
+    .logo {
+        width: 180px;
+    }
+
+    .logo img {
+        height: 80px;
+    }
+
+    .nav-menu {
+        gap: 15px;
+    }
+
+    .nav-menu a {
+        font-size: 14px;
+    }
+
+    .right-section {
+        gap: 10px;
+
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .phone span {
+        font-size: 11px;
+    }
+
+    .phone h4 {
+        font-size: 13px;
+    }
+
+    .btn {
+        padding: 10px 15px;
+        font-size: 13px;
+    }
+
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        height: 70px;
+
+        padding: 0 15px;
+    }
+
+
+    /* LOGO */
+
+    .logo {
+        width: auto;
+
+        border-right: none;
+
+        justify-content: flex-start;
+    }
+
+    .logo img {
+        height: 70px;
+
+        max-width: 160px;
+
+        object-fit: contain;
+    }
+
+
+    /* HIDE DESKTOP MENU */
+
+    nav {
+        display: none;
+    }
+
+
+    /* HIDE PHONE + BUTTON */
+
+    .right-section {
+        display: none;
+    }
+
+
+    /* SHOW HAMBURGER */
+
+    .menu-toggle {
+        display: block;
+    }
+
+}
+
+
+/* ==================================================
+   SMALL MOBILE
+================================================== */
+
+@media (max-width: 480px) {
+
+    .navbar {
+        height: 65px;
+
+        padding: 0 12px;
+    }
+
+    .logo img {
+        height: 65px;
+
+        max-width: 145px;
+    }
+
+    .menu-toggle {
+        font-size: 25px;
+
+        margin-right: 5px;
+    }
+
+}
+
+/* ===========================
+   MOBILE NAVIGATION
+=========================== */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        position: relative;
+    }
+
+    /* Show navigation when menu is open */
+    nav.mobile-nav-open {
+        display: block;
+
+        position: absolute;
+
+        top: 70px;
+        left: 0;
+
+        width: 100%;
+
+        background: #FFFDF7;
+
+        border-bottom: 1px solid #e5e5e5;
+
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+
+        z-index: 999;
+    }
+
+    nav.mobile-nav-open .nav-menu {
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 0;
+
+        padding: 10px 0;
+    }
+
+    nav.mobile-nav-open .nav-menu li {
+
+        width: 100%;
+
+        text-align: center;
+    }
+
+    nav.mobile-nav-open .nav-menu a {
+
+        display: block;
+
+        width: 100%;
+
+        padding: 15px 20px;
+
+        font-size: 16px;
+
+        color: #0B2E6D;
+    }
+
+    nav.mobile-nav-open .nav-menu a:hover {
+
+        background: #f5eee8;
+
+        color: #B8735A;
+    }
+
+
+    /* Hamburger */
+
+    .menu-toggle {
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        width: 42px;
+        height: 42px;
+
+        background: transparent;
+
+        border: none;
+
+        color: #0B2E6D;
+
+        font-size: 28px;
+
+        cursor: pointer;
+
+        margin: 0;
+    }
+
+}
+
+
+/* ===========================
+   SMALL MOBILE
+=========================== */
+
+@media (max-width: 480px) {
+
+    nav.mobile-nav-open {
+        top: 65px;
+    }
+
+    nav.mobile-nav-open .nav-menu a {
+        padding: 14px 15px;
+        font-size: 15px;
+    }
+
+}
+
+/* =========================================
+   APPOINTMENT BUTTON
+========================================= */
+
+/* Hide mobile appointment button on desktop */
+.mobile-appointment {
+    display: none !important;
+}
+
+
+/* =========================================
+   MOBILE NAVBAR
+========================================= */
+
+@media (max-width: 768px) {
+
+    /* Mobile menu */
+    nav.mobile-nav-open {
+        display: block;
+
+        position: absolute;
+        top: 70px;
+        left: 0;
+
+        width: 100%;
+
+        background: #FFFDF7;
+
+        border-bottom: 1px solid #e5e5e5;
+
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+
+        z-index: 999;
+    }
+
+
+    nav.mobile-nav-open .nav-menu {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 0;
+
+        width: 100%;
+
+        padding: 10px 0 20px;
+
+        margin: 0;
+    }
+
+
+    nav.mobile-nav-open .nav-menu li {
+        width: 100%;
+
+        text-align: center;
+    }
+
+
+    nav.mobile-nav-open .nav-menu a {
+        display: block;
+
+        width: 100%;
+
+        padding: 14px 20px;
+
+        font-size: 16px;
+
+        color: #0B2E6D;
+    }
+
+
+    nav.mobile-nav-open .nav-menu a:hover {
+        background: #f5eee8;
+
+        color: #B8735A;
+    }
+
+
+    /* =====================================
+       SCHEDULE APPOINTMENT
+    ===================================== */
+
+    .mobile-appointment {
+        display: flex !important;
+
+        justify-content: center;
+
+        align-items: center;
+
+        padding: 10px 20px 18px;
+    }
+
+
+    .mobile-appointment .btn {
+        width: auto;
+
+        padding: 13px 22px;
+
+        background: #0B2E6D;
+
+        color: white;
+
+        border: none;
+
+        border-radius: 6px;
+
+        font-size: 15px;
+
+        font-weight: 600;
+    }
+
+
+    .mobile-appointment .btn:hover {
+        background: #B8735A;
+    }
+
+
+    /* =====================================
+       DESKTOP RIGHT SECTION HIDDEN MOBILE
+    ===================================== */
+
+    .right-section {
+        display: none;
+    }
+
+
+    /* =====================================
+       HAMBURGER
+    ===================================== */
+
+    .menu-toggle {
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        width: 42px;
+        height: 42px;
+
+        background: transparent;
+
+        border: none;
+
+        color: #0B2E6D;
+
+        font-size: 28px;
+
+        cursor: pointer;
+
+        margin: 0;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+    nav.mobile-nav-open {
+        top: 65px;
+    }
+
+    nav.mobile-nav-open .nav-menu a {
+        padding: 13px 15px;
+
+        font-size: 15px;
+    }
+
+    .mobile-appointment {
+        padding: 10px 15px 18px;
+    }
+
+    .mobile-appointment .btn {
+        padding: 12px 20px;
+
+        font-size: 14px;
+    }
+
+}
+
+/* Phone Section */
+.phone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 20px;
+}
+
+.phone-text {
+  text-align: right;
+  line-height: 1.2;
+}
+
+.phone-text span {
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  color: #4d6178;
+  margin-bottom: 3px;
+}
+
+.phone-text h4 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: #0b2c6b;
+}
+
+.phone-icon {
+  width: 30px;
+  height: 30px;
+  color: #0b2c6b;
+  stroke-width: 1.5;
+}
