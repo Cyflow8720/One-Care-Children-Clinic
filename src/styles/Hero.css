@@ -1,184 +1,1040 @@
-/* ===========================
-   HERO
-=========================== */
+/* =========================
+   HERO SECTION
+========================= */
 
 .hero {
-    min-height: calc(100vh - 80px);
+  position: relative;
+  width: 100%;
+  min-height: 850px;
 
-    width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
-    display: flex;
-    align-items: center;
-
-    position: relative;
-
-    overflow: hidden;
-
-    background-image: url("../assets/hero-doctor.png");
-
-    background-size: cover;
-
-    background-position: center;
-
-    background-repeat: no-repeat;
-
-    padding: 60px 7%;
+  overflow: hidden;
 }
 
 
-/* ===========================
-   CONTENT
-=========================== */
+/* =========================
+   MAIN CONTENT
+========================= */
 
 .hero-content {
-    width: 52%;
+  position: absolute;
 
-    position: relative;
+  top: 75px;
+  left: 8%;
 
-    z-index: 2;
+  width: 47%;
+  max-width: 650px;
+
+  z-index: 3;
 }
+
+
+/* =========================
+   TAG
+========================= */
 
 .hero-tag {
-    display: inline-block;
+  display: inline-block;
 
-    color: #0B2E6D;
+  padding: 10px 20px;
 
-    font-size: 15px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #0B2C6B;
 
-    font-weight: 600;
+  border-radius: 30px;
 
-    margin-bottom: 18px;
+  font-size: 14px;
+  font-weight: 600;
+
+  margin-bottom: 22px;
 }
+
+
+/* =========================
+   HEADING
+========================= */
 
 .hero-content h1 {
-    margin: 0;
+  margin: 0;
 
-    color: #0B2E6D;
+  max-width: 620px;
 
-    font-size: clamp(45px, 5vw, 68px);
+  font-size: clamp(42px, 4.5vw, 65px);
+  line-height: 1.08;
 
-    line-height: 1.05;
+  font-weight: 700;
 
-    font-weight: 700;
-
-    letter-spacing: -1.5px;
+  color: #0B2C6B;
 }
+
+.hero-content h1 span {
+  color: #B86A4D;
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
 
 .hero-content p {
-    max-width: 560px;
+  max-width: 550px;
 
-    margin: 25px 0 30px;
+  margin-top: 22px;
+  margin-bottom: 25px;
 
-    color: #40566B;
+  font-size: clamp(15px, 1.3vw, 17px);
+  line-height: 1.6;
 
-    font-size: 18px;
-
-    line-height: 1.55;
+  color: #24344D;
 }
 
 
-/* ===========================
+/* =========================
    BUTTON
-=========================== */
+========================= */
 
 .hero-btn {
-    background: #0B2E6D;
+  padding: 16px 30px;
 
-    color: white;
+  border: none;
+  border-radius: 7px;
 
-    border: none;
+  background: #0B2C6B;
+  color: white;
 
-    padding: 15px 28px;
+  font-size: 16px;
+  font-weight: 600;
 
-    border-radius: 7px;
+  cursor: pointer;
 
-    font-size: 16px;
-
-    font-weight: 600;
-
-    cursor: pointer;
-
-    transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .hero-btn:hover {
-    background: #B8735A;
-
-    transform: translateY(-2px);
+  background: #B86A4D;
 }
 
 
-/* ===========================
+/* =========================
+   DOCTOR
+========================= */
+
+.hero-doctor {
+  position: absolute;
+
+  right: 0;
+  top: 0;
+
+  width: 48%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  z-index: 2;
+}
+
+.hero-doctor img {
+  width: min(88%, 590px);
+  height: auto;
+
+  margin-top: 20px;
+
+  display: block;
+}
+
+
+/* =========================
+   PATIENT CARD
+========================= */
+
+.patient-card {
+  position: absolute;
+
+  top: 390px;
+  right: 5%;
+
+  width: min(310px, 28vw);
+
+  padding: 22px 26px;
+
+  background: rgba(255, 255, 255, 0.94);
+
+  border-radius: 12px;
+
+  box-shadow: 0 10px 30px rgba(11, 44, 107, 0.12);
+
+  z-index: 4;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+
+  box-sizing: border-box;
+}
+
+.stars {
+  font-size: 21px;
+  color: #B86A4D;
+}
+
+.patient-card strong {
+  font-size: 16px;
+}
+
+.patient-card span {
+  font-size: 15px;
+}
+
+
+/* =========================
+   STAT CARDS
+========================= */
+
+.stats {
+  position: absolute;
+
+  top: 530px;
+  right: 5%;
+
+  display: flex;
+
+  gap: 15px;
+
+  z-index: 4;
+}
+
+.stat-card {
+  width: clamp(120px, 10vw, 145px);
+  min-height: 120px;
+
+  padding: 18px;
+
+  background: rgba(255, 255, 255, 0.92);
+
+  border-radius: 12px;
+
+  box-sizing: border-box;
+}
+
+.stat-card strong {
+  display: block;
+
+  color: #0B2C6B;
+
+  font-size: clamp(26px, 2.2vw, 32px);
+
+  font-weight: 500;
+
+  margin-bottom: 8px;
+}
+
+.stat-card span {
+  color: #4b5563;
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+
+/* =========================
+   FEATURE CARDS
+========================= */
+
+.hero-features {
+  position: absolute;
+
+  left: 5%;
+  bottom: 40px;
+
+  width: 430px;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 17px;
+
+  z-index: 4;
+}
+
+.feature-card {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  width: 205px;
+
+  padding: 12px 14px;
+
+  background: rgba(255, 255, 255, 0.94);
+
+  border-radius: 6px;
+
+  box-sizing: border-box;
+}
+
+.feature-card span {
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #EEF3FA;
+
+  color: #0B2C6B;
+
+  font-size: 18px;
+}
+
+.feature-card p {
+  margin: 0;
+
+  color: #0B2C6B;
+
+  font-size: 14px;
+}
+
+
+/* =========================
+   SCROLL INDICATOR
+========================= */
+
+.scroll-indicator {
+  position: absolute;
+
+  right: 4%;
+  bottom: 55px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 8px;
+
+  z-index: 5;
+}
+
+.scroll-circle {
+  width: 60px;
+  height: 60px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #0B2C6B;
+
+  color: white;
+
+  font-size: 28px;
+}
+
+.scroll-indicator span {
+  color: #0B2C6B;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+
+/* =====================================================
+   LARGE TABLET / SMALL LAPTOP
+===================================================== */
+
+@media (max-width: 1200px) {
+
+  .hero {
+    min-height: 800px;
+  }
+
+  .hero-content {
+    left: 6%;
+    width: 48%;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(40px, 4.5vw, 56px);
+  }
+
+  .hero-doctor {
+    width: 50%;
+  }
+
+  .patient-card {
+    right: 4%;
+    top: 370px;
+  }
+
+  .stats {
+    right: 4%;
+    top: 505px;
+  }
+
+  .hero-features {
+    left: 4%;
+    bottom: 30px;
+  }
+}
+
+
+/* =====================================================
    TABLET
-=========================== */
+===================================================== */
 
 @media (max-width: 1000px) {
 
-    .hero {
-        padding: 50px 5%;
-    }
+  .hero {
+    min-height: 820px;
+  }
 
-    .hero-content h1 {
-        font-size: 48px;
-    }
+  .hero-content {
+    top: 65px;
+    left: 5%;
+
+    width: 50%;
+  }
+
+  .hero-content h1 {
+    font-size: 46px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+    max-width: 470px;
+  }
+
+  .hero-doctor {
+    width: 52%;
+  }
+
+  .hero-doctor img {
+    width: 95%;
+  }
+
+  .patient-card {
+    top: 380px;
+    right: 3%;
+
+    width: 270px;
+  }
+
+  .stats {
+    top: 520px;
+    right: 3%;
+
+    gap: 10px;
+  }
+
+  .stat-card {
+    width: 125px;
+    min-height: 110px;
+
+    padding: 15px;
+  }
+
+  .stat-card strong {
+    font-size: 27px;
+  }
+
+  .stat-card span {
+    font-size: 13px;
+  }
+
+  .hero-features {
+    width: 400px;
+    left: 4%;
+
+    gap: 10px;
+  }
+
+  .feature-card {
+    width: 195px;
+  }
+
+  .scroll-indicator {
+    right: 2%;
+  }
 }
 
 
-/* ===========================
+/* =====================================================
+   SMALL TABLET
+===================================================== */
+
+@media (max-width: 850px) {
+
+  .hero {
+    min-height: 900px;
+  }
+
+  .hero-content {
+    width: 48%;
+  }
+
+  .hero-content h1 {
+    font-size: 40px;
+  }
+
+  .hero-doctor {
+    width: 50%;
+  }
+
+  .patient-card {
+    top: 390px;
+    right: 2%;
+
+    width: 250px;
+  }
+
+  .stats {
+    top: 525px;
+    right: 2%;
+  }
+
+  .stat-card {
+    width: 115px;
+  }
+
+  .hero-features {
+    width: 390px;
+  }
+
+  .feature-card {
+    width: 190px;
+  }
+
+  .scroll-indicator {
+    display: none;
+  }
+}
+
+
+/* =====================================================
    MOBILE
-=========================== */
+===================================================== */
 
 @media (max-width: 768px) {
 
-    .hero {
-        min-height: 650px;
+  .hero {
+    min-height: 1250px;
 
-        align-items: flex-start;
+    background-position: center;
+  }
 
-        padding: 55px 25px;
+  /* CONTENT */
 
-        background-position: 65% center;
-    }
+  .hero-content {
+    position: relative;
 
-    .hero-content {
-        width: 100%;
+    top: auto;
+    left: auto;
 
-        text-align: center;
-    }
+    width: 90%;
+    max-width: 600px;
 
-    .hero-content h1 {
-        font-size: 40px;
+    margin: 0 auto;
 
-        line-height: 1.1;
-    }
+    padding-top: 45px;
 
-    .hero-content p {
-        font-size: 16px;
+    text-align: center;
+  }
 
-        margin: 20px auto 25px;
-    }
+  .hero-tag {
+    padding: 9px 17px;
+
+    font-size: 13px;
+
+    margin-bottom: 18px;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(36px, 8vw, 52px);
+
+    line-height: 1.1;
+
+    max-width: 600px;
+
+    margin: 0 auto;
+  }
+
+  .hero-content p {
+    max-width: 520px;
+
+    margin: 20px auto 24px;
+
+    font-size: 16px;
+  }
+
+  .hero-btn {
+    padding: 14px 27px;
+
+    font-size: 15px;
+  }
+
+
+  /* DOCTOR */
+
+  .hero-doctor {
+    position: absolute;
+
+    top: 330px;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+    height: 400px;
+
+    display: flex;
+
+    justify-content: center;
+  }
+
+  .hero-doctor img {
+    width: min(82%, 450px);
+
+    margin-top: 0;
+  }
+
+
+  /* PATIENT CARD */
+
+  .patient-card {
+    top: 690px;
+
+    left: 5%;
+    right: auto;
+
+    width: 90%;
+
+    padding: 20px;
+
+    text-align: left;
+  }
+
+
+  /* STATS */
+
+  .stats {
+    position: absolute;
+
+    top: 820px;
+
+    left: 5%;
+    right: auto;
+
+    width: 90%;
+
+    display: flex;
+
+    gap: 10px;
+  }
+
+  .stat-card {
+    flex: 1;
+
+    width: auto;
+    min-height: 115px;
+
+    padding: 16px;
+  }
+
+  .stat-card strong {
+    font-size: 28px;
+  }
+
+  .stat-card span {
+    font-size: 13px;
+  }
+
+
+  /* FEATURES */
+
+  .hero-features {
+    position: absolute;
+
+    left: 5%;
+    bottom: 35px;
+
+    width: 90%;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 10px;
+  }
+
+  .feature-card {
+    width: 100%;
+
+    min-width: 0;
+
+    padding: 11px;
+  }
+
+  .feature-card span {
+    width: 44px;
+    height: 44px;
+
+    font-size: 16px;
+  }
+
+  .feature-card p {
+    font-size: 13px;
+  }
+
+
+  /* HIDE SCROLL */
+
+  .scroll-indicator {
+    display: none;
+  }
 }
 
 
-/* ===========================
+/* =====================================================
    SMALL MOBILE
-=========================== */
+===================================================== */
 
 @media (max-width: 480px) {
 
-    .hero {
-        min-height: 600px;
+  .hero {
+    min-height: 1350px;
+  }
 
-        padding: 40px 18px;
 
-        background-position: 68% center;
-    }
+  /* CONTENT */
 
-    .hero-content h1 {
-        font-size: 34px;
-    }
+  .hero-content {
+    width: 90%;
 
-    .hero-content p {
-        font-size: 15px;
-    }
+    padding-top: 35px;
+  }
+
+  .hero-tag {
+    font-size: 12px;
+
+    padding: 8px 15px;
+
+    margin-bottom: 15px;
+  }
+
+  .hero-content h1 {
+    font-size: 34px;
+
+    line-height: 1.12;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+
+    line-height: 1.55;
+
+    margin-top: 17px;
+    margin-bottom: 20px;
+  }
+
+  .hero-btn {
+    padding: 13px 23px;
+
+    font-size: 14px;
+  }
+
+
+  /* DOCTOR */
+
+  .hero-doctor {
+    top: 300px;
+
+    height: 380px;
+  }
+
+  .hero-doctor img {
+    width: 94%;
+  }
+
+
+  /* PATIENT CARD */
+
+  .patient-card {
+    top: 640px;
+
+    left: 5%;
+
+    width: 90%;
+
+    padding: 18px;
+  }
+
+  .patient-card strong {
+    font-size: 15px;
+  }
+
+  .patient-card span {
+    font-size: 14px;
+  }
+
+  .stars {
+    font-size: 19px;
+  }
+
+
+  /* STATS */
+
+  .stats {
+    top: 770px;
+
+    left: 5%;
+
+    width: 90%;
+
+    gap: 8px;
+  }
+
+  .stat-card {
+    min-height: 105px;
+
+    padding: 14px 10px;
+  }
+
+  .stat-card strong {
+    font-size: 25px;
+
+    margin-bottom: 5px;
+  }
+
+  .stat-card span {
+    font-size: 11px;
+
+    line-height: 1.4;
+  }
+
+
+  /* FEATURES */
+
+  .hero-features {
+    bottom: 30px;
+
+    grid-template-columns: 1fr;
+
+    gap: 8px;
+  }
+
+  .feature-card {
+    min-height: 62px;
+
+    padding: 9px 12px;
+  }
+
+  .feature-card span {
+    width: 42px;
+    height: 42px;
+  }
+
+  .feature-card p {
+    font-size: 13px;
+  }
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE
+===================================================== */
+
+@media (max-width: 360px) {
+
+  .hero {
+    min-height: 1400px;
+  }
+
+  .hero-content h1 {
+    font-size: 30px;
+  }
+
+  .hero-doctor {
+    top: 290px;
+    height: 350px;
+  }
+
+  .hero-doctor img {
+    width: 100%;
+  }
+
+  .patient-card {
+    top: 610px;
+  }
+
+  .stats {
+    top: 755px;
+  }
+
+  .stat-card {
+    min-height: 100px;
+    padding: 12px 8px;
+  }
+
+  .stat-card strong {
+    font-size: 22px;
+  }
+
+  .stat-card span {
+    font-size: 10px;
+  }
+
+  .hero-features {
+    bottom: 25px;
+  }
+}
+
+
+/* =====================================================
+   HERO LOAD ANIMATION
+===================================================== */
+
+@keyframes heroBottomToTop {
+
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+
+/* TAG */
+
+.hero-tag {
+  animation: heroBottomToTop 0.8s ease-out 0.1s both;
+}
+
+
+/* HEADING */
+
+.hero-content h1 {
+  animation: heroBottomToTop 0.8s ease-out 0.25s both;
+}
+
+
+/* DESCRIPTION */
+
+.hero-content p {
+  animation: heroBottomToTop 0.8s ease-out 0.4s both;
+}
+
+
+/* BUTTON */
+
+.hero-btn {
+  animation: heroBottomToTop 0.8s ease-out 0.55s both;
+}
+
+
+/* PATIENT CARD */
+
+.patient-card {
+  animation: heroBottomToTop 0.8s ease-out 0.7s both;
+}
+
+
+/* STATS */
+
+.stats {
+  animation: heroBottomToTop 0.8s ease-out 0.85s both;
+}
+
+
+/* =====================================================
+   FEATURE SCROLL ANIMATION
+===================================================== */
+
+.hero-features .feature-card {
+  opacity: 0;
+  transform: translateY(70px);
+}
+
+.hero-features.features-visible .feature-card {
+  animation: featureBottomToTop 0.8s ease-out forwards;
+}
+
+
+/* INDIVIDUAL TIMING */
+
+.hero-features.features-visible .feature-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.hero-features.features-visible .feature-card:nth-child(2) {
+  animation-delay: 0.25s;
+}
+
+.hero-features.features-visible .feature-card:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.hero-features.features-visible .feature-card:nth-child(4) {
+  animation-delay: 0.55s;
+}
+
+
+@keyframes featureBottomToTop {
+
+  from {
+    opacity: 0;
+    transform: translateY(70px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+
+/* SCROLL INDICATOR */
+
+.scroll-indicator {
+  animation: heroBottomToTop 0.8s ease-out 1.15s both;
+}
+
+
+/* =====================================================
+   ACCESSIBILITY
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .hero *,
+  .hero {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .hero-features .feature-card {
+    opacity: 1;
+    transform: none;
+  }
 }
