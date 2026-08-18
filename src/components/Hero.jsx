@@ -53,6 +53,7 @@ useEffect(() => {
          Understanding every little health concern.
 Finding the right path to better health.
 Nurturing happier, healthier tomorrows.
+
         </p>
 
         <button className="hero-btn">
