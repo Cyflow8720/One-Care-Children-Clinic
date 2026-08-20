@@ -1,0 +1,492 @@
+/* =================================
+   FONT IMPORT
+================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+
+/* =================================
+   BRAND COLORS
+================================= */
+
+/*
+   Deep Navy  : #051C4E
+   Copper     : #B26747
+   Sage Grey  : #818A8B
+   Background : #F7F8F7
+*/
+
+
+/* =================================
+   SERVICES SECTION
+================================= */
+
+.services-section {
+  width: 100%;
+  background: #f1f0f0;
+
+  padding: 100px 0 110px;
+
+  overflow: hidden;
+
+  font-family: "DM Sans", sans-serif;
+}
+
+
+/* =================================
+   HEADING
+================================= */
+
+.services-heading {
+  max-width: 1350px;
+   margin: 0 auto 70px; 
+   padding: 0 30px;
+}
+
+
+/* SMALL LABEL */
+
+.services-heading span {
+  display: block;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.5px;
+
+  text-transform: uppercase;
+
+  color: #b26747;
+
+  margin-bottom: 18px;
+}
+
+
+/* MAIN HEADING */
+
+.services-heading h2 {
+  margin: 0;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 56px;
+
+  line-height: 1.08;
+
+  font-weight: 500;
+
+  letter-spacing: -2.5px;
+
+  color: #051c4e;
+}
+
+
+/* BOLD SECOND LINE */
+
+.services-heading h2 strong {
+  font-weight: 800;
+
+  color: #051c4e;
+}
+
+
+/* =================================
+   SLIDER
+================================= */
+
+.services-slider {
+  width: 100%;
+
+  overflow: hidden;
+}
+
+
+.services-track {
+  display: flex;
+
+  gap: 40px;
+
+  width: max-content;
+
+  animation: servicesMove 70s linear infinite;
+}
+
+
+/* =================================
+   PAUSE WHEN MOUSE IS ON CARD
+================================= */
+
+.services-track:hover {
+  animation-play-state: paused;
+}
+
+
+/* =================================
+   INFINITE SLIDER ANIMATION
+================================= */
+
+@keyframes servicesMove {
+
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+
+}
+
+
+/* =================================
+   SERVICE CARD
+================================= */
+
+.service-card {
+  width: 800px;
+
+  height: 450px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  background: #ffffff;
+
+  border-radius: 16px;
+
+  overflow: hidden;
+
+  /*
+     Very subtle premium shadow
+  */
+
+  box-shadow:
+    0 10px 35px rgba(5, 28, 78, 0.07);
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+
+/* CARD HOVER */
+
+.service-card:hover {
+  box-shadow:
+    0 18px 45px rgba(5, 28, 78, 0.12);
+}
+
+
+/* =================================
+   IMAGE
+================================= */
+
+.service-image {
+  width: 50%;
+
+  height: 100%;
+
+  overflow: hidden;
+}
+
+
+.service-image img {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  transition:
+    transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+
+/* IMAGE HOVER */
+
+.service-card:hover .service-image img {
+  transform: scale(1.05);
+}
+
+
+/* =================================
+   CONTENT
+================================= */
+
+.service-content {
+  width: 50%;
+
+  height: 100%;
+
+  padding: 46px 50px 38px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+}
+
+
+/* =================================
+   CATEGORY
+================================= */
+
+.service-category {
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.3px;
+
+  color: #818a8b;
+
+  margin-bottom: 18px;
+}
+
+
+/* =================================
+   TITLE
+================================= */
+
+.service-content h3 {
+  margin: 0;
+
+  max-width: 340px;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 27px;
+
+  line-height: 1.3;
+
+  font-weight: 700;
+
+  letter-spacing: -0.8px;
+
+  color: #051c4e;
+}
+
+
+/* =================================
+   POINTS
+================================= */
+
+.service-points {
+  margin-top: auto;
+
+  margin-bottom: 45px;
+}
+
+
+.service-points p {
+  margin: 9px 0;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 15px;
+
+  line-height: 1.4;
+
+  font-weight: 400;
+
+  color: #818a8b;
+}
+
+
+/* =================================
+   POINT SYMBOL
+================================= */
+
+.service-points p::first-letter {
+  color: #b26747;
+}
+
+
+/* =================================
+   READ MORE
+================================= */
+
+.service-read-more {
+  border-top: 1px solid #dedede;
+
+  padding-top: 18px;
+}
+
+
+.service-read-more a {
+  text-decoration: none;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  color: #051c4e;
+
+  transition:
+    color 0.3s ease;
+}
+
+
+.service-read-more a span {
+  display: inline-block;
+
+  margin-left: 4px;
+
+  color: #b26747;
+
+  transition:
+    transform 0.3s ease;
+}
+
+
+/* READ MORE HOVER */
+
+.service-read-more a:hover {
+  color: #b26747;
+}
+
+
+.service-read-more a:hover span {
+  transform: translateX(6px);
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 700px) {
+
+  .services-section {
+    padding: 70px 0 80px;
+  }
+
+
+  /* HEADING */
+
+  .services-heading {
+    padding: 0 20px;
+
+    margin-bottom: 45px;
+  }
+
+
+  .services-heading span {
+    font-size: 13px;
+
+    margin-bottom: 14px;
+  }
+
+
+  .services-heading h2 {
+    font-size: 38px;
+
+    line-height: 1.1;
+
+    letter-spacing: -1.5px;
+  }
+
+
+  /* CARD */
+
+  .service-card {
+    width: 88vw;
+
+    height: 500px;
+
+    flex-direction: column;
+
+    border-radius: 14px;
+  }
+
+
+  /* IMAGE */
+
+  .service-image {
+    width: 100%;
+
+    height: 52%;
+  }
+
+
+  /* CONTENT */
+
+  .service-content {
+    width: 100%;
+
+    height: 48%;
+
+    padding: 25px;
+  }
+
+
+  /* CATEGORY */
+
+  .service-category {
+    font-size: 13px;
+
+    margin-bottom: 10px;
+  }
+
+
+  /* TITLE */
+
+  .service-content h3 {
+    font-size: 21px;
+
+    line-height: 1.3;
+  }
+
+
+  /* POINTS */
+
+  .service-points {
+    margin-bottom: 20px;
+  }
+
+
+  .service-points p {
+    font-size: 13px;
+
+    margin: 5px 0;
+  }
+
+
+  /* READ MORE */
+
+  .service-read-more {
+    padding-top: 12px;
+  }
+
+
+  .service-read-more a {
+    font-size: 14px;
+  }
+
+}
+
+
+/* =================================
+   REDUCE MOTION
+================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .services-track {
+    animation: none;
+  }
+
+}
