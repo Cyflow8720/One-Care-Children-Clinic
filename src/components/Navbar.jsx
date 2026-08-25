@@ -145,7 +145,9 @@ function Navbar() {
   <FiPhoneCall className="phone-icon" />
 </div>
 
-        <button className="btn">
+        <button className="btn"onClick={() => {
+            window.location.href = "#appointment";
+          }}>
           Appointment
         </button>
 

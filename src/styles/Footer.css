@@ -1,0 +1,797 @@
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.site-footer {
+  width: 100%;
+
+  background: #263b68;
+
+  color: #ffffff;
+
+  padding: 75px 20px 0;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.footer-container {
+  width: 100%;
+
+  max-width: 1200px;
+
+  margin: 0 auto;
+}
+
+
+/* =====================================================
+   MAIN FOOTER
+===================================================== */
+
+.footer-main {
+  display: grid;
+
+  grid-template-columns:
+    1.4fr
+    0.8fr
+    1.5fr;
+
+  gap: 70px;
+
+  padding-bottom: 50px;
+}
+
+
+/* =====================================================
+   FOOTER BRAND
+===================================================== */
+
+.footer-brand {
+  opacity: 0;
+
+  transform: translateY(55px);
+
+  transition:
+    opacity 0.9s ease,
+    transform 0.9s cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    );
+}
+
+
+.footer-visible .footer-brand {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.footer-logo-wrapper {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 18px;
+
+  padding: 10px 15px;
+
+  background: #ffffff;
+
+  border-radius: 10px;
+}
+
+
+.footer-logo {
+  display: block;
+
+  width: 190px;
+
+  max-width: 100%;
+
+  height: auto;
+
+  object-fit: contain;
+}
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.footer-description {
+  margin: 0;
+
+  max-width: 330px;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+
+  color: rgba(
+    255,
+    255,
+    255,
+    0.78
+  );
+}
+
+
+/* =====================================================
+   SOCIAL MEDIA
+===================================================== */
+
+.footer-socials {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-top: 24px;
+}
+
+
+.social-link {
+  width: 40px;
+
+  height: 40px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(
+    255,
+    255,
+    255,
+    0.1
+  );
+
+  border: 1px solid rgba(
+    255,
+    255,
+    255,
+    0.18
+  );
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.social-link svg {
+  font-size: 17px;
+}
+
+
+.social-link:hover {
+  transform: translateY(-5px);
+
+  background: #ffffff;
+
+  color: #263b68;
+
+  box-shadow:
+    0 8px 20px rgba(
+      0,
+      0,
+      0,
+      0.18
+    );
+}
+
+
+/* =====================================================
+   FOOTER COLUMNS
+===================================================== */
+
+.footer-column {
+  opacity: 0;
+
+  transform: translateY(55px);
+
+  transition:
+    opacity 0.9s ease 0.15s,
+    transform 0.9s cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    );
+}
+
+
+.footer-visible .footer-column {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+
+.footer-column h3 {
+  position: relative;
+
+  margin: 0 0 24px;
+
+  padding-bottom: 10px;
+
+  font-size: 18px;
+
+  font-weight: 700;
+
+  color: #ffffff;
+}
+
+
+.footer-column h3::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  bottom: 0;
+
+  width: 35px;
+
+  height: 2px;
+
+  border-radius: 5px;
+
+  background: #9fb3df;
+}
+
+
+/* =====================================================
+   QUICK LINKS
+===================================================== */
+
+.footer-column ul {
+  list-style: none;
+
+  padding: 0;
+
+  margin: 0;
+}
+
+
+.footer-column li {
+  margin-bottom: 13px;
+}
+
+
+.footer-column li a {
+  position: relative;
+
+  color: rgba(
+    255,
+    255,
+    255,
+    0.75
+  );
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  transition:
+    color 0.3s ease,
+    padding-left 0.3s ease;
+}
+
+
+.footer-column li a::before {
+  content: "→";
+
+  position: absolute;
+
+  left: -16px;
+
+  opacity: 0;
+
+  transition:
+    opacity 0.3s ease,
+    left 0.3s ease;
+}
+
+
+.footer-column li a:hover {
+  color: #ffffff;
+
+  padding-left: 7px;
+}
+
+
+.footer-column li a:hover::before {
+  left: -12px;
+
+  opacity: 1;
+}
+
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+.footer-contact {
+  transition-delay: 0.3s;
+}
+
+
+.contact-item {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 13px;
+
+  margin-bottom: 18px;
+}
+
+
+.contact-icon {
+  width: 32px;
+
+  height: 32px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(
+    255,
+    255,
+    255,
+    0.1
+  );
+
+  color: #ffffff;
+}
+
+
+.contact-icon svg {
+  font-size: 13px;
+}
+
+
+.contact-text {
+  min-width: 0;
+}
+
+
+.contact-label {
+  display: block;
+
+  margin-bottom: 4px;
+
+  font-size: 11px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+
+  color: #aebddd;
+}
+
+
+.contact-text p {
+  margin: 0;
+
+  font-size: 13px;
+
+  line-height: 1.65;
+
+  color: rgba(
+    255,
+    255,
+    255,
+    0.75
+  );
+}
+
+
+.contact-text a {
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  transition:
+    color 0.3s ease;
+}
+
+
+.contact-text a:hover {
+  color: #b8c9eb;
+}
+
+
+/* =====================================================
+   DOCTOR INFORMATION
+===================================================== */
+
+.doctor-info {
+  padding: 28px 0;
+
+  border-top: 1px solid rgba(
+    255,
+    255,
+    255,
+    0.12
+  );
+
+  border-bottom: 1px solid rgba(
+    255,
+    255,
+    255,
+    0.12
+  );
+
+  text-align: center;
+
+  opacity: 0;
+
+  transform: translateY(45px);
+
+  transition:
+    opacity 0.8s ease 0.4s,
+    transform 0.8s ease 0.4s;
+}
+
+
+.footer-visible .doctor-info {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+
+.doctor-info h4 {
+  margin: 0 0 7px;
+
+  font-size: 18px;
+
+  font-weight: 700;
+
+  color: #ffffff;
+}
+
+
+.doctor-role {
+  margin: 0;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 1px;
+
+  color: #b7c6e2;
+}
+
+
+.doctor-qualification {
+  margin: 7px 0 0;
+
+  font-size: 13px;
+
+  color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  );
+}
+
+
+.doctor-certification {
+  margin: 5px 0 0;
+
+  font-size: 12px;
+
+  color: rgba(
+    255,
+    255,
+    255,
+    0.68
+  );
+}
+
+
+/* =====================================================
+   FOOTER BOTTOM
+===================================================== */
+
+.footer-bottom {
+  min-height: 70px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  position: relative;
+}
+
+
+.footer-bottom p {
+  margin: 0;
+
+  font-size: 12px;
+
+  color: rgba(
+    255,
+    255,
+    255,
+    0.62
+  );
+}
+
+
+/* =====================================================
+   PRIVACY / TERMS
+===================================================== */
+
+.footer-legal {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+
+.footer-legal a {
+  color: rgba(
+    255,
+    255,
+    255,
+    0.7
+  );
+
+  font-size: 12px;
+
+  text-decoration: none;
+
+  transition:
+    color 0.3s ease;
+}
+
+
+.footer-legal a:hover {
+  color: #ffffff;
+}
+
+
+.footer-legal span {
+  color: rgba(
+    255,
+    255,
+    255,
+    0.35
+  );
+}
+
+
+/* =====================================================
+   BACK TO TOP
+===================================================== */
+
+.back-to-top {
+  width: 38px;
+
+  height: 38px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  color: #263b68;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.back-to-top:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 8px 20px rgba(
+      0,
+      0,
+      0,
+      0.2
+    );
+}
+
+
+.back-to-top svg {
+  font-size: 12px;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+  .site-footer {
+    padding-top: 65px;
+  }
+
+
+  .footer-main {
+    grid-template-columns:
+      1fr
+      1fr;
+
+    gap: 45px;
+  }
+
+
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+
+
+  .footer-contact {
+    transition-delay: 0.2s;
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+  .site-footer {
+    padding: 55px 20px 0;
+  }
+
+
+  .footer-main {
+    grid-template-columns: 1fr;
+
+    gap: 38px;
+
+    padding-bottom: 40px;
+  }
+
+
+  .footer-brand {
+    grid-column: auto;
+  }
+
+
+  .footer-logo {
+    width: 165px;
+  }
+
+
+  .footer-description {
+    font-size: 14px;
+  }
+
+
+  .footer-column h3 {
+    font-size: 17px;
+
+    margin-bottom: 20px;
+  }
+
+
+  .contact-item {
+    margin-bottom: 16px;
+  }
+
+
+  .doctor-info {
+    padding: 24px 0;
+  }
+
+
+  .doctor-info h4 {
+    font-size: 17px;
+  }
+
+
+  .doctor-role {
+    line-height: 1.5;
+  }
+
+
+  .footer-bottom {
+    min-height: auto;
+
+    padding: 22px 0 25px;
+
+    flex-direction: column;
+
+    text-align: center;
+
+    gap: 14px;
+  }
+
+
+  .back-to-top {
+    position: absolute;
+
+    right: 0;
+
+    bottom: 20px;
+  }
+
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE
+===================================================== */
+
+@media (max-width: 380px) {
+
+  .footer-logo {
+    width: 150px;
+  }
+
+
+  .footer-description {
+    font-size: 13px;
+  }
+
+
+  .footer-bottom {
+    padding-right: 45px;
+  }
+
+}

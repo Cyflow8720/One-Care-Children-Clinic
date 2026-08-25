@@ -1,0 +1,800 @@
+/* =========================================
+   HEALTHCARE CTA
+========================================= */
+
+.healthcare-cta {
+  position: relative;
+  width: 100%;
+  min-height: 560px;
+  background: #ffffff;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 70px 40px;
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.healthcare-cta-content {
+  position: relative;
+  z-index: 20;
+
+  width: 100%;
+  max-width: 850px;
+
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* Initial hidden position */
+  opacity: 0;
+  transform: translateY(100px);
+
+  transition: none;
+}
+
+
+/* =========================================
+   WHEN SECTION ENTERS VIEWPORT
+========================================= */
+
+.healthcare-cta-visible .healthcare-cta-content {
+  animation: contentReveal 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+
+/* =========================================
+   CONTENT REVEAL
+========================================= */
+
+@keyframes contentReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Heading */
+
+.healthcare-cta-content h2 {
+  margin: 0;
+
+   color: #0B2C6B;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: clamp(42px, 4.2vw, 60px);
+
+  font-weight: 600;
+
+  line-height: 1.08;
+
+  letter-spacing: -2.5px;
+}
+
+
+/* Subtitle */
+
+.healthcare-cta-content p {
+  margin: 22px 0 27px;
+
+   color: #0B2C6B;;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 16px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   CONTENT ANIMATION
+========================================= */
+
+@keyframes contentReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.healthcare-cta-button {
+  position: relative;
+
+  border: none;
+  outline: none;
+
+  background:#0B2C6B;
+ 
+  color: #ffffff;
+
+  padding: 15px 28px;
+
+  min-width: 190px;
+
+  border-radius: 5px;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  overflow: hidden;
+
+  transform: translateZ(0);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+
+/* Button shine */
+
+.healthcare-cta-button::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -120%;
+
+  width: 70%;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.35),
+    transparent
+  );
+
+  transform: skewX(-20deg);
+
+  transition: left 0.6s ease;
+}
+
+
+/* Hover */
+
+.healthcare-cta-button:hover {
+  background:hsl(18, 43%, 49%);
+
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 12px 25px rgba(3, 77, 125, 0.25);
+}
+
+
+.healthcare-cta-button:hover::before {
+  left: 140%;
+}
+
+
+/* Click */
+
+.healthcare-cta-button:active {
+  transform: translateY(-1px) scale(0.97);
+
+  box-shadow:
+    0 5px 12px rgba(3, 77, 125, 0.2);
+}
+
+
+/* =========================================
+   FLOATING IMAGES
+========================================= */
+
+.healthcare-image {
+  position: absolute;
+
+  z-index: 5;
+
+  border-radius: 50%;
+
+  overflow: hidden;
+
+  background: #f1f4f5;
+
+  /* Important */
+  aspect-ratio: 1 / 1;
+
+  animation-timing-function: ease-in-out;
+
+  animation-iteration-count: infinite;
+
+  animation-direction: alternate;
+
+  will-change: transform;
+}
+
+
+/* Image */
+
+.healthcare-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  /*
+     contain keeps the complete photo visible.
+     Change to cover only if you want a
+     stronger cropped-circle look.
+  */
+  object-fit: cover;
+
+  object-position: center;
+}
+
+
+/* =========================================
+   LEFT TOP IMAGE
+   Up + Down
+========================================= */
+
+.image-one {
+  top: 38px;
+  left: 18px;
+
+  width: 170px;
+  height: 170px;
+
+  animation-name: floatVerticalOne;
+  animation-duration: 5.5s;
+}
+
+
+/* =========================================
+   LEFT MIDDLE IMAGE
+   Left + Right
+========================================= */
+
+.image-two {
+  top: 195px;
+  left: 200px;
+
+  width: 115px;
+  height: 115px;
+
+  animation-name: floatHorizontalOne;
+  animation-duration: 4.5s;
+}
+
+
+/* =========================================
+   LEFT BOTTOM IMAGE
+   Up + Down
+========================================= */
+
+.image-three {
+  bottom: 82px;
+  left: 58px;
+
+  width: 125px;
+  height: 125px;
+
+  animation-name: floatVerticalTwo;
+  animation-duration: 6s;
+}
+
+
+/* =========================================
+   RIGHT TOP IMAGE
+   Left + Right
+========================================= */
+
+.image-four {
+  top: 48px;
+  right: 60px;
+
+  width: 125px;
+  height: 125px;
+
+  animation-name: floatHorizontalTwo;
+  animation-duration: 5.2s;
+}
+
+
+/* =========================================
+   RIGHT MIDDLE IMAGE
+   Up + Down
+========================================= */
+
+.image-five {
+  top: 157px;
+  right: 182px;
+
+  width: 115px;
+  height: 115px;
+
+  animation-name: floatVerticalThree;
+  animation-duration: 4.8s;
+}
+
+
+/* =========================================
+   RIGHT BOTTOM IMAGE
+   Left + Right
+========================================= */
+
+.image-six {
+  bottom: 78px;
+  right: 28px;
+
+  width: 175px;
+  height: 175px;
+
+  animation-name: floatHorizontalThree;
+  animation-duration: 6.5s;
+}
+
+
+/* =========================================
+   FLOAT ANIMATIONS
+========================================= */
+
+
+/* Vertical 1 */
+
+@keyframes floatVerticalOne {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-16px);
+  }
+}
+
+
+/* Horizontal 1 */
+
+@keyframes floatHorizontalOne {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(14px);
+  }
+}
+
+
+/* Vertical 2 */
+
+@keyframes floatVerticalTwo {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(18px);
+  }
+}
+
+
+/* Horizontal 2 */
+
+@keyframes floatHorizontalTwo {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-15px);
+  }
+}
+
+
+/* Vertical 3 */
+
+@keyframes floatVerticalThree {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-13px);
+  }
+}
+
+
+/* Horizontal 3 */
+
+@keyframes floatHorizontalThree {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-18px);
+  }
+}
+
+
+/* =========================================
+   DECORATIVE LINES
+========================================= */
+
+.decorative-lines {
+  position: absolute;
+
+  z-index: 8;
+
+  width: 45px;
+  height: 45px;
+
+  pointer-events: none;
+}
+
+
+.decorative-lines span {
+  position: absolute;
+
+  display: block;
+
+  width: 25px;
+  height: 1px;
+
+  background: #17252e;
+
+  transform-origin: left center;
+}
+
+
+/* LEFT LINES */
+
+.lines-left {
+  top: 175px;
+  left: 282px;
+}
+
+
+.lines-left span:nth-child(1) {
+  top: 2px;
+  left: 5px;
+
+  transform: rotate(-68deg);
+}
+
+
+.lines-left span:nth-child(2) {
+  top: 11px;
+  left: 13px;
+
+  transform: rotate(-45deg);
+}
+
+
+.lines-left span:nth-child(3) {
+  top: 21px;
+  left: 17px;
+
+  transform: rotate(-22deg);
+}
+
+
+/* RIGHT LINES */
+
+.lines-right {
+  top: 143px;
+  right: 280px;
+}
+
+
+.lines-right span:nth-child(1) {
+  top: 1px;
+  left: 7px;
+
+  transform: rotate(55deg);
+}
+
+
+.lines-right span:nth-child(2) {
+  top: 10px;
+  left: 14px;
+
+  transform: rotate(78deg);
+}
+
+
+.lines-right span:nth-child(3) {
+  top: 20px;
+  left: 17px;
+
+  transform: rotate(103deg);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .healthcare-cta {
+    min-height: 530px;
+
+    padding: 60px 25px;
+  }
+
+
+  .healthcare-cta-content h2 {
+    font-size: 48px;
+  }
+
+
+  .image-one {
+    left: 15px;
+
+    width: 145px;
+    height: 145px;
+  }
+
+
+  .image-two {
+    left: 150px;
+
+    top: 200px;
+  }
+
+
+  .image-three {
+    left: 40px;
+
+    bottom: 65px;
+  }
+
+
+  .image-four {
+    right: 25px;
+  }
+
+
+  .image-five {
+    right: 145px;
+  }
+
+
+  .image-six {
+    right: 15px;
+
+    width: 150px;
+    height: 150px;
+  }
+
+
+  .lines-left {
+    left: 215px;
+  }
+
+
+  .lines-right {
+    right: 215px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .healthcare-cta {
+    min-height: 650px;
+
+    padding: 60px 20px;
+  }
+
+
+  .healthcare-cta-content {
+    max-width: 90%;
+  }
+
+
+  .healthcare-cta-content h2 {
+    font-size: 36px;
+
+    line-height: 1.12;
+
+    letter-spacing: -1.2px;
+  }
+
+
+  .healthcare-cta-content p {
+    font-size: 14px;
+
+    margin-top: 17px;
+  }
+
+
+  .healthcare-cta-button {
+    min-width: 175px;
+
+    padding: 13px 22px;
+
+    font-size: 14px;
+  }
+
+
+  /* Images */
+
+  .healthcare-image {
+    width: 85px;
+    height: 85px;
+  }
+
+
+  .image-one {
+    top: 25px;
+    left: 10px;
+
+    width: 105px;
+    height: 105px;
+  }
+
+
+  .image-two {
+    top: 135px;
+    left: 18px;
+
+    width: 80px;
+    height: 80px;
+  }
+
+
+  .image-three {
+    bottom: 35px;
+    left: 15px;
+
+    width: 95px;
+    height: 95px;
+  }
+
+
+  .image-four {
+    top: 30px;
+    right: 15px;
+
+    width: 95px;
+    height: 95px;
+  }
+
+
+  .image-five {
+    top: 150px;
+    right: 20px;
+
+    width: 80px;
+    height: 80px;
+  }
+
+
+  .image-six {
+    bottom: 35px;
+    right: 10px;
+
+    width: 110px;
+    height: 110px;
+  }
+
+
+  .decorative-lines {
+    display: none;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 450px) {
+
+  .healthcare-cta {
+    min-height: 600px;
+  }
+
+
+  .healthcare-cta-content h2 {
+    font-size: 30px;
+  }
+
+
+  .healthcare-cta-content p {
+    font-size: 13px;
+
+    padding: 0 15px;
+  }
+
+
+  .image-one {
+    width: 85px;
+    height: 85px;
+  }
+
+
+  .image-two {
+    top: 125px;
+
+    width: 70px;
+    height: 70px;
+  }
+
+
+  .image-three {
+    width: 80px;
+    height: 80px;
+  }
+
+
+  .image-four {
+    width: 80px;
+    height: 80px;
+  }
+
+
+  .image-five {
+    width: 70px;
+    height: 70px;
+  }
+
+
+  .image-six {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .healthcare-cta-content,
+  .healthcare-image,
+  .healthcare-cta-button {
+    animation: none !important;
+
+    transition: none !important;
+  }
+}

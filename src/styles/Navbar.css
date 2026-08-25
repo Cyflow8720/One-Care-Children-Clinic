@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
 /* ===========================
    NAVBAR
 =========================== */
@@ -374,27 +376,72 @@ nav {
 =========================== */
 
 .btn {
-    background: #0B2E6D;
+    position: relative;
 
-    color: white;
+  border: none;
+  outline: none;
 
-    border: none;
+  background:#0B2C6B;
+ 
+  color: #ffffff;
 
-    padding: 14px 30px;
+  padding: 15px 28px;
 
-    border-radius: 8px;
+  min-width: 190px;
 
-    cursor: pointer;
+  border-radius: 5px;
 
-    font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
 
-    font-weight: 600;
+  font-size: 16px;
 
-    transition: 0.3s;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  overflow: hidden;
+
+  transform: translateZ(0);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+.btn::before {
+    content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -120%;
+
+  width: 70%;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.35),
+    transparent
+  );
+
+  transform: skewX(-20deg);
+
+  transition: left 0.6s ease;
 }
 
 .btn:hover {
-    background: #B8735A;
+   background:hsl(18, 43%, 49%);
+
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 12px 25px rgba(3, 77, 125, 0.25);
+}
+.btn:hover::before {
+   left: 140%;
 }
 
 
