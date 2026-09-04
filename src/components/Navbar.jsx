@@ -71,31 +71,81 @@ function Navbar() {
 
                 <li>
                   <a href="#" onClick={closeMenu}>
-                    Pediatric Consultation
+                    General Pediatric Care
                   </a>
                 </li>
 
                 <li>
                   <a href="#" onClick={closeMenu}>
-                    Vaccination
+                    Newborn & Infant Care
                   </a>
                 </li>
 
                 <li>
                   <a href="#" onClick={closeMenu}>
-                    Child Development
+                    Vaccination & Immunization
                   </a>
                 </li>
 
                 <li>
                   <a href="#" onClick={closeMenu}>
-                    Newborn Care
+                    Growth & Development Assessment
                   </a>
                 </li>
 
                 <li>
                   <a href="#" onClick={closeMenu}>
-                    Nutrition & Growth
+                    Nutrition & Feeding Guidance
+                  </a>
+                </li>
+                <li>
+                  <a href="#" onClick={closeMenu}>
+                    Pediatric Diabetes Care
+                  </a>
+                </li>
+                <li>
+                  <a href="#" onClick={closeMenu}>
+                    Pediatric Rheumatology Care
+                  </a>
+                </li>
+                <li>
+                  <a href="#" onClick={closeMenu}>
+                    Respiratory & Allergy Care
+                  </a>
+                </li>
+                <li>
+                  <a href="#" onClick={closeMenu}>
+                    Neurology & Developmental Care
+                  </a>
+                </li>
+                <li>
+                  <a href="#" onClick={closeMenu}>
+                    Behavioral & Learning Concerns
+                  </a>
+                </li>
+                <li>
+                  <a href="#" onClick={closeMenu}>
+                    Adolescent Health
+                  </a>
+                </li>
+                <li>
+                  <a href="#" onClick={closeMenu}>
+                    Pediatric Skin Care
+                  </a>
+                </li>
+                <li>
+                  <a href="#" onClick={closeMenu}>
+                    Adolescent Health
+                  </a>
+                </li>
+                <li>
+                  <a href="#" onClick={closeMenu}>
+                    * Preventive Child Health
+                  </a>
+                </li>
+                <li>
+                  <a href="#" onClick={closeMenu}>
+                    Post-Hospitalization Follow-up
                   </a>
                 </li>
 
