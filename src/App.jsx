@@ -1,5 +1,6 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import PediatricServices from "./components/PediatricServices";
 import About from "./components/About";
 import Services from "./components/Services";
 import WhyChooseUs from "./components/WhyChooseUs";
@@ -13,6 +14,7 @@ function App() {
     <>
       <Navbar />
       <Hero />
+      <PediatricServices />
       <About />
       <Services />
       <WhyChooseUs />

@@ -128,39 +128,7 @@ Nurturing happier, healthier tomorrows.
       </div>
 
 
-      {/* =========================
-          SERVICE FEATURES
-      ========================= */}
-
-      <div
-  ref={featuresRef}
-  className={`hero-features ${
-    featuresVisible ? "features-visible" : ""
-  }`}
->
-
-        <div className="feature-card">
-          <span>♡</span>
-          <p>Child-Friendly Care</p>
-        </div>
-
-        <div className="feature-card">
-          <span>♡</span>
-          <p>Expert Pediatric Care</p>
-        </div>
-
-        <div className="feature-card">
-          <span>♡</span>
-          <p>Complete Child Wellness</p>
-        </div>
-
-        <div className="feature-card">
-          <span>♡</span>
-          <p>Personalized Attention</p>
-        </div>
-
-      </div>
-
+      
 
       {/* =========================
           SCROLL INDICATOR
