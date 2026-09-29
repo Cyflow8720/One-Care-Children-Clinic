@@ -101,81 +101,104 @@ function AboutPage() {
         </div>
       </section>
 
-
-      {/* ================================
-          OUR APPROACH
+             {/* ================================
+          ABOUT THE CLINIC
       ================================= */}
 
-      <section className="approach-section">
+      <section className="clinic-about-section">
 
         <div className="about-container">
 
-          <div className="section-heading">
+          <div className="clinic-about-grid">
 
-            <div className="about-label">
-              OUR APPROACH
-            </div>
+            {/* LEFT CONTENT */}
 
-            <h2>
-              Care that grows with
-              <span> your child.</span>
-            </h2>
+            <div className="clinic-about-content">
 
-            <p>
-              Every child is different. Our approach is designed to
-              provide thoughtful, age-appropriate care while helping
-              parents understand every stage of their child's growth.
-            </p>
-
-          </div>
-
-
-          <div className="approach-cards">
-
-            <div className="approach-card">
-
-              <div className="approach-icon">
-                01
+              <div className="about-label">
+                ABOUT ONE CARE CHILDREN'S CLINIC
               </div>
 
-              <h3>Newborn Care</h3>
+              <h2>
+                A caring space for
+                <span> growing children.</span>
+              </h2>
+
+              <p className="clinic-about-intro">
+                One Care Children's Clinic is dedicated to providing
+                thoughtful, personalised and child-centred healthcare
+                for infants, children and adolescents.
+              </p>
 
               <p>
-                Gentle and attentive care during the earliest and
-                most important stage of your child's life.
+                We understand that visiting a doctor can sometimes feel
+                overwhelming for both children and parents. That's why
+                we aim to create a warm, comfortable and reassuring
+                environment where every child feels cared for and every
+                parent feels heard.
+              </p>
+
+              <p>
+                From newborn and infant care to childhood illnesses,
+                growth and development, nutrition and preventive
+                healthcare, our focus is on supporting your child's
+                health at every stage.
+              </p>
+
+              <p>
+                At One Care Children's Clinic, we believe good pediatric
+                care is not only about treating illness. It is also
+                about understanding your child, answering your questions
+                and helping you make confident healthcare decisions.
               </p>
 
             </div>
 
 
-            <div className="approach-card">
+            {/* RIGHT HIGHLIGHTS */}
 
-              <div className="approach-icon">
-                02
+            <div className="clinic-about-highlights">
+
+              <div className="clinic-highlight-card">
+                <div className="clinic-highlight-number">01</div>
+
+                <div>
+                  <h3>Personalised Care</h3>
+
+                  <p>
+                    Every child is different. Our approach is tailored
+                    to their individual health and developmental needs.
+                  </p>
+                </div>
               </div>
 
-              <h3>Child Health</h3>
 
-              <p>
-                Support for common childhood illnesses, immunity,
-                nutrition and everyday health concerns.
-              </p>
+              <div className="clinic-highlight-card">
+                <div className="clinic-highlight-number">02</div>
 
-            </div>
+                <div>
+                  <h3>Child-Friendly Environment</h3>
 
-
-            <div className="approach-card">
-
-              <div className="approach-icon">
-                03
+                  <p>
+                    A welcoming and reassuring space designed to make
+                    healthcare visits more comfortable for children.
+                  </p>
+                </div>
               </div>
 
-              <h3>Growth & Development</h3>
 
-              <p>
-                Monitoring your child's physical, emotional and
-                developmental milestones at every stage.
-              </p>
+              <div className="clinic-highlight-card">
+                <div className="clinic-highlight-number">03</div>
+
+                <div>
+                  <h3>Complete Pediatric Support</h3>
+
+                  <p>
+                    From newborn care to everyday childhood health,
+                    we support families through every stage of growth.
+                  </p>
+                </div>
+              </div>
 
             </div>
 
@@ -185,6 +208,43 @@ function AboutPage() {
 
       </section>
 
+      
+      {/* ================================
+          CTA
+      ================================= */}
+
+      <section className="about-cta">
+
+        <div className="about-container">
+
+          <div className="about-cta-content">
+
+            <div>
+
+              <span>
+                YOUR CHILD'S WELLNESS IS OUR PRIORITY
+              </span>
+
+              <h2>
+                Caring today for a healthier tomorrow.
+              </h2>
+
+            </div>
+
+
+            <a
+              href="/book-appointment"
+              className="about-cta-button"
+            >
+              Book an Appointment
+              <span>→</span>
+            </a>
+
+          </div>
+
+        </div>
+
+      </section>
 
       {/* ================================
           WHY ONE CARE
@@ -311,42 +371,7 @@ function AboutPage() {
       </section>
 
 
-      {/* ================================
-          CTA
-      ================================= */}
-
-      <section className="about-cta">
-
-        <div className="about-container">
-
-          <div className="about-cta-content">
-
-            <div>
-
-              <span>
-                YOUR CHILD'S WELLNESS IS OUR PRIORITY
-              </span>
-
-              <h2>
-                Caring today for a healthier tomorrow.
-              </h2>
-
-            </div>
-
-
-            <a
-              href="/book-appointment"
-              className="about-cta-button"
-            >
-              Book an Appointment
-              <span>→</span>
-            </a>
-
-          </div>
-
-        </div>
-
-      </section>
+      
 
     </main>
   );

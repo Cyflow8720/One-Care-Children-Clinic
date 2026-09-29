@@ -13,7 +13,7 @@
 }
 
 .about-container {
-  width: min(1180px, calc(100% - 80px));
+  width: min(1600px, calc(100% - 120px));
   margin: 0 auto;
 }
 
@@ -88,6 +88,516 @@
 }
 
 
+
+/* =========================================================
+   ABOUT THE CLINIC — PREMIUM SECTION
+========================================================= */
+
+.clinic-about-section {
+  position: relative;
+  padding: 125px 0;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+
+/* -----------------------------------------
+   BACKGROUND DECORATION
+----------------------------------------- */
+
+.clinic-about-section::before {
+  content: "";
+  position: absolute;
+
+  width: 520px;
+  height: 520px;
+
+  left: -280px;
+  top: 80px;
+
+  border-radius: 50%;
+
+  background: rgba(139, 157, 145, 0.10);
+
+  pointer-events: none;
+}
+
+.clinic-about-section::after {
+  content: "";
+  position: absolute;
+
+  width: 260px;
+  height: 260px;
+
+  right: -130px;
+  bottom: -100px;
+
+  border-radius: 50%;
+
+  background: rgba(184, 106, 77, 0.08);
+
+  pointer-events: none;
+}
+
+
+/* -----------------------------------------
+   MAIN GRID
+----------------------------------------- */
+
+.clinic-about-grid {
+  position: relative;
+  z-index: 2;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.05fr)
+    minmax(420px, 0.95fr);
+
+  gap: 85px;
+
+  align-items: center;
+}
+
+
+/* =========================================================
+   LEFT CONTENT
+========================================================= */
+
+.clinic-about-content {
+  position: relative;
+
+  max-width: 650px;
+}
+
+
+/* Label */
+
+.clinic-about-content .about-label {
+  margin-bottom: 22px;
+}
+
+
+/* Heading */
+
+.clinic-about-content h2 {
+  margin: 0 0 28px;
+
+  color: #0b2c6b;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: clamp(42px, 4.4vw, 60px);
+
+  line-height: 1.08;
+
+  letter-spacing: -2px;
+
+  font-weight: 700;
+}
+
+.clinic-about-content h2 span {
+  display: block;
+
+  color: #b86a4d;
+}
+
+
+/* Intro */
+
+.clinic-about-intro {
+  position: relative;
+
+  margin: 0 0 25px !important;
+  padding-left: 22px;
+
+  color: #253b59 !important;
+
+  font-size: 19px !important;
+
+  line-height: 1.75 !important;
+
+  font-weight: 500;
+
+  border-left: 3px solid #b86a4d;
+}
+
+
+/* Normal paragraphs */
+
+.clinic-about-content > p:not(.clinic-about-intro) {
+  margin: 0 0 18px;
+
+  color: #687386;
+
+  font-size: 15.5px;
+
+  line-height: 1.85;
+}
+
+
+/* Small decorative line */
+
+.clinic-about-content::after {
+  content: "";
+
+  display: block;
+
+  width: 70px;
+  height: 2px;
+
+  margin-top: 35px;
+
+  background: #b86a4d;
+}
+
+
+/* =========================================================
+   RIGHT SIDE
+========================================================= */
+
+.clinic-about-highlights {
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 18px;
+
+  padding: 25px 0;
+}
+
+
+/* Decorative vertical line */
+
+.clinic-about-highlights::before {
+  content: "";
+
+  position: absolute;
+
+  left: 24px;
+  top: 20px;
+  bottom: 20px;
+
+  width: 1px;
+
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(184, 106, 77, 0.35),
+    transparent
+  );
+}
+
+
+/* =========================================================
+   HIGHLIGHT CARD
+========================================================= */
+
+.clinic-highlight-card {
+  position: relative;
+
+  z-index: 2;
+
+  display: grid;
+
+  grid-template-columns: 50px 1fr;
+
+  gap: 22px;
+
+  align-items: start;
+
+  padding: 27px 30px;
+
+  background: rgba(255, 255, 255, 0.92);
+
+  border: 1px solid rgba(11, 44, 107, 0.08);
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 10px 30px rgba(11, 44, 107, 0.055);
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease,
+    border-color 0.4s ease;
+}
+
+
+/* Hover */
+
+.clinic-highlight-card:hover {
+  transform: translateX(8px);
+
+  border-color: rgba(184, 106, 77, 0.25);
+
+  box-shadow:
+    0 20px 45px rgba(11, 44, 107, 0.10);
+}
+
+
+/* =========================================================
+   NUMBER
+========================================================= */
+
+.clinic-highlight-number {
+  position: relative;
+
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #0b2c6b;
+
+  color: #ffffff;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.5px;
+
+  box-shadow:
+    0 8px 18px rgba(11, 44, 107, 0.16);
+
+  transition:
+    transform 0.4s ease,
+    background 0.4s ease;
+}
+
+
+/* Number hover */
+
+.clinic-highlight-card:hover .clinic-highlight-number {
+  background: #b86a4d;
+
+  transform: rotate(8deg) scale(1.08);
+}
+
+
+/* =========================================================
+   CARD TEXT
+========================================================= */
+
+.clinic-highlight-card h3 {
+  margin: 2px 0 8px;
+
+  color: #0b2c6b;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 19px;
+
+  line-height: 1.3;
+
+  font-weight: 700;
+}
+
+
+.clinic-highlight-card p {
+  margin: 0;
+
+  color: #707a89;
+
+  font-size: 14px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+@keyframes clinicContentReveal {
+
+  from {
+    opacity: 0;
+
+    transform: translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+
+}
+
+
+@keyframes clinicCardReveal {
+
+  from {
+    opacity: 0;
+
+    transform: translateX(40px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateX(0);
+  }
+
+}
+
+
+.clinic-about-content {
+  animation:
+    clinicContentReveal 0.8s ease both;
+}
+
+
+.clinic-highlight-card {
+  animation:
+    clinicCardReveal 0.7s ease both;
+}
+
+
+.clinic-highlight-card:nth-child(1) {
+  animation-delay: 0.15s;
+}
+
+.clinic-highlight-card:nth-child(2) {
+  animation-delay: 0.30s;
+}
+
+.clinic-highlight-card:nth-child(3) {
+  animation-delay: 0.45s;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .clinic-about-section {
+    padding: 100px 0;
+  }
+
+  .clinic-about-grid {
+    grid-template-columns: 1fr;
+
+    gap: 60px;
+  }
+
+  .clinic-about-content {
+    max-width: 750px;
+  }
+
+  .clinic-about-content h2 {
+    font-size: 48px;
+  }
+
+  .clinic-about-highlights {
+    max-width: 750px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 800px) {
+
+  .clinic-about-section {
+    padding: 80px 0;
+  }
+
+  .clinic-about-grid {
+    gap: 45px;
+  }
+
+  .clinic-about-content h2 {
+    font-size: 40px;
+
+    letter-spacing: -1.3px;
+  }
+
+  .clinic-about-intro {
+    font-size: 17px !important;
+
+    line-height: 1.7 !important;
+  }
+
+  .clinic-about-content > p:not(.clinic-about-intro) {
+    font-size: 15px;
+  }
+
+  .clinic-highlight-card {
+    padding: 23px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 500px) {
+
+  .clinic-about-section {
+    padding: 70px 0;
+  }
+
+  .clinic-about-content h2 {
+    font-size: 34px;
+
+    line-height: 1.12;
+
+    letter-spacing: -1px;
+  }
+
+  .clinic-about-intro {
+    padding-left: 15px;
+
+    font-size: 16px !important;
+  }
+
+  .clinic-about-highlights {
+    gap: 14px;
+  }
+
+  .clinic-highlight-card {
+    grid-template-columns: 42px 1fr;
+
+    gap: 15px;
+
+    padding: 20px;
+  }
+
+  .clinic-highlight-number {
+    width: 42px;
+    height: 42px;
+
+    font-size: 11px;
+  }
+
+  .clinic-highlight-card h3 {
+    font-size: 17px;
+  }
+
+  .clinic-highlight-card p {
+    font-size: 13px;
+  }
+
+}
 /* =========================================================
    IMPORTANT:
    FORCE A PROPER TWO COLUMN LAYOUT
@@ -299,178 +809,6 @@
   font-size: 13px;
 }
 
-
-/* =========================================================
-   APPROACH
-========================================================= */
-
-.approach-section {
-  padding: 105px 0;
-
-  background: #ffffff;
-}
-
-
-.section-heading {
-  width: 100%;
-  max-width: 700px;
-
-  margin: 0 auto 55px;
-
-  text-align: center;
-}
-
-
-.section-heading .about-label {
-  justify-content: center;
-}
-
-
-.section-heading h2 {
-  margin: 0 0 18px;
-
-  color: #0b2c6b;
-
-  font-size: clamp(38px, 4vw, 52px);
-
-  line-height: 1.1;
-
-  letter-spacing: -1.5px;
-}
-
-
-.section-heading h2 span {
-  color: #b86a4d;
-}
-
-
-.section-heading p {
-  margin: 0 auto;
-
-  color: #687386;
-
-  font-size: 15.5px;
-
-  line-height: 1.8;
-}
-
-
-/* =========================================================
-   CARDS
-========================================================= */
-
-.approach-cards {
-  display: grid;
-
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-
-  gap: 25px;
-}
-
-
-.approach-card {
-  position: relative;
-
-  min-height: 235px;
-
-  padding: 35px 30px;
-
-  background: #fafaf8;
-
-  border: 1px solid #e6eae7;
-
-  border-radius: 20px;
-
-  overflow: hidden;
-
-  transition:
-    transform 0.4s ease,
-    box-shadow 0.4s ease,
-    border-color 0.4s ease;
-}
-
-
-.approach-card::before {
-  content: "";
-
-  position: absolute;
-
-  top: 0;
-  left: 0;
-
-  width: 0;
-  height: 3px;
-
-  background: #b86a4d;
-
-  transition: width 0.4s ease;
-}
-
-
-.approach-card:hover {
-  transform: translateY(-8px);
-
-  border-color: rgba(184, 106, 77, 0.35);
-
-  box-shadow:
-    0 20px 45px rgba(11, 44, 107, 0.10);
-}
-
-
-.approach-card:hover::before {
-  width: 100%;
-}
-
-
-.approach-icon {
-  width: 52px;
-  height: 52px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  margin-bottom: 22px;
-
-  border-radius: 15px;
-
-  background: #0b2c6b;
-
-  color: white;
-
-  font-size: 14px;
-
-  font-weight: 700;
-
-  transition: 0.4s ease;
-}
-
-
-.approach-card:hover .approach-icon {
-  background: #b86a4d;
-
-  transform: rotate(5deg) scale(1.06);
-}
-
-
-.approach-card h3 {
-  margin: 0 0 10px;
-
-  color: #0b2c6b;
-
-  font-size: 20px;
-}
-
-
-.approach-card p {
-  margin: 0;
-
-  color: #697386;
-
-  font-size: 14px;
-
-  line-height: 1.75;
-}
 
 
 /* =========================================================

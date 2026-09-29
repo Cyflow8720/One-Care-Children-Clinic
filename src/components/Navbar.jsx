@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "../styles/Navbar.css";
@@ -29,18 +30,20 @@ function Navbar() {
 
         <ul className="nav-menu">
 
+          {/* HOME */}
           <li>
-            <a href="#" onClick={closeMenu}>
+            <Link to="/" onClick={closeMenu}>
               Home
-            </a>
+            </Link>
           </li>
 
 
+          {/* ABOUT */}
           <li>
-  <Link to="/about" onClick={closeMenu}>
-    About Us
-  </Link>
-</li>
+            <Link to="/about" onClick={closeMenu}>
+              About Us
+            </Link>
+          </li>
 
 
           {/* SERVICES DROPDOWN */}
@@ -56,98 +59,83 @@ function Navbar() {
               </a>
 
               <button
-  className={`dropdown-arrow ${servicesOpen ? "open" : ""}`}
-  onClick={() => setServicesOpen(!servicesOpen)}
-  aria-label="Open services menu"
->
-  <FaChevronDown />
-</button>
+                className={`dropdown-arrow ${servicesOpen ? "open" : ""}`}
+                onClick={() => setServicesOpen(!servicesOpen)}
+                aria-label="Open services menu"
+              >
+                <FaChevronDown />
+              </button>
 
             </div>
 
 
-            {/* Dropdown */}
+            {/* SERVICES MENU */}
             {servicesOpen && (
               <ul className="services-menu">
 
+                {/* NEWBORN CARE */}
                 <li>
-                  <a href="#" onClick={closeMenu}>
-                    General Pediatric Care
-                  </a>
+                  <Link
+                    to="/services/newborn-care"
+                    onClick={closeMenu}
+                  >
+                    Newborn Care
+                  </Link>
                 </li>
 
+
+                {/* VACCINATION */}
                 <li>
-                  <a href="#" onClick={closeMenu}>
-                    Newborn & Infant Care
-                  </a>
+                  <Link
+                    to="/services/vaccination"
+                    onClick={closeMenu}
+                  >
+                    Vaccination
+                  </Link>
                 </li>
 
+
+                {/* GROWTH & DEVELOPMENT */}
                 <li>
-                  <a href="#" onClick={closeMenu}>
-                    Vaccination & Immunization
-                  </a>
+                  <Link
+                    to="/services/growth-development"
+                    onClick={closeMenu}
+                  >
+                    Growth & Development
+                  </Link>
                 </li>
 
+
+                {/* CHILD NUTRITION */}
                 <li>
-                  <a href="#" onClick={closeMenu}>
-                    Growth & Development Assessment
-                  </a>
+                  <Link
+                    to="/services/child-nutrition"
+                    onClick={closeMenu}
+                  >
+                    Child Nutrition
+                  </Link>
                 </li>
 
+
+                {/* CHILDHOOD ILLNESS */}
                 <li>
-                  <a href="#" onClick={closeMenu}>
-                    Nutrition & Feeding Guidance
-                  </a>
+                  <Link
+                    to="/services/childhood-illness"
+                    onClick={closeMenu}
+                  >
+                    Childhood Illness
+                  </Link>
                 </li>
+
+
+                {/* ADOLESCENT CARE */}
                 <li>
-                  <a href="#" onClick={closeMenu}>
-                    Pediatric Diabetes Care
-                  </a>
-                </li>
-                <li>
-                  <a href="#" onClick={closeMenu}>
-                    Pediatric Rheumatology Care
-                  </a>
-                </li>
-                <li>
-                  <a href="#" onClick={closeMenu}>
-                    Respiratory & Allergy Care
-                  </a>
-                </li>
-                <li>
-                  <a href="#" onClick={closeMenu}>
-                    Neurology & Developmental Care
-                  </a>
-                </li>
-                <li>
-                  <a href="#" onClick={closeMenu}>
-                    Behavioral & Learning Concerns
-                  </a>
-                </li>
-                <li>
-                  <a href="#" onClick={closeMenu}>
-                    Adolescent Health
-                  </a>
-                </li>
-                <li>
-                  <a href="#" onClick={closeMenu}>
-                    Pediatric Skin Care
-                  </a>
-                </li>
-                <li>
-                  <a href="#" onClick={closeMenu}>
-                    Adolescent Health
-                  </a>
-                </li>
-                <li>
-                  <a href="#" onClick={closeMenu}>
-                    * Preventive Child Health
-                  </a>
-                </li>
-                <li>
-                  <a href="#" onClick={closeMenu}>
-                    Post-Hospitalization Follow-up
-                  </a>
+                  <Link
+                    to="/services/adolescent-care"
+                    onClick={closeMenu}
+                  >
+                    Adolescent Care
+                  </Link>
                 </li>
 
               </ul>
@@ -156,7 +144,7 @@ function Navbar() {
           </li>
 
 
-          {/* Mobile Appointment */}
+          {/* MOBILE APPOINTMENT */}
           <li className="mobile-appointment">
 
             <button className="btn">
@@ -166,6 +154,7 @@ function Navbar() {
           </li>
 
 
+          {/* ATTACHMENTS */}
           <li>
             <a href="#" onClick={closeMenu}>
               Attachments
@@ -173,9 +162,10 @@ function Navbar() {
           </li>
 
 
+          {/* TESTIMONIALS */}
           <li>
             <a href="#" onClick={closeMenu}>
-              Testimonials 
+              Testimonials
             </a>
           </li>
 
@@ -184,28 +174,35 @@ function Navbar() {
       </nav>
 
 
-      {/* Right Side */}
+      {/* RIGHT SIDE */}
       <div className="right-section">
 
         <div className="phone">
-  <div className="phone-text">
-    <span>Call us</span>
-    <h4>+91 88793 33393</h4>
-  </div>
 
-  <FiPhoneCall className="phone-icon" />
-</div>
+          <div className="phone-text">
+            <span>Call us</span>
+            <h4>+91 88793 33393</h4>
+          </div>
 
-        <button className="btn"onClick={() => {
+          <FiPhoneCall className="phone-icon" />
+
+        </div>
+
+
+        {/* APPOINTMENT BUTTON */}
+        <button
+          className="btn"
+          onClick={() => {
             window.location.href = "#appointment";
-          }}>
+          }}
+        >
           Appointment
         </button>
 
       </div>
 
 
-      {/* Mobile Menu */}
+      {/* MOBILE MENU */}
       <button
         className="menu-toggle"
         onClick={() => setMenuOpen(!menuOpen)}
@@ -218,3 +215,4 @@ function Navbar() {
 }
 
 export default Navbar;
+

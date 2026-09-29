@@ -12,6 +12,17 @@ import HealthcareCTA from "./components/HealthcareCTA";
 import GoogleReviews from "./components/GoogleReviews";
 import Footer from "./components/Footer";
 
+// ========================================
+// SERVICE PAGES
+// ========================================
+
+import NewbornCare from "./components/servicePages/NewbornCare";
+import Vaccination from "./components/servicePages/Vaccination";
+import GrowthDevelopment from "./components/servicePages/GrowthDevelopment";
+import ChildNutrition from "./components/servicePages/ChildNutrition";
+import ChildhoodIllness from "./components/servicePages/ChildhoodIllness";
+import AdolescentCare from "./components/servicePages/AdolescentCare";
+
 
 // ========================================
 // SCROLL TO TOP WHEN PAGE CHANGES
@@ -62,9 +73,45 @@ function App() {
 
       <Routes>
 
+        {/* HOME */}
         <Route path="/" element={<Home />} />
 
+        {/* ABOUT */}
         <Route path="/about" element={<AboutPage />} />
+
+        {/* ========================================
+            SERVICE PAGES
+        ======================================== */}
+
+        <Route
+          path="/services/newborn-care"
+          element={<NewbornCare />}
+        />
+
+        <Route
+          path="/services/vaccination"
+          element={<Vaccination />}
+        />
+
+        <Route
+          path="/services/growth-development"
+          element={<GrowthDevelopment />}
+        />
+
+        <Route
+          path="/services/child-nutrition"
+          element={<ChildNutrition />}
+        />
+
+        <Route
+          path="/services/childhood-illness"
+          element={<ChildhoodIllness />}
+        />
+
+        <Route
+          path="/services/adolescent-care"
+          element={<AdolescentCare />}
+        />
 
       </Routes>
 
