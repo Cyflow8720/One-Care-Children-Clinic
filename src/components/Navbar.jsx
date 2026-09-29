@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import "../styles/Navbar.css";
 import logo from "../assets/logo.png";
 import { FaChevronDown } from "react-icons/fa";
@@ -36,10 +37,10 @@ function Navbar() {
 
 
           <li>
-            <a href="#" onClick={closeMenu}>
-              About us
-            </a>
-          </li>
+  <Link to="/about" onClick={closeMenu}>
+    About Us
+  </Link>
+</li>
 
 
           {/* SERVICES DROPDOWN */}
