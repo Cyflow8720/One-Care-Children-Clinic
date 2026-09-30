@@ -1,0 +1,1012 @@
+/* =========================================================
+   NEWBORN CARE PAGE
+   One Care Children Clinic
+========================================================= */
+
+.newborn-page {
+  --navy: #0b2c6b;
+  --navy-dark: #071f4d;
+  --copper: #b86a4d;
+  --copper-light: #d08a70;
+  --sage: #8b9d91;
+  --warm-white: #fafaf8;
+  --white: #ffffff;
+  --text: #26344a;
+  --muted: #687386;
+  --border: #e8e9e5;
+
+  color: var(--text);
+  background: var(--warm-white);
+  overflow: hidden;
+}
+
+/* =========================================================
+   COMMON
+========================================================= */
+
+.newborn-page *,
+.newborn-page *::before,
+.newborn-page *::after {
+  box-sizing: border-box;
+}
+
+.section-container {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 14px;
+  color: var(--copper);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.section-label::before {
+  content: "";
+  width: 28px;
+  height: 2px;
+  background: var(--copper);
+  border-radius: 20px;
+}
+
+.section-heading {
+  max-width: 700px;
+  margin-bottom: 45px;
+}
+
+.section-heading h2 {
+  margin: 0 0 16px;
+  color: var(--navy);
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.12;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.section-heading p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.newborn-hero {
+  position: relative;
+  min-height: 680px;
+  display: flex;
+  align-items: center;
+  background:
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(184, 106, 77, 0.09),
+      transparent 30%
+    ),
+    linear-gradient(135deg, #fdfdfb 0%, #f5f7f3 100%);
+}
+
+.newborn-hero::before {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  right: -180px;
+  bottom: -200px;
+  border: 1px solid rgba(184, 106, 77, 0.12);
+  border-radius: 50%;
+}
+
+.newborn-hero-content {
+  position: relative;
+  z-index: 2;
+  width: 52%;
+  padding: 90px 0;
+}
+
+.newborn-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding: 9px 15px;
+  color: var(--copper);
+  background: rgba(184, 106, 77, 0.08);
+  border: 1px solid rgba(184, 106, 77, 0.15);
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.newborn-eyebrow::before {
+  content: "✦";
+  font-size: 13px;
+}
+
+.newborn-hero-content h1 {
+  max-width: 650px;
+  margin: 0 0 22px;
+  color: var(--navy);
+  font-size: clamp(44px, 5.5vw, 72px);
+  line-height: 1.03;
+  letter-spacing: -2.5px;
+  font-weight: 700;
+}
+
+.newborn-hero-content h1 span {
+  color: var(--copper);
+}
+
+.newborn-hero-content > p {
+  max-width: 580px;
+  margin: 0 0 30px;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.newborn-hero-buttons {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 34px;
+}
+
+.newborn-primary-btn,
+.newborn-secondary-btn,
+.newborn-cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 52px;
+  padding: 0 24px;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.newborn-primary-btn {
+  color: var(--white);
+  background: var(--navy);
+  box-shadow: 0 12px 28px rgba(11, 44, 107, 0.18);
+}
+
+.newborn-primary-btn:hover {
+  transform: translateY(-3px);
+  background: var(--navy-dark);
+  box-shadow: 0 16px 32px rgba(11, 44, 107, 0.24);
+}
+
+.newborn-secondary-btn {
+  color: var(--navy);
+  background: transparent;
+  border: 1px solid #d8ddd8;
+}
+
+.newborn-secondary-btn:hover {
+  transform: translateY(-3px);
+  border-color: var(--copper);
+  color: var(--copper);
+}
+
+.newborn-hero-points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+}
+
+.newborn-hero-points span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #526074;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.newborn-hero-points svg {
+  color: var(--copper);
+  font-size: 12px;
+}
+
+/* Hero Image */
+
+.newborn-hero-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 46%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 55px 5% 55px 20px;
+}
+
+.hero-image-shape {
+  position: relative;
+  width: min(470px, 100%);
+  height: min(570px, 82%);
+  overflow: hidden;
+  border-radius: 180px 180px 28px 28px;
+  box-shadow: 0 25px 60px rgba(29, 43, 67, 0.14);
+}
+
+.hero-image-shape::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 65%,
+    rgba(7, 31, 77, 0.15)
+  );
+  pointer-events: none;
+}
+
+.hero-image-shape img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.newborn-intro {
+  padding: 110px 0;
+  background: var(--white);
+}
+
+.newborn-intro {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.newborn-intro-image {
+  position: relative;
+}
+
+.newborn-intro-image::before {
+  content: "";
+  position: absolute;
+  left: -18px;
+  bottom: -18px;
+  width: 150px;
+  height: 150px;
+  border: 2px solid rgba(184, 106, 77, 0.18);
+  border-radius: 24px;
+  z-index: 0;
+}
+
+.newborn-intro-image img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 450px;
+  display: block;
+  object-fit: cover;
+  border-radius: 24px;
+  box-shadow: 0 20px 50px rgba(24, 40, 65, 0.12);
+}
+
+.newborn-intro-content h2 {
+  margin: 0 0 20px;
+  color: var(--navy);
+  font-size: clamp(32px, 4vw, 46px);
+  line-height: 1.12;
+  letter-spacing: -1px;
+}
+
+.newborn-intro-content > p {
+  margin: 0 0 24px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+.intro-highlight {
+  padding: 22px 24px;
+  border-left: 3px solid var(--copper);
+  background: #f8f8f5;
+  border-radius: 0 14px 14px 0;
+}
+
+.intro-highlight p {
+  margin: 0;
+  color: var(--navy);
+  font-size: 15px;
+  line-height: 1.7;
+  font-weight: 600;
+}
+
+/* =========================================================
+   WHAT WE COVER
+========================================================= */
+
+.newborn-services {
+  padding: 110px 0;
+  background: #f5f7f3;
+}
+
+.newborn-care-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.newborn-care-card {
+  padding: 32px 25px;
+  background: var(--white);
+  border: 1px solid rgba(11, 44, 107, 0.06);
+  border-radius: 18px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.newborn-care-card:hover {
+  transform: translateY(-7px);
+  border-color: rgba(184, 106, 77, 0.25);
+  box-shadow: 0 20px 45px rgba(24, 40, 65, 0.09);
+}
+
+.care-icon {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  color: var(--copper);
+  background: rgba(184, 106, 77, 0.09);
+  border-radius: 14px;
+  font-size: 20px;
+}
+
+.newborn-care-card h3 {
+  margin: 0 0 12px;
+  color: var(--navy);
+  font-size: 18px;
+}
+
+.newborn-care-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+/* =========================================================
+   FEATURE SECTION
+========================================================= */
+
+.newborn-feature {
+  padding: 110px 0;
+  background: var(--white);
+}
+
+.newborn-feature,
+.newborn-growth-section {
+  position: relative;
+}
+
+.newborn-feature-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.newborn-feature-content h2,
+.newborn-growth-content h2 {
+  margin: 0 0 18px;
+  color: var(--navy);
+  font-size: clamp(32px, 4vw, 46px);
+  line-height: 1.12;
+  letter-spacing: -1px;
+}
+
+.newborn-feature-content > div > p,
+.newborn-growth-content > p {
+  margin: 0 0 25px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+.feature-list {
+  display: grid;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.feature-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: #4d5b6f;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.feature-list svg {
+  flex-shrink: 0;
+  margin-top: 4px;
+  color: var(--copper);
+}
+
+.newborn-feature-image {
+  position: relative;
+}
+
+.newborn-feature-image img {
+  width: 100%;
+  height: 440px;
+  display: block;
+  object-fit: cover;
+  border-radius: 24px;
+  box-shadow: 0 20px 50px rgba(24, 40, 65, 0.12);
+}
+
+/* =========================================================
+   GROWTH SECTION
+========================================================= */
+
+.newborn-growth-section {
+  padding: 110px 0;
+  background: #f5f7f3;
+}
+
+.newborn-growth-inner {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.newborn-growth-image img {
+  width: 100%;
+  height: 470px;
+  display: block;
+  object-fit: cover;
+  border-radius: 24px;
+  box-shadow: 0 20px 50px rgba(24, 40, 65, 0.12);
+}
+
+.growth-points {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.growth-points div {
+  padding: 17px;
+  background: var(--white);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  color: var(--navy);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* =========================================================
+   WARNING / WHEN TO CONSULT
+========================================================= */
+
+.newborn-warning {
+  padding: 110px 0;
+  background: var(--navy);
+}
+
+.newborn-warning .section-label {
+  color: #e2a28b;
+}
+
+.newborn-warning .section-label::before {
+  background: #e2a28b;
+}
+
+.newborn-warning .section-heading h2 {
+  color: var(--white);
+}
+
+.newborn-warning .section-heading p {
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.warning-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.warning-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  min-height: 115px;
+  padding: 23px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 15px;
+}
+
+.warning-item > div:first-child {
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--navy);
+  background: #e7b19e;
+  border-radius: 50%;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.warning-item p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+/* =========================================================
+   PARENT CENTRED CARE
+========================================================= */
+
+.newborn-parent-section {
+  padding: 110px 0;
+  background: var(--white);
+}
+
+.parent-care-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.parent-care-content h2 {
+  margin: 0 0 18px;
+  color: var(--navy);
+  font-size: clamp(32px, 4vw, 46px);
+  line-height: 1.12;
+  letter-spacing: -1px;
+}
+
+.parent-care-content > p {
+  margin: 0 0 28px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+.parent-care-list {
+  display: grid;
+  gap: 17px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.parent-care-list li {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  color: #4e5b6e;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.parent-care-list svg {
+  flex-shrink: 0;
+  color: var(--copper);
+}
+
+.parent-care-image img {
+  width: 100%;
+  height: 440px;
+  display: block;
+  object-fit: cover;
+  border-radius: 24px;
+  box-shadow: 0 20px 50px rgba(24, 40, 65, 0.12);
+}
+
+/* =========================================================
+   FAQ
+========================================================= */
+
+.newborn-faq {
+  padding: 110px 0;
+  background: #f5f7f3;
+}
+
+.faq-list {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  margin-bottom: 12px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 22px 24px;
+  color: var(--navy);
+  background: transparent;
+  border: none;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+}
+
+.faq-question svg {
+  flex-shrink: 0;
+  color: var(--copper);
+  transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-question svg {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  padding: 0 24px 23px;
+}
+
+.faq-answer p {
+  max-width: 760px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.newborn-cta {
+  padding: 90px 0;
+  background: var(--white);
+}
+
+.newborn-cta-inner {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 55px 65px;
+  background: var(--navy);
+  border-radius: 24px;
+}
+
+.newborn-cta-inner::before,
+.newborn-cta-inner::after {
+  content: "";
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+}
+
+.newborn-cta-inner::before {
+  width: 280px;
+  height: 280px;
+  right: -90px;
+  top: -150px;
+}
+
+.newborn-cta-inner::after {
+  width: 180px;
+  height: 180px;
+  left: -80px;
+  bottom: -110px;
+}
+
+.newborn-cta-inner > div {
+  position: relative;
+  z-index: 1;
+}
+
+.newborn-cta-inner h2 {
+  margin: 0 0 10px;
+  color: var(--white);
+  font-size: clamp(28px, 3.5vw, 42px);
+  line-height: 1.15;
+}
+
+.newborn-cta-inner p {
+  max-width: 600px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.newborn-cta-button {
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+  color: var(--navy);
+  background: var(--white);
+}
+
+.newborn-cta-button:hover {
+  transform: translateY(-3px);
+  background: #f7f2ef;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+  .newborn-hero-content {
+    width: 55%;
+  }
+
+  .newborn-hero-image {
+    width: 45%;
+  }
+
+  .newborn-care-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .newborn-intro,
+  .newborn-feature-content,
+  .newborn-growth-inner,
+  .parent-care-grid {
+    gap: 50px;
+  }
+}
+
+/* =========================================================
+   MOBILE / TABLET
+========================================================= */
+
+@media (max-width: 800px) {
+  .section-container {
+    width: min(100% - 32px, 620px);
+  }
+
+  .newborn-hero {
+    min-height: auto;
+    display: block;
+    padding: 55px 0 0;
+  }
+
+  .newborn-hero-content {
+    width: 100%;
+    padding: 0 0 45px;
+  }
+
+  .newborn-hero-content h1 {
+    font-size: clamp(40px, 11vw, 58px);
+    letter-spacing: -1.8px;
+  }
+
+  .newborn-hero-content > p {
+    font-size: 15px;
+  }
+
+  .newborn-hero-image {
+    position: relative;
+    width: 100%;
+    height: 470px;
+    padding: 0 0 45px;
+  }
+
+  .hero-image-shape {
+    width: min(430px, 100%);
+    height: 420px;
+  }
+
+  .newborn-intro,
+  .newborn-feature-content,
+  .newborn-growth-inner,
+  .parent-care-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .newborn-intro,
+  .newborn-feature,
+  .newborn-growth-section,
+  .newborn-parent-section,
+  .newborn-services,
+  .newborn-warning,
+  .newborn-faq {
+    padding: 80px 0;
+  }
+
+  .newborn-intro {
+    display: grid;
+  }
+
+  .newborn-intro-image {
+    order: 2;
+  }
+
+  .newborn-intro-content {
+    order: 1;
+  }
+
+  .newborn-intro-image img,
+  .newborn-feature-image img,
+  .newborn-growth-image img,
+  .parent-care-image img {
+    height: 390px;
+  }
+
+  .warning-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .newborn-cta-inner {
+    padding: 45px 35px;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 520px) {
+  .section-container {
+    width: calc(100% - 28px);
+  }
+
+  .section-heading {
+    margin-bottom: 32px;
+  }
+
+  .section-heading h2 {
+    font-size: 31px;
+  }
+
+  .newborn-hero {
+    padding-top: 40px;
+  }
+
+  .newborn-eyebrow {
+    font-size: 11px;
+  }
+
+  .newborn-hero-content h1 {
+    font-size: 41px;
+  }
+
+  .newborn-hero-content > p {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  .newborn-hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .newborn-primary-btn,
+  .newborn-secondary-btn {
+    width: 100%;
+  }
+
+  .newborn-hero-points {
+    display: grid;
+    gap: 11px;
+  }
+
+  .newborn-hero-image {
+    height: 390px;
+    padding-bottom: 35px;
+  }
+
+  .hero-image-shape {
+    height: 350px;
+    border-radius: 130px 130px 22px 22px;
+  }
+
+  .newborn-intro,
+  .newborn-feature,
+  .newborn-growth-section,
+  .newborn-parent-section,
+  .newborn-services,
+  .newborn-warning,
+  .newborn-faq {
+    padding: 65px 0;
+  }
+
+  .newborn-intro-image img,
+  .newborn-feature-image img,
+  .newborn-growth-image img,
+  .parent-care-image img {
+    height: 330px;
+    border-radius: 18px;
+  }
+
+  .newborn-care-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .newborn-care-card {
+    padding: 25px 22px;
+  }
+
+  .growth-points {
+    grid-template-columns: 1fr;
+  }
+
+  .warning-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .warning-item {
+    min-height: auto;
+  }
+
+  .faq-question {
+    padding: 19px 18px;
+    font-size: 14px;
+  }
+
+  .faq-answer {
+    padding: 0 18px 20px;
+  }
+
+  .newborn-cta {
+    padding: 60px 0;
+  }
+
+  .newborn-cta-inner {
+    padding: 38px 25px;
+    border-radius: 18px;
+  }
+
+  .newborn-cta-button {
+    width: 100%;
+  }
+}
