@@ -277,7 +277,7 @@
   background: var(--white);
 }
 
-.newborn-intro {
+.newborn-intro-inner {
   display: grid;
   grid-template-columns: 0.95fr 1.05fr;
   gap: 80px;
@@ -327,10 +327,20 @@
 }
 
 .intro-highlight {
-  padding: 22px 24px;
-  border-left: 3px solid var(--copper);
-  background: #f8f8f5;
-  border-radius: 0 14px 14px 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 24px 28px;
+  margin-top: 30px;
+  background: #f7f7f5;
+  border-left: 3px solid #b86a4d;
+  border-radius: 0 18px 18px 0;
+}
+.highlight-icon {
+  flex-shrink: 0;
+  font-size: 20px;
+  color: #0b2c6b;
+  margin-top: 2px;
 }
 
 .intro-highlight p {

@@ -11,7 +11,6 @@ import feedingImage from "../../assets/services/NewbornCare/newborn-feeding.png"
 import growthImage from "../../assets/services/NewbornCare/newborn-growth.png";
 import consultationImage from "../../assets/services/NewbornCare/newborn-consultation.png";
 
-
 // ========================================
 // ICONS
 // ========================================
@@ -26,19 +25,16 @@ import {
   FaChevronDown,
 } from "react-icons/fa";
 
-
 // ========================================
 // COMPONENT
 // ========================================
 
 function NewbornCare() {
-
   const [openFaq, setOpenFaq] = useState(null);
 
   const toggleFaq = (index) => {
     setOpenFaq(openFaq === index ? null : index);
   };
-
 
   // ========================================
   // FAQ DATA
@@ -48,176 +44,150 @@ function NewbornCare() {
     {
       question: "What happens during a newborn check-up?",
       answer:
-        "A newborn check-up includes a detailed assessment of your baby's feeding, weight, growth, physical health and overall development. Parents can also discuss feeding, sleep, hygiene and other newborn-care concerns."
+        "A newborn check-up includes a detailed assessment of your baby's feeding, weight, growth, physical health and overall development. Parents can also discuss feeding, sleep, hygiene and other newborn-care concerns.",
     },
     {
       question: "How often should my newborn be checked?",
       answer:
-        "Newborn follow-up visits depend on your baby's age, health, feeding and individual needs. Your pediatrician will recommend an appropriate schedule and guide you about the next visit."
+        "Newborn follow-up visits depend on your baby's age, health, feeding and individual needs. Your pediatrician will recommend an appropriate schedule and guide you about the next visit.",
     },
     {
       question: "How can I know if my newborn is feeding well?",
       answer:
-        "Your baby's feeding pattern, urine output, weight gain and overall behaviour can provide useful clues. If your baby is feeding poorly, seems unusually sleepy or is not gaining weight as expected, consult your pediatrician."
+        "Your baby's feeding pattern, urine output, weight gain and overall behaviour can provide useful clues. If your baby is feeding poorly, seems unusually sleepy or is not gaining weight as expected, consult your pediatrician.",
     },
     {
       question: "When should I be concerned about jaundice?",
       answer:
-        "Mild newborn jaundice can be common, but increasing yellow discoloration, poor feeding, unusual sleepiness or other concerning symptoms should be evaluated by a pediatrician."
+        "Mild newborn jaundice can be common, but increasing yellow discoloration, poor feeding, unusual sleepiness or other concerning symptoms should be evaluated by a pediatrician.",
     },
     {
       question: "When should I seek urgent medical attention for my newborn?",
       answer:
-        "Breathing difficulty, bluish skin, seizures, significant lethargy, persistent vomiting, fever or difficulty feeding can require prompt medical evaluation."
+        "Breathing difficulty, bluish skin, seizures, significant lethargy, persistent vomiting, fever or difficulty feeding can require prompt medical evaluation.",
     },
   ];
-
 
   return (
     <main className="newborn-page">
 
       {/* ========================================
-          HERO SECTION
+          HERO
       ======================================== */}
 
       <section className="newborn-hero">
 
-        <div className="newborn-hero-content">
+        <div className="section-container newborn-hero-inner">
 
-          <span className="newborn-eyebrow">
-            NEWBORN CARE
-          </span>
+          <div className="newborn-hero-content">
 
-          <h1>
-            Gentle care for
-            <span> your little one.</span>
-          </h1>
+            <span className="newborn-eyebrow">
+              NEWBORN CARE
+            </span>
 
-          <p>
-            The first days of life are filled with important changes.
-            Our newborn care focuses on your baby's health, growth,
-            feeding and wellbeing while giving parents the guidance
-            they need with confidence.
-          </p>
+            <h1>
+              Gentle care for
+              <span> your little one.</span>
+            </h1>
 
-          <div className="newborn-hero-buttons">
+            <p>
+              The first days of life are filled with important changes.
+              Our newborn care focuses on your baby's health, growth,
+              feeding and wellbeing while giving parents the guidance
+              they need with confidence.
+            </p>
 
-            <a
-              href="#appointment"
-              className="newborn-primary-btn"
-            >
-              Book an Appointment
-              <FaArrowRight />
-            </a>
+            <div className="newborn-hero-buttons">
 
-            <a
-              href="#newborn-care"
-              className="newborn-secondary-btn"
-            >
-              Explore Newborn Care
-            </a>
+              <a
+                href="#appointment"
+                className="newborn-primary-btn"
+              >
+                Book an Appointment
+                <FaArrowRight />
+              </a>
+
+              <a
+                href="#newborn-care"
+                className="newborn-secondary-btn"
+              >
+                Explore Newborn Care
+              </a>
+
+            </div>
+
+            
 
           </div>
 
-          <div className="newborn-hero-points">
+          <div className="newborn-hero-image">
 
-            <div>
-              <FaCheck />
-              <span>Personalized care</span>
-            </div>
-
-            <div>
-              <FaCheck />
-              <span>Growth monitoring</span>
-            </div>
-
-            <div>
-              <FaCheck />
-              <span>Parent guidance</span>
+            <div className="hero-image-shape">
+              <img
+                src={heroImage}
+                alt="Newborn baby receiving pediatric care"
+              />
             </div>
 
           </div>
-
-        </div>
-
-
-        <div className="newborn-hero-image">
-
-          <div className="hero-image-shape"></div>
-
-          <img
-            src={heroImage}
-            alt="Newborn baby receiving pediatric care"
-          />
 
         </div>
 
       </section>
 
 
+           
       {/* ========================================
-          INTRODUCTION
+          INTRODUCTION — STARTING STRONG
       ======================================== */}
 
-      <section
-        className="newborn-intro section-container"
-        id="newborn-care"
-      >
+      <section className="newborn-intro" id="newborn-care">
+        <div className="section-container newborn-intro-inner">
 
-        <div className="newborn-intro-image">
+          <div className="newborn-intro-image">
+            <img
+              src={examinationImage}
+              alt="Pediatrician examining a newborn baby"
+            />
+          </div>
 
-          <img
-            src={examinationImage}
-            alt="Pediatrician examining a newborn baby"
-          />
+          <div className="newborn-intro-content">
+            <span className="section-label">
+              STARTING STRONG
+            </span>
 
-        </div>
+            <h2>
+              Why newborn care
+              <span> matters</span>
+            </h2>
 
+            <p>
+              The newborn period is an important stage when babies
+              need careful observation and gentle support. Regular
+              pediatric care helps monitor feeding, weight, growth
+              and overall wellbeing.
+            </p>
 
-        <div className="newborn-intro-content">
+            <p>
+              At One Care Children's Clinic, we also help parents
+              understand their baby's changing needs and provide
+              practical guidance for everyday newborn care.
+            </p>
 
-          <span className="section-label">
-            STARTING STRONG
-          </span>
+            <div className="intro-highlight">
+              
 
-          <h2>
-            Why newborn care
-            <span> matters</span>
-          </h2>
-
-          <p>
-            The newborn period is an important stage when babies
-            need careful observation and gentle support. Regular
-            pediatric care helps monitor feeding, weight, growth
-            and overall wellbeing.
-          </p>
-
-          <p>
-            At One Care Children's Clinic, we also help parents
-            understand their baby's changing needs and provide
-            practical guidance for everyday newborn care.
-          </p>
-
-          <div className="intro-highlight">
-
-            <FaBaby />
-
-            <div>
-              <strong>
-                Every newborn is different.
-              </strong>
-
-              <span>
-                Care is tailored to your baby's individual needs.
-              </span>
+              <div>
+                <strong>Every newborn is different.Care is tailored to your baby's individual needs.</strong>
+                <span>
+                  
+                </span>
+              </div>
             </div>
-
           </div>
 
         </div>
-
       </section>
-
 
       {/* ========================================
           WHAT WE COVER
@@ -249,8 +219,6 @@ function NewbornCare() {
 
           <div className="newborn-care-grid">
 
-            {/* CARD 1 */}
-
             <div className="newborn-care-card">
 
               <div className="care-icon">
@@ -268,8 +236,6 @@ function NewbornCare() {
 
             </div>
 
-
-            {/* CARD 2 */}
 
             <div className="newborn-care-card">
 
@@ -289,8 +255,6 @@ function NewbornCare() {
             </div>
 
 
-            {/* CARD 3 */}
-
             <div className="newborn-care-card">
 
               <div className="care-icon">
@@ -308,8 +272,6 @@ function NewbornCare() {
 
             </div>
 
-
-            {/* CARD 4 */}
 
             <div className="newborn-care-card">
 
@@ -339,58 +301,62 @@ function NewbornCare() {
           FEEDING SECTION
       ======================================== */}
 
-      <section className="newborn-feature section-container">
+      <section className="newborn-feature">
 
-        <div className="newborn-feature-content">
+        <div className="section-container newborn-feature-content">
 
-          <span className="section-label">
-            FEEDING & WELLBEING
-          </span>
+          <div className="newborn-feature-text">
 
-          <h2>
-            Supporting healthy
-            <span> feeding habits</span>
-          </h2>
+            <span className="section-label">
+              FEEDING & WELLBEING
+            </span>
 
-          <p>
-            Feeding is one of the most important parts of
-            newborn care. We help parents understand feeding
-            patterns and recognize signs that may need attention.
-          </p>
+            <h2>
+              Supporting healthy
+              <span> feeding habits</span>
+            </h2>
 
-          <ul className="feature-list">
+            <p>
+              Feeding is one of the most important parts of
+              newborn care. We help parents understand feeding
+              patterns and recognize signs that may need attention.
+            </p>
 
-            <li>
-              <FaCheck />
-              Breastfeeding guidance
-            </li>
+            <ul className="feature-list">
 
-            <li>
-              <FaCheck />
-              Feeding pattern support
-            </li>
+              <li>
+                <FaCheck />
+                <span>Breastfeeding guidance</span>
+              </li>
 
-            <li>
-              <FaCheck />
-              Monitoring weight gain
-            </li>
+              <li>
+                <FaCheck />
+                <span>Feeding pattern support</span>
+              </li>
 
-            <li>
-              <FaCheck />
-              Guidance for common feeding concerns
-            </li>
+              <li>
+                <FaCheck />
+                <span>Monitoring weight gain</span>
+              </li>
 
-          </ul>
+              <li>
+                <FaCheck />
+                <span>Guidance for common feeding concerns</span>
+              </li>
 
-        </div>
+            </ul>
+
+          </div>
 
 
-        <div className="newborn-feature-image">
+          <div className="newborn-feature-image">
 
-          <img
-            src={feedingImage}
-            alt="Newborn feeding support"
-          />
+            <img
+              src={feedingImage}
+              alt="Newborn feeding support"
+            />
+
+          </div>
 
         </div>
 
@@ -435,17 +401,17 @@ function NewbornCare() {
             <div className="growth-points">
 
               <div>
-                <strong>01</strong>
+                <strong>01.  </strong>
                 <span>Weight monitoring</span>
               </div>
 
               <div>
-                <strong>02</strong>
+                <strong>02.  </strong>
                 <span>Feeding assessment</span>
               </div>
 
               <div>
-                <strong>03</strong>
+                <strong>03. </strong>
                 <span>Overall wellbeing</span>
               </div>
 
@@ -458,67 +424,7 @@ function NewbornCare() {
       </section>
 
 
-      {/* ========================================
-          WHEN TO CONSULT
-      ======================================== */}
-
-      <section className="newborn-warning section-container">
-
-        <div className="section-heading">
-
-          <span className="section-label">
-            KNOW WHEN TO SEEK HELP
-          </span>
-
-          <h2>
-            When should you
-            <span> consult a pediatrician?</span>
-          </h2>
-
-          <p>
-            If something feels different about your newborn,
-            it is always okay to seek professional guidance.
-          </p>
-
-        </div>
-
-
-        <div className="warning-grid">
-
-          <div className="warning-item">
-            <FaCheck />
-            <span>Difficulty feeding</span>
-          </div>
-
-          <div className="warning-item">
-            <FaCheck />
-            <span>Poor or inadequate weight gain</span>
-          </div>
-
-          <div className="warning-item">
-            <FaCheck />
-            <span>Increasing yellowing of the skin</span>
-          </div>
-
-          <div className="warning-item">
-            <FaCheck />
-            <span>Breathing difficulties</span>
-          </div>
-
-          <div className="warning-item">
-            <FaCheck />
-            <span>Unusual sleepiness or lethargy</span>
-          </div>
-
-          <div className="warning-item">
-            <FaCheck />
-            <span>Fever or other concerning symptoms</span>
-          </div>
-
-        </div>
-
-      </section>
-
+      
 
       {/* ========================================
           PARENT EXPERIENCE
@@ -590,58 +496,64 @@ function NewbornCare() {
           FAQ
       ======================================== */}
 
-      <section className="newborn-faq section-container">
+      <section className="newborn-faq">
 
-        <div className="section-heading">
+        <div className="section-container">
 
-          <span className="section-label">
-            COMMON QUESTIONS
-          </span>
+          <div className="section-heading">
 
-          <h2>
-            Newborn care
-            <span> FAQs</span>
-          </h2>
+            <span className="section-label">
+              COMMON QUESTIONS
+            </span>
 
-        </div>
+            <h2>
+              Newborn care
+              <span> FAQs</span>
+            </h2>
+
+          </div>
 
 
-        <div className="faq-list">
+          <div className="faq-list">
 
-          {faqs.map((faq, index) => (
+            {faqs.map((faq, index) => (
 
-            <div
-              className={`faq-item ${
-                openFaq === index ? "active" : ""
-              }`}
-              key={index}
-            >
-
-              <button
-                className="faq-question"
-                onClick={() => toggleFaq(index)}
+              <div
+                className={`faq-item ${
+                  openFaq === index ? "active" : ""
+                }`}
+                key={index}
               >
 
-                <span>
-                  {faq.question}
-                </span>
+                <button
+                  className="faq-question"
+                  onClick={() => toggleFaq(index)}
+                >
 
-                <FaChevronDown />
+                  <span>
+                    {faq.question}
+                  </span>
 
-              </button>
+                  <FaChevronDown />
+
+                </button>
 
 
-              <div className="faq-answer">
+                {openFaq === index && (
+                  <div className="faq-answer">
 
-                <p>
-                  {faq.answer}
-                </p>
+                    <p>
+                      {faq.answer}
+                    </p>
+
+                  </div>
+                )}
 
               </div>
 
-            </div>
+            ))}
 
-          ))}
+          </div>
 
         </div>
 
@@ -657,22 +569,26 @@ function NewbornCare() {
         id="appointment"
       >
 
-        <div className="newborn-cta-inner">
+        <div className="section-container newborn-cta-inner">
 
-          <span className="section-label">
-            ONE CARE CHILDREN'S CLINIC
-          </span>
+          <div className="newborn-cta-content">
 
-          <h2>
-            Give your little one
-            <span> the right start.</span>
-          </h2>
+            <span className="section-label">
+              ONE CARE CHILDREN'S CLINIC
+            </span>
 
-          <p>
-            Have questions about your newborn's health,
-            feeding or growth? Schedule a consultation
-            with our pediatric care team.
-          </p>
+            <h2>
+              Give your little one
+              <span> the right start.</span>
+            </h2>
+
+            <p>
+              Have questions about your newborn's health,
+              feeding or growth? Schedule a consultation
+              with our pediatric care team.
+            </p>
+
+          </div>
 
           <a
             href="#"
