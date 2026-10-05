@@ -155,11 +155,11 @@ function Navbar() {
 
 
           {/* ATTACHMENTS */}
-          <li>
-            <a href="#" onClick={closeMenu}>
-              Attachments
-            </a>
-          </li>
+<li>
+  <Link to="/attachments" onClick={closeMenu}>
+    Attachments
+  </Link>
+</li>
 
 
           {/* TESTIMONIALS */}
@@ -169,46 +169,32 @@ function Navbar() {
             </a>
           </li>
 
+          {/* Gallery */}
+          <li>
+            <a href="#" onClick={closeMenu}>
+              Gallery
+            </a>
+          </li>
+
+          {/* Contact us */}
+          <li>
+            <a href="#" onClick={closeMenu}>
+              Contact us
+            </a>
+          </li>
+
         </ul>
 
       </nav>
 
 
-      {/* RIGHT SIDE */}
-      <div className="right-section">
-
-        <div className="phone">
-
-          <div className="phone-text">
-            <span>Call us</span>
-            <h4>+91 88793 33393</h4>
-          </div>
-
-          <FiPhoneCall className="phone-icon" />
-
-        </div>
+      
 
 
-        {/* APPOINTMENT BUTTON */}
-        <button
-          className="btn"
-          onClick={() => {
-            window.location.href = "#appointment";
-          }}
-        >
-          Appointment
-        </button>
-
-      </div>
+        
 
 
-      {/* MOBILE MENU */}
-      <button
-        className="menu-toggle"
-        onClick={() => setMenuOpen(!menuOpen)}
-      >
-        {menuOpen ? "✕" : "☰"}
-      </button>
+     
 
     </header>
   );

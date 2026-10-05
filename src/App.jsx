@@ -1,7 +1,9 @@
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 
+import TopBar from "./components/TopBar";
 import Navbar from "./components/Navbar";
+
 import Hero from "./components/Hero";
 import PediatricServices from "./components/PediatricServices";
 import About from "./components/About";
@@ -11,6 +13,7 @@ import WhyChooseUs from "./components/WhyChooseUs";
 import HealthcareCTA from "./components/HealthcareCTA";
 import GoogleReviews from "./components/GoogleReviews";
 import Footer from "./components/Footer";
+import Attachments from "./components/Attachments";
 
 // ========================================
 // SERVICE PAGES
@@ -22,7 +25,6 @@ import GrowthDevelopment from "./components/servicePages/GrowthDevelopment";
 import ChildNutrition from "./components/servicePages/ChildNutrition";
 import ChildhoodIllness from "./components/servicePages/ChildhoodIllness";
 import AdolescentCare from "./components/servicePages/AdolescentCare";
-
 
 // ========================================
 // SCROLL TO TOP WHEN PAGE CHANGES
@@ -37,7 +39,6 @@ function ScrollToTop() {
 
   return null;
 }
-
 
 // ========================================
 // HOME PAGE
@@ -57,7 +58,6 @@ function Home() {
   );
 }
 
-
 // ========================================
 // APP
 // ========================================
@@ -66,10 +66,18 @@ function App() {
   return (
     <BrowserRouter>
 
-      {/* Automatically moves page to top when route changes */}
+      {/* Scroll to top whenever route changes */}
       <ScrollToTop />
 
-      <Navbar />
+      {/* Sticky Header */}
+      <div className="sticky-header">
+        <TopBar />
+        <Navbar />
+      </div>
+
+      {/* ========================================
+          ALL ROUTES
+      ======================================== */}
 
       <Routes>
 
@@ -78,6 +86,9 @@ function App() {
 
         {/* ABOUT */}
         <Route path="/about" element={<AboutPage />} />
+
+        {/* ATTACHMENTS */}
+        <Route path="/attachments" element={<Attachments />} />
 
         {/* ========================================
             SERVICE PAGES
@@ -115,11 +126,11 @@ function App() {
 
       </Routes>
 
+      {/* Footer appears on every page */}
       <Footer />
 
     </BrowserRouter>
   );
 }
-
 
 export default App;
