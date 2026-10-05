@@ -169,6 +169,13 @@ function Navbar() {
             </a>
           </li>
 
+          {/* Contact Us */}
+<li>
+  <Link to="/contact" onClick={closeMenu}>
+    Contact Us
+  </Link>
+</li>
+
         </ul>
 
       </nav>

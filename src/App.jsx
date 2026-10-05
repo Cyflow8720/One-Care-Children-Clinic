@@ -1,6 +1,10 @@
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 
+// ========================================
+// MAIN COMPONENTS
+// ========================================
+
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import PediatricServices from "./components/PediatricServices";
@@ -11,6 +15,9 @@ import WhyChooseUs from "./components/WhyChooseUs";
 import HealthcareCTA from "./components/HealthcareCTA";
 import GoogleReviews from "./components/GoogleReviews";
 import Footer from "./components/Footer";
+
+import Contact from "./components/Contact";
+import BookAppointment from "./components/BookAppointment";
 
 // ========================================
 // SERVICE PAGES
@@ -23,9 +30,8 @@ import ChildNutrition from "./components/servicePages/ChildNutrition";
 import ChildhoodIllness from "./components/servicePages/ChildhoodIllness";
 import AdolescentCare from "./components/servicePages/AdolescentCare";
 
-
 // ========================================
-// SCROLL TO TOP WHEN PAGE CHANGES
+// SCROLL TO TOP
 // ========================================
 
 function ScrollToTop() {
@@ -38,7 +44,6 @@ function ScrollToTop() {
   return null;
 }
 
-
 // ========================================
 // HOME PAGE
 // ========================================
@@ -47,16 +52,21 @@ function Home() {
   return (
     <>
       <Hero />
+
       <PediatricServices />
+
       <About />
+
       <Services />
+
       <WhyChooseUs />
+
       <HealthcareCTA />
+
       <GoogleReviews />
     </>
   );
 }
-
 
 // ========================================
 // APP
@@ -66,22 +76,54 @@ function App() {
   return (
     <BrowserRouter>
 
-      {/* Automatically moves page to top when route changes */}
+      {/* Scroll page to top whenever route changes */}
       <ScrollToTop />
 
+      {/* Navbar appears on every page */}
       <Navbar />
 
       <Routes>
 
-        {/* HOME */}
-        <Route path="/" element={<Home />} />
+        {/* ==================================
+            HOME
+        ================================== */}
 
-        {/* ABOUT */}
-        <Route path="/about" element={<AboutPage />} />
+        <Route
+          path="/"
+          element={<Home />}
+        />
 
-        {/* ========================================
+
+        {/* ==================================
+            ABOUT PAGE
+        ================================== */}
+
+        <Route
+          path="/about"
+          element={<AboutPage />}
+        />
+
+
+        {/* ==================================
+            CONTACT PAGE
+        ================================== */}
+
+        <Route path="/contact" element={<Contact />} />
+
+
+        {/* ==================================
+            APPOINTMENT PAGE
+        ================================== */}
+
+        <Route
+          path="/appointment"
+          element={<BookAppointment />}
+        />
+
+
+        {/* ==================================
             SERVICE PAGES
-        ======================================== */}
+        ================================== */}
 
         <Route
           path="/services/newborn-care"
@@ -115,11 +157,11 @@ function App() {
 
       </Routes>
 
+      {/* Footer appears on every page */}
       <Footer />
 
     </BrowserRouter>
   );
 }
-
 
 export default App;

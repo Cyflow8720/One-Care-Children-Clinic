@@ -107,12 +107,7 @@ function NewbornCare() {
                 <FaArrowRight />
               </a>
 
-              <a
-                href="#newborn-care"
-                className="newborn-secondary-btn"
-              >
-                Explore Newborn Care
-              </a>
+              
 
             </div>
 

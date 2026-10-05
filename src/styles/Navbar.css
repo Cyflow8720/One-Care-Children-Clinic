@@ -30,7 +30,7 @@
 
 .logo {
     height: 100%;
-    width: 230px;
+    width: 2oopx;
 
     display: flex;
     justify-content: center;
@@ -40,7 +40,7 @@
 }
 
 .logo img {
-    height: 120px;
+    height: 100px;
     width: auto;
     object-fit: contain;
 }
