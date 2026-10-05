@@ -1,11 +1,16 @@
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 
+<<<<<<< HEAD
 // ========================================
 // MAIN COMPONENTS
 // ========================================
 
+=======
+import TopBar from "./components/TopBar";
+>>>>>>> 14753ac36934b3c4c3dead1f83dd9a14f48ae181
 import Navbar from "./components/Navbar";
+
 import Hero from "./components/Hero";
 import PediatricServices from "./components/PediatricServices";
 import About from "./components/About";
@@ -15,6 +20,7 @@ import WhyChooseUs from "./components/WhyChooseUs";
 import HealthcareCTA from "./components/HealthcareCTA";
 import GoogleReviews from "./components/GoogleReviews";
 import Footer from "./components/Footer";
+import Attachments from "./components/Attachments";
 
 import Contact from "./components/Contact";
 import BookAppointment from "./components/BookAppointment";
@@ -76,11 +82,26 @@ function App() {
   return (
     <BrowserRouter>
 
+<<<<<<< HEAD
       {/* Scroll page to top whenever route changes */}
       <ScrollToTop />
 
       {/* Navbar appears on every page */}
       <Navbar />
+=======
+      {/* Scroll to top whenever route changes */}
+      <ScrollToTop />
+
+      {/* Sticky Header */}
+      <div className="sticky-header">
+        <TopBar />
+        <Navbar />
+      </div>
+
+      {/* ========================================
+          ALL ROUTES
+      ======================================== */}
+>>>>>>> 14753ac36934b3c4c3dead1f83dd9a14f48ae181
 
       <Routes>
 
@@ -93,6 +114,7 @@ function App() {
           element={<Home />}
         />
 
+<<<<<<< HEAD
 
         {/* ==================================
             ABOUT PAGE
@@ -122,6 +144,12 @@ function App() {
 
 
         {/* ==================================
+=======
+        {/* ATTACHMENTS */}
+        <Route path="/attachments" element={<Attachments />} />
+
+        {/* ========================================
+>>>>>>> 14753ac36934b3c4c3dead1f83dd9a14f48ae181
             SERVICE PAGES
         ================================== */}
 

@@ -11,3 +11,9 @@ body{
     background:#f8fafc;
 
 }
+.sticky-header {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  width: 100%;
+}
