@@ -1,14 +1,12 @@
+
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 
-<<<<<<< HEAD
 // ========================================
 // MAIN COMPONENTS
 // ========================================
 
-=======
 import TopBar from "./components/TopBar";
->>>>>>> 14753ac36934b3c4c3dead1f83dd9a14f48ae181
 import Navbar from "./components/Navbar";
 
 import Hero from "./components/Hero";
@@ -16,7 +14,7 @@ import PediatricServices from "./components/PediatricServices";
 import About from "./components/About";
 import AboutPage from "./components/AboutPage";
 import Services from "./components/Services";
-import WhyChooseUs from "./components/WhyChooseUs";
+// import WhyChooseUs from "./components/WhyChooseUs";
 import HealthcareCTA from "./components/HealthcareCTA";
 import GoogleReviews from "./components/GoogleReviews";
 import Footer from "./components/Footer";
@@ -65,7 +63,7 @@ function Home() {
 
       <Services />
 
-      <WhyChooseUs />
+      {/* <WhyChooseUs /> */}
 
       <HealthcareCTA />
 
@@ -82,13 +80,6 @@ function App() {
   return (
     <BrowserRouter>
 
-<<<<<<< HEAD
-      {/* Scroll page to top whenever route changes */}
-      <ScrollToTop />
-
-      {/* Navbar appears on every page */}
-      <Navbar />
-=======
       {/* Scroll to top whenever route changes */}
       <ScrollToTop />
 
@@ -101,7 +92,6 @@ function App() {
       {/* ========================================
           ALL ROUTES
       ======================================== */}
->>>>>>> 14753ac36934b3c4c3dead1f83dd9a14f48ae181
 
       <Routes>
 
@@ -114,8 +104,6 @@ function App() {
           element={<Home />}
         />
 
-<<<<<<< HEAD
-
         {/* ==================================
             ABOUT PAGE
         ================================== */}
@@ -125,13 +113,14 @@ function App() {
           element={<AboutPage />}
         />
 
-
         {/* ==================================
             CONTACT PAGE
         ================================== */}
 
-        <Route path="/contact" element={<Contact />} />
-
+        <Route
+          path="/contact"
+          element={<Contact />}
+        />
 
         {/* ==================================
             APPOINTMENT PAGE
@@ -142,14 +131,16 @@ function App() {
           element={<BookAppointment />}
         />
 
+        {/* ==================================
+            ATTACHMENTS
+        ================================== */}
+
+        <Route
+          path="/attachments"
+          element={<Attachments />}
+        />
 
         {/* ==================================
-=======
-        {/* ATTACHMENTS */}
-        <Route path="/attachments" element={<Attachments />} />
-
-        {/* ========================================
->>>>>>> 14753ac36934b3c4c3dead1f83dd9a14f48ae181
             SERVICE PAGES
         ================================== */}
 
@@ -193,3 +184,4 @@ function App() {
 }
 
 export default App;
+

@@ -142,9 +142,29 @@ function About() {
                 ↗
               </span>
             </div>
+            {/* FEATURE 04 */}
+<div
+  className={`about-feature ${
+    activeFeature === 3 ? "active" : ""
+  }`}
+  onClick={() => setActiveFeature(3)}
+>
+  <span className="feature-number">
+    04
+  </span>
+
+  <span className="feature-text">
+    Vaccination & Preventive Care
+  </span>
+
+  <span className="feature-arrow">
+    ↗
+  </span>
+</div>
 
           </div>
         </div>
+        
 
         {/* SMALL IMAGE */}
         <div className="about-secondary-image">

@@ -125,9 +125,8 @@ const Footer = () => {
 
             <p className="footer-description">
 
-              Caring for little ones with
-              <br />
-              expertise, compassion & heart.
+              Care Today For Healther Tommorow 
+             
 
             </p>
 

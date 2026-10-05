@@ -1,19 +1,24 @@
 
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../styles/Navbar.css";
 import logo from "../assets/logo.png";
 import { FaChevronDown } from "react-icons/fa";
-import { FiPhoneCall } from "react-icons/fi";
 
 function Navbar() {
-
   const [menuOpen, setMenuOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+
+  const navigate = useNavigate();
 
   const closeMenu = () => {
     setMenuOpen(false);
     setServicesOpen(false);
+  };
+
+  const handleAppointment = () => {
+    closeMenu();
+    navigate("/appointment");
   };
 
   return (
@@ -21,7 +26,12 @@ function Navbar() {
 
       {/* Logo */}
       <div className="logo">
-        <img src={logo} alt="One Care Children's Clinic" />
+        <Link to="/" onClick={closeMenu}>
+          <img
+            src={logo}
+            alt="One Care Children's Clinic"
+          />
+        </Link>
       </div>
 
 
@@ -32,7 +42,10 @@ function Navbar() {
 
           {/* HOME */}
           <li>
-            <Link to="/" onClick={closeMenu}>
+            <Link
+              to="/"
+              onClick={closeMenu}
+            >
               Home
             </Link>
           </li>
@@ -40,7 +53,10 @@ function Navbar() {
 
           {/* ABOUT */}
           <li>
-            <Link to="/about" onClick={closeMenu}>
+            <Link
+              to="/about"
+              onClick={closeMenu}
+            >
               About Us
             </Link>
           </li>
@@ -59,8 +75,13 @@ function Navbar() {
               </a>
 
               <button
-                className={`dropdown-arrow ${servicesOpen ? "open" : ""}`}
-                onClick={() => setServicesOpen(!servicesOpen)}
+                type="button"
+                className={`dropdown-arrow ${
+                  servicesOpen ? "open" : ""
+                }`}
+                onClick={() =>
+                  setServicesOpen(!servicesOpen)
+                }
                 aria-label="Open services menu"
               >
                 <FaChevronDown />
@@ -147,63 +168,64 @@ function Navbar() {
           {/* MOBILE APPOINTMENT */}
           <li className="mobile-appointment">
 
-            <button className="btn">
-              Schedule appointment
+            <button
+              type="button"
+              className="btn"
+              onClick={handleAppointment}
+            >
+              Schedule Appointment
             </button>
 
           </li>
 
 
           {/* ATTACHMENTS */}
-<li>
-  <Link to="/attachments" onClick={closeMenu}>
-    Attachments
-  </Link>
-</li>
+          <li>
+            <Link
+              to="/attachments"
+              onClick={closeMenu}
+            >
+              Attachments
+            </Link>
+          </li>
 
 
           {/* TESTIMONIALS */}
           <li>
-            <a href="#" onClick={closeMenu}>
+            <a
+              href="#"
+              onClick={(e) => e.preventDefault()}
+            >
               Testimonials
             </a>
           </li>
 
-<<<<<<< HEAD
-          {/* Contact Us */}
-<li>
-  <Link to="/contact" onClick={closeMenu}>
-    Contact Us
-  </Link>
-</li>
-=======
-          {/* Gallery */}
+
+          {/* GALLERY */}
           <li>
-            <a href="#" onClick={closeMenu}>
+            <a
+              href="#"
+              onClick={(e) => e.preventDefault()}
+            >
               Gallery
             </a>
           </li>
 
-          {/* Contact us */}
+
+          {/* CONTACT US */}
           <li>
-            <a href="#" onClick={closeMenu}>
-              Contact us
-            </a>
+            <Link
+              to="/contact"
+              onClick={closeMenu}
+            >
+              Contact Us
+            </Link>
           </li>
->>>>>>> 14753ac36934b3c4c3dead1f83dd9a14f48ae181
 
         </ul>
 
       </nav>
 
-
-      
-
-
-        
-
-
-     
 
     </header>
   );

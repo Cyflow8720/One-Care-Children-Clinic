@@ -199,6 +199,18 @@ function AboutPage() {
                   </p>
                 </div>
               </div>
+              <div className="clinic-highlight-card">
+                <div className="clinic-highlight-number">04</div>
+
+                <div>
+                  <h3>Vaccination Prevention Caret</h3>
+
+                  <p>
+                    From newborn care to everyday childhood health,
+                    we support families through every stage of growth.
+                  </p>
+                </div>
+              </div>
 
             </div>
 

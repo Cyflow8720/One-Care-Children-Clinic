@@ -383,6 +383,13 @@ h6 {
   transition-delay: 0.75s;
 }
 
+.about-visible .about-feature:nth-child(4) {
+  opacity: 1;
+  transform: scale(1);
+
+  transition-delay: 0.95s;
+}
+
 
 /* =========================================
    LAPTOP
