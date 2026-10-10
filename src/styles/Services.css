@@ -1,135 +1,67 @@
-/* =================================
-   FONT IMPORT
-================================= */
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
 
-
-/* =================================
-   BRAND COLORS
-================================= */
-
-/*
-   Deep Navy  : #051C4E
-   Copper     : #B26747
-   Sage Grey  : #818A8B
-   Background : #F7F8F7
-*/
-
-
-/* =================================
-   SERVICES SECTION
-================================= */
+/* SECTION */
 
 .services-section {
   width: 100%;
+  box-sizing: border-box;
   background: #f1f0f0;
-
-  padding: 100px 0 110px;
-
+  padding: 80px 0 90px;
   overflow: hidden;
-
   font-family: "DM Sans", sans-serif;
 }
 
-
-/* =================================
-   HEADING
-================================= */
+/* HEADING */
 
 .services-heading {
   max-width: 1350px;
-   margin: 0 auto 70px; 
-   padding: 0 30px;
+  margin: 0 auto 55px;
+  padding: 0 30px;
+  box-sizing: border-box;
 }
 
-
-/* SMALL LABEL */
-
-.services-heading span {
+.services-heading > span {
   display: block;
-
-  font-family: "DM Sans", sans-serif;
-
   font-size: 15px;
-
   font-weight: 600;
-
   letter-spacing: 0.5px;
-
   text-transform: uppercase;
-
-  color: hsl(18, 43%, 49%);
-
+  color: #b26747;
   margin-bottom: 18px;
 }
 
-
-/* MAIN HEADING */
-
 .services-heading h2 {
   margin: 0;
-
   font-family: "Manrope", sans-serif;
-
-  font-size: 56px;
-
-  line-height: 1.08;
-
-  font-weight: 500;
-
-  letter-spacing: -2.5px;
-
+  font-size: 52px;
+  line-height: 1.12;
+  font-weight: 600;
+  letter-spacing: -2px;
   color: #051c4e;
 }
 
-
-/* BOLD SECOND LINE */
-
-.services-heading h2 strong {
-  font-weight: 800;
-
-  color: #051c4e;
-}
-
-
-/* =================================
-   SLIDER
-================================= */
+/* HORIZONTAL SLIDER */
 
 .services-slider {
   width: 100%;
-
   overflow: hidden;
 }
 
-
 .services-track {
   display: flex;
-
+  align-items: stretch;
   gap: 40px;
-
   width: max-content;
-
   animation: servicesMove 70s linear infinite;
+  will-change: transform;
 }
-
-
-/* =================================
-   PAUSE WHEN MOUSE IS ON CARD
-================================= */
 
 .services-track:hover {
   animation-play-state: paused;
 }
 
-
-/* =================================
-   INFINITE SLIDER ANIMATION
-================================= */
-
 @keyframes servicesMove {
-
   from {
     transform: translateX(0);
   }
@@ -137,356 +69,236 @@
   to {
     transform: translateX(-50%);
   }
-
 }
 
-
-/* =================================
-   SERVICE CARD
-================================= */
+/* CARD */
 
 .service-card {
   width: 800px;
-
   height: 450px;
-
-  flex-shrink: 0;
-
+  flex: 0 0 800px;
   display: flex;
-
-  background: #ffffff;
-
-  border-radius: 16px;
-
   overflow: hidden;
-
-  /*
-     Very subtle premium shadow
-  */
-
-  box-shadow:
-    0 10px 35px rgba(5, 28, 78, 0.07);
-
-  transition:
-    transform 0.4s ease,
-    box-shadow 0.4s ease;
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 35px rgba(5, 28, 78, 0.07);
+  transition: box-shadow 0.3s ease;
 }
-
-
-/* CARD HOVER */
 
 .service-card:hover {
-  box-shadow:
-    0 18px 45px rgba(5, 28, 78, 0.12);
+  box-shadow: 0 18px 45px rgba(5, 28, 78, 0.12);
 }
 
+/* YOUTUBE VIDEO */
 
-/* =================================
-   IMAGE
-================================= */
-
-.service-image {
+.service-image,
+.service-video {
   width: 50%;
-
   height: 100%;
-
+  flex: 0 0 50%;
+  min-width: 0;
   overflow: hidden;
+  background: #051c4e;
 }
 
-
-.service-image img {
-  width: 100%;
-
-  height: 100%;
-
-  object-fit: cover;
-
+.service-video iframe {
   display: block;
-
-  transition:
-    transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 
-
-/* IMAGE HOVER */
-
-.service-card:hover .service-image img {
-  transform: scale(1.05);
-}
-
-
-/* =================================
-   CONTENT
-================================= */
+/* RIGHT CONTENT */
 
 .service-content {
   width: 50%;
-
   height: 100%;
-
-  padding: 46px 50px 38px;
-
-  display: flex;
-
-  flex-direction: column;
-
+  min-width: 0;
+  padding: 42px 40px 35px;
   box-sizing: border-box;
-
-  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
 }
 
-
-/* =================================
-   CATEGORY
-================================= */
-
 .service-category {
-  font-family: "DM Sans", sans-serif;
-
+  display: block;
   font-size: 14px;
-
   font-weight: 600;
-
   letter-spacing: 0.3px;
-
   color: #818a8b;
-
   margin-bottom: 18px;
 }
 
-
-/* =================================
-   TITLE
-================================= */
-
 .service-content h3 {
   margin: 0;
-
-  max-width: 340px;
-
   font-family: "Manrope", sans-serif;
-
-  font-size: 27px;
-
-  line-height: 1.3;
-
+  font-size: 25px;
+  line-height: 1.35;
   font-weight: 700;
-
-  letter-spacing: -0.8px;
-
+  letter-spacing: -0.6px;
   color: #051c4e;
 }
 
-
-/* =================================
-   POINTS
-================================= */
-
-.service-points {
-  margin-top: auto;
-
-  margin-bottom: 45px;
-}
-
-
-.service-points p {
-  margin: 9px 0;
-
-  font-family: "DM Sans", sans-serif;
-
-  font-size: 15px;
-
-  line-height: 1.4;
-
-  font-weight: 400;
-
+.video-description {
+  margin: 16px 0 0;
+  font-size: 14px;
+  line-height: 1.6;
   color: #818a8b;
 }
 
+/* VIDEO DETAILS */
 
-/* =================================
-   POINT SYMBOL
-================================= */
+.service-points {
+  margin-top: auto;
+  margin-bottom: 28px;
+}
+
+.service-points p {
+  margin: 9px 0;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #818a8b;
+}
 
 .service-points p::first-letter {
   color: #b26747;
 }
 
-
-/* =================================
-   READ MORE
-================================= */
+/* YOUTUBE LINK */
 
 .service-read-more {
   border-top: 1px solid #dedede;
-
   padding-top: 18px;
+  flex-shrink: 0;
 }
-
 
 .service-read-more a {
-  text-decoration: none;
-
-  font-family: "DM Sans", sans-serif;
-
-  font-size: 15px;
-
-  font-weight: 600;
-
-  color: #051c4e;
-
-  transition:
-    color 0.3s ease;
-}
-
-
-.service-read-more a span {
   display: inline-block;
-
-  margin-left: 4px;
-
-  color: #b26747;
-
-  transition:
-    transform 0.3s ease;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  color: #051c4e;
+  transition: color 0.3s ease;
 }
-
-
-/* READ MORE HOVER */
 
 .service-read-more a:hover {
   color: #b26747;
 }
 
+.service-read-more a span {
+  display: inline-block;
+  margin-left: 4px;
+  color: #b26747;
+  transition: transform 0.3s ease;
+}
 
 .service-read-more a:hover span {
   transform: translateX(6px);
 }
 
+/* TABLET */
 
-/* =================================
-   MOBILE
-================================= */
-
-@media (max-width: 700px) {
-
-  .services-section {
-    padding: 70px 0 80px;
+@media (max-width: 900px) {
+  .service-card {
+    width: 720px;
+    flex-basis: 720px;
   }
 
+  .service-content {
+    padding: 32px;
+  }
 
-  /* HEADING */
+  .service-content h3 {
+    font-size: 22px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  .services-section {
+    padding: 60px 0 70px;
+  }
 
   .services-heading {
     padding: 0 20px;
-
-    margin-bottom: 45px;
+    margin-bottom: 35px;
   }
 
-
-  .services-heading span {
+  .services-heading > span {
     font-size: 13px;
-
-    margin-bottom: 14px;
+    margin-bottom: 12px;
   }
-
 
   .services-heading h2 {
-    font-size: 38px;
-
-    line-height: 1.1;
-
-    letter-spacing: -1.5px;
+    font-size: 34px;
+    line-height: 1.15;
+    letter-spacing: -1px;
   }
 
-
-  /* CARD */
+  .services-track {
+    gap: 20px;
+  }
 
   .service-card {
     width: 88vw;
-
-    height: 500px;
-
+    flex-basis: 88vw;
+    height: auto;
     flex-direction: column;
-
     border-radius: 14px;
   }
 
-
-  /* IMAGE */
-
-  .service-image {
+  .service-image,
+  .service-video {
     width: 100%;
-
-    height: 52%;
+    height: auto;
+    flex: 0 0 auto;
+    aspect-ratio: 16 / 9;
   }
-
-
-  /* CONTENT */
 
   .service-content {
     width: 100%;
-
-    height: 48%;
-
-    padding: 25px;
+    height: auto;
+    min-height: 320px;
+    padding: 24px;
   }
-
-
-  /* CATEGORY */
 
   .service-category {
     font-size: 13px;
-
     margin-bottom: 10px;
   }
 
-
-  /* TITLE */
-
   .service-content h3 {
     font-size: 21px;
-
-    line-height: 1.3;
   }
 
-
-  /* POINTS */
+  .video-description {
+    font-size: 13px;
+    margin-top: 10px;
+  }
 
   .service-points {
-    margin-bottom: 20px;
+    margin-top: 18px;
+    margin-bottom: 22px;
   }
-
 
   .service-points p {
     font-size: 13px;
-
-    margin: 5px 0;
+    margin: 6px 0;
   }
-
-
-  /* READ MORE */
 
   .service-read-more {
-    padding-top: 12px;
+    margin-top: auto;
+    padding-top: 14px;
   }
-
-
-  .service-read-more a {
-    font-size: 14px;
-  }
-
 }
 
-
-/* =================================
-   REDUCE MOTION
-================================= */
+/* REDUCED MOTION */
 
 @media (prefers-reduced-motion: reduce) {
-
   .services-track {
     animation: none;
   }
-
 }
