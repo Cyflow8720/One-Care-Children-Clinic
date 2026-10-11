@@ -1,5 +1,11 @@
+
 import React, { useState } from "react";
 import "../styles/Contact.css";
+import { Link } from "react-router-dom";
+
+import gallery1 from "../assets/gallery/gallery1.png";
+import gallery2 from "../assets/gallery/gallery2.png";
+import gallery3 from "../assets/gallery/gallery3.png";
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -15,6 +21,8 @@ function Contact() {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -23,47 +31,137 @@ function Contact() {
       ...prev,
       [name]: value,
     }));
+
+    setSubmitError("");
+    setSubmitted(false);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    setSubmitted(true);
+    if (isSubmitting) return;
 
-    setTimeout(() => {
-      setSubmitted(false);
-    }, 5000);
+    setIsSubmitting(true);
+    setSubmitted(false);
+    setSubmitError("");
+
+    try {
+      const apiBaseUrl =
+        import.meta.env.VITE_API_BASE_URL ||
+        "http://localhost:5000";
+
+      const response = await fetch(
+        `${apiBaseUrl}/api/appointments`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
+
+      const result = await response.json().catch(() => ({}));
+
+      if (!response.ok || !result.success) {
+        throw new Error(
+          result.error ||
+            "Unable to submit your appointment request. Please try again."
+        );
+      }
+
+      setSubmitted(true);
+
+      setFormData({
+        parentName: "",
+        childName: "",
+        childAge: "",
+        phone: "",
+        email: "",
+        date: "",
+        time: "",
+        reason: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error("Appointment submission failed:", error);
+
+      setSubmitError(
+        error.message ||
+          "Something went wrong. Please try again."
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
     <main className="appointment-page">
-
-      {/* =====================================================
-          HERO
-      ===================================================== */}
+      {/* HERO */}
       <section className="appointment-hero">
         <div className="appointment-hero-overlay"></div>
 
         <div className="appointment-hero-content">
-          <span className="appointment-eyebrow">
-            PERSONALIZED PEDIATRIC CARE
-          </span>
+          <div className="appointment-hero-text">
+            <span className="appointment-eyebrow">
+              PERSONALIZED PEDIATRIC CARE
+            </span>
 
-          <h1>Book an Appointment</h1>
+            <h1>Book an Appointment</h1>
 
-          <p>
-            Give your child the care they deserve with a consultation
-            designed around their individual needs.
-          </p>
+            <p>
+              Give your child the care they deserve with a consultation
+              designed around their individual needs.
+            </p>
 
-          <div className="appointment-hero-line"></div>
+            <div className="appointment-hero-line"></div>
+          </div>
+
+          {/* Gallery visuals */}
+          <div className="appointment-hero-gallery">
+            <div className="hero-gallery-decoration"></div>
+
+            <div className="hero-gallery-image hero-gallery-image-back">
+              <img src={gallery3} alt="Children's clinic" />
+            </div>
+
+            <div className="hero-gallery-image hero-gallery-image-middle">
+              <img src={gallery2} alt="Clinic care" />
+            </div>
+
+            <div className="hero-gallery-image hero-gallery-image-front">
+              <img src={gallery1} alt="One Care clinic gallery" />
+            </div>
+
+            <Link to="/gallery" className="hero-gallery-label">
+              <span className="hero-gallery-label-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  aria-hidden="true"
+                >
+                  <rect x="3" y="3" width="18" height="18" rx="3" />
+                  <circle cx="8.5" cy="8.5" r="1.5" />
+                  <path d="m21 15-5-5L5 21" />
+                </svg>
+              </span>
+
+              <span className="hero-gallery-label-copy">
+                <strong>Explore Our Gallery</strong>
+                <span>Take a look inside our clinic</span>
+              </span>
+
+              <span className="hero-gallery-arrow">↗</span>
+            </Link>
+          </div>
         </div>
       </section>
 
-
-      {/* =====================================================
-          INTRO
-      ===================================================== */}
+      {/* INTRO */}
       <section className="appointment-intro">
         <span className="section-mini-title">
           WE&apos;RE HERE FOR YOUR LITTLE ONE
@@ -81,15 +179,10 @@ function Contact() {
         </p>
       </section>
 
-
-      {/* =====================================================
-          MAIN APPOINTMENT AREA
-      ===================================================== */}
+      {/* MAIN APPOINTMENT AREA */}
       <section className="appointment-main">
-
-        {/* ================= FORM ================= */}
+        {/* FORM */}
         <div className="appointment-form-wrapper">
-
           <div className="form-heading">
             <span className="form-small-title">
               APPOINTMENT REQUEST
@@ -103,31 +196,50 @@ function Contact() {
             </p>
           </div>
 
-
           {/* SUCCESS MESSAGE */}
           {submitted && (
-            <div className="appointment-success">
+            <div
+              className="appointment-success"
+              role="status"
+              aria-live="polite"
+            >
               <div className="success-icon">✓</div>
 
               <div>
-                <strong>Appointment request received!</strong>
+                <strong>Appointment request submitted!</strong>
 
                 <p>
-                  Thank you. Our clinic team will contact you shortly
-                  to confirm your appointment.
+                  Your request was accepted by the appointment
+                  system. Our clinic team will contact you to
+                  confirm your appointment.
                 </p>
               </div>
             </div>
           )}
 
+          {/* ERROR MESSAGE */}
+          {submitError && (
+            <div
+              className="appointment-error"
+              role="alert"
+              aria-live="assertive"
+            >
+              <strong>Unable to submit your request.</strong>
+
+              <p>{submitError}</p>
+
+              <p>
+                Please try again or call{" "}
+                <a href="tel:+918879333393">
+                  +91 88793 33393
+                </a>.
+              </p>
+            </div>
+          )}
 
           <form onSubmit={handleSubmit}>
-
-            {/* ==============================================
-                PARENT / GUARDIAN DETAILS
-            ============================================== */}
+            {/* PARENT / GUARDIAN DETAILS */}
             <div className="form-section">
-
               <div className="form-section-title">
                 <span className="form-number">01</span>
 
@@ -137,9 +249,7 @@ function Contact() {
                 </div>
               </div>
 
-
               <div className="form-grid">
-
                 <div className="form-group">
                   <label htmlFor="parentName">
                     Parent / Guardian Name
@@ -152,15 +262,14 @@ function Contact() {
                     value={formData.parentName}
                     onChange={handleChange}
                     placeholder="Enter your full name"
+                    autoComplete="name"
+                    maxLength={100}
                     required
                   />
                 </div>
 
-
                 <div className="form-group">
-                  <label htmlFor="phone">
-                    Phone Number
-                  </label>
+                  <label htmlFor="phone">Phone Number</label>
 
                   <input
                     id="phone"
@@ -169,10 +278,13 @@ function Contact() {
                     value={formData.phone}
                     onChange={handleChange}
                     placeholder="+91 XXXXX XXXXX"
+                    autoComplete="tel"
+                    inputMode="tel"
+                    pattern="[+]?[0-9 ()-]{10,20}"
+                    title="Enter a valid phone number."
                     required
                   />
                 </div>
-
 
                 <div className="form-group full-width">
                   <label htmlFor="email">
@@ -186,19 +298,16 @@ function Contact() {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    placeholder="you@example.com"
+                    placeholder="onecarechildrensclinic@gmail.com"
+                    autoComplete="email"
+                    maxLength={150}
                   />
                 </div>
-
               </div>
             </div>
 
-
-            {/* ==============================================
-                CHILD DETAILS
-            ============================================== */}
+            {/* CHILD DETAILS */}
             <div className="form-section">
-
               <div className="form-section-title">
                 <span className="form-number">02</span>
 
@@ -208,9 +317,7 @@ function Contact() {
                 </div>
               </div>
 
-
               <div className="form-grid">
-
                 <div className="form-group">
                   <label htmlFor="childName">
                     Child&apos;s Name
@@ -223,10 +330,10 @@ function Contact() {
                     value={formData.childName}
                     onChange={handleChange}
                     placeholder="Enter child's name"
+                    maxLength={100}
                     required
                   />
                 </div>
-
 
                 <div className="form-group">
                   <label htmlFor="childAge">
@@ -240,19 +347,15 @@ function Contact() {
                     value={formData.childAge}
                     onChange={handleChange}
                     placeholder="e.g. 2 years"
+                    maxLength={40}
                     required
                   />
                 </div>
-
               </div>
             </div>
 
-
-            {/* ==============================================
-                PREFERRED APPOINTMENT
-            ============================================== */}
+            {/* PREFERRED APPOINTMENT */}
             <div className="form-section">
-
               <div className="form-section-title">
                 <span className="form-number">03</span>
 
@@ -262,13 +365,9 @@ function Contact() {
                 </div>
               </div>
 
-
               <div className="form-grid">
-
                 <div className="form-group">
-                  <label htmlFor="date">
-                    Preferred Date
-                  </label>
+                  <label htmlFor="date">Preferred Date</label>
 
                   <input
                     id="date"
@@ -276,15 +375,13 @@ function Contact() {
                     name="date"
                     value={formData.date}
                     onChange={handleChange}
+                    min={new Date().toLocaleDateString("en-CA")}
                     required
                   />
                 </div>
 
-
                 <div className="form-group">
-                  <label htmlFor="time">
-                    Preferred Time
-                  </label>
+                  <label htmlFor="time">Preferred Time</label>
 
                   <select
                     id="time"
@@ -293,33 +390,17 @@ function Contact() {
                     onChange={handleChange}
                     required
                   >
-                    <option value="">
-                      Select preferred time
-                    </option>
-
-                    <option value="morning">
-                      Morning
-                    </option>
-
-                    <option value="afternoon">
-                      Afternoon
-                    </option>
-
-                    <option value="evening">
-                      Evening
-                    </option>
+                    <option value="">Select preferred time</option>
+                    <option value="morning">Morning</option>
+                    <option value="afternoon">Afternoon</option>
+                    <option value="evening">Evening</option>
                   </select>
                 </div>
-
               </div>
             </div>
 
-
-            {/* ==============================================
-                REASON FOR VISIT
-            ============================================== */}
+            {/* REASON FOR VISIT */}
             <div className="form-section">
-
               <div className="form-section-title">
                 <span className="form-number">04</span>
 
@@ -329,12 +410,8 @@ function Contact() {
                 </div>
               </div>
 
-
               <div className="form-group">
-
-                <label htmlFor="reason">
-                  Reason for Visit
-                </label>
+                <label htmlFor="reason">Reason for Visit</label>
 
                 <select
                   id="reason"
@@ -343,48 +420,21 @@ function Contact() {
                   onChange={handleChange}
                   required
                 >
-                  <option value="">
-                    Select a reason
-                  </option>
-
-                  <option value="newborn-care">
-                    Newborn Care
-                  </option>
-
-                  <option value="vaccination">
-                    Vaccination
-                  </option>
-
+                  <option value="">Select a reason</option>
+                  <option value="newborn-care">Newborn Care</option>
+                  <option value="vaccination">Vaccination</option>
                   <option value="growth-development">
-                    Growth & Development
+                    Growth &amp; Development
                   </option>
-
-                  <option value="nutrition">
-                    Child Nutrition
-                  </option>
-
-                  <option value="illness">
-                    Childhood Illness
-                  </option>
-
-                  <option value="adolescent-care">
-                    Adolescent Care
-                  </option>
-
-                  <option value="routine-checkup">
-                    Routine Check-up
-                  </option>
-
-                  <option value="other">
-                    Other
-                  </option>
+                  <option value="nutrition">Child Nutrition</option>
+                  <option value="illness">Childhood Illness</option>
+                  <option value="adolescent-care">Adolescent Care</option>
+                  <option value="routine-checkup">Routine Check-up</option>
+                  <option value="other">Other</option>
                 </select>
-
               </div>
 
-
               <div className="form-group">
-
                 <label htmlFor="message">
                   Additional Information
                   <span className="optional">Optional</span>
@@ -397,18 +447,13 @@ function Contact() {
                   onChange={handleChange}
                   placeholder="Tell us anything you'd like the doctor or clinic team to know..."
                   rows="5"
-                ></textarea>
-
+                  maxLength={1000}
+                />
               </div>
-
             </div>
 
-
-            {/* ==============================================
-                SUBMIT
-            ============================================== */}
+            {/* SUBMIT */}
             <div className="form-submit-area">
-
               <p className="form-note">
                 By submitting this form, you are requesting an
                 appointment. Our team will contact you for confirmation.
@@ -417,26 +462,26 @@ function Contact() {
               <button
                 type="submit"
                 className="appointment-submit"
+                disabled={isSubmitting}
               >
-                <span>Request an Appointment</span>
-                <span className="submit-arrow">→</span>
+                <span>
+                  {isSubmitting
+                    ? "Submitting Request..."
+                    : "Request an Appointment"}
+                </span>
+
+                <span className="submit-arrow">
+                  {isSubmitting ? "…" : "→"}
+                </span>
               </button>
-
             </div>
-
           </form>
-
         </div>
 
-
-        {/* =================================================
-            SIDEBAR
-        ================================================= */}
+        {/* SIDEBAR */}
         <aside className="appointment-sidebar">
-
           {/* CLINIC CARD */}
           <div className="sidebar-card clinic-card">
-
             <span className="sidebar-label">
               ONE CARE CHILDREN CLINIC
             </span>
@@ -472,25 +517,19 @@ function Contact() {
                 <small>Email us</small>
 
                 <a href="mailto:hello@onecarechildrenclinic.com">
-                  hello@onecarechildrenclinic.com
+                  onecarechildrensclinic@gmail.com
                 </a>
               </div>
             </div>
-
           </div>
-
 
           {/* BEFORE YOUR VISIT */}
           <div className="sidebar-card visit-card">
-
-            <span className="sidebar-label">
-              BEFORE YOUR VISIT
-            </span>
+            <span className="sidebar-label">BEFORE YOUR VISIT</span>
 
             <h3>What to bring</h3>
 
             <ul className="visit-checklist">
-
               <li>
                 <span>✓</span>
                 <p>Previous medical records</p>
@@ -515,23 +554,15 @@ function Contact() {
                 <span>✓</span>
                 <p>Your questions or concerns</p>
               </li>
-
             </ul>
-
           </div>
-
 
           {/* EMERGENCY */}
           <div className="sidebar-card emergency-card">
-
-            <div className="emergency-icon">
-              !
-            </div>
+            <div className="emergency-icon">!</div>
 
             <div>
-              <span className="sidebar-label">
-                IMPORTANT
-              </span>
+              <span className="sidebar-label">IMPORTANT</span>
 
               <h3>Need urgent care?</h3>
 
@@ -540,28 +571,17 @@ function Contact() {
                 medical emergencies.
               </p>
 
-              <a
-                href="tel:112"
-                className="emergency-link"
-              >
+              <a href="tel:112" className="emergency-link">
                 Call emergency services →
               </a>
             </div>
-
           </div>
-
         </aside>
-
       </section>
 
-
-      {/* =====================================================
-          HOW IT WORKS
-      ===================================================== */}
+      {/* HOW IT WORKS */}
       <section className="appointment-process">
-
         <div className="process-heading">
-
           <span className="section-mini-title">
             SIMPLE &amp; CONVENIENT
           </span>
@@ -575,21 +595,13 @@ function Contact() {
             We&apos;ve kept the process easy so you can focus on
             what matters most — your child.
           </p>
-
         </div>
 
-
         <div className="process-grid">
-
           <div className="process-card">
+            <span className="process-number">01</span>
 
-            <span className="process-number">
-              01
-            </span>
-
-            <div className="process-icon">
-              ✎
-            </div>
+            <div className="process-icon">✎</div>
 
             <h3>Share the details</h3>
 
@@ -597,19 +609,12 @@ function Contact() {
               Complete the appointment request form with your
               child&apos;s basic details and your concerns.
             </p>
-
           </div>
 
-
           <div className="process-card">
+            <span className="process-number">02</span>
 
-            <span className="process-number">
-              02
-            </span>
-
-            <div className="process-icon">
-              ☎
-            </div>
+            <div className="process-icon">☎</div>
 
             <h3>We&apos;ll connect</h3>
 
@@ -617,19 +622,12 @@ function Contact() {
               Our clinic team will contact you to discuss your
               preferred appointment time.
             </p>
-
           </div>
 
-
           <div className="process-card">
+            <span className="process-number">03</span>
 
-            <span className="process-number">
-              03
-            </span>
-
-            <div className="process-icon">
-              ✓
-            </div>
+            <div className="process-icon">✓</div>
 
             <h3>Visit the clinic</h3>
 
@@ -637,21 +635,13 @@ function Contact() {
               Once confirmed, simply arrive at the clinic for
               your child&apos;s consultation.
             </p>
-
           </div>
-
         </div>
-
       </section>
 
-
-      {/* =====================================================
-          FAQ
-      ===================================================== */}
+      {/* FAQ */}
       <section className="appointment-faq">
-
         <div className="faq-heading">
-
           <span className="section-mini-title">
             QUESTIONS, ANSWERED
           </span>
@@ -660,12 +650,9 @@ function Contact() {
             Before you
             <span> visit us.</span>
           </h2>
-
         </div>
 
-
         <div className="faq-list">
-
           <details className="faq-item">
             <summary>
               How do I book an appointment?
@@ -678,7 +665,6 @@ function Contact() {
               and time based on availability.
             </p>
           </details>
-
 
           <details className="faq-item">
             <summary>
@@ -693,7 +679,6 @@ function Contact() {
             </p>
           </details>
 
-
           <details className="faq-item">
             <summary>
               What should I bring for my child&apos;s visit?
@@ -706,7 +691,6 @@ function Contact() {
               recent reports relevant to your child.
             </p>
           </details>
-
 
           <details className="faq-item">
             <summary>
@@ -721,7 +705,6 @@ function Contact() {
             </p>
           </details>
 
-
           <details className="faq-item">
             <summary>
               Can I contact the clinic directly?
@@ -734,19 +717,12 @@ function Contact() {
               assistance.
             </p>
           </details>
-
         </div>
-
       </section>
 
-
-      {/* =====================================================
-          FINAL CTA
-      ===================================================== */}
+      {/* FINAL CTA */}
       <section className="appointment-bottom-cta">
-
         <div className="bottom-cta-content">
-
           <span className="section-mini-title">
             WE&apos;RE HERE WHEN YOU NEED US
           </span>
@@ -763,7 +739,6 @@ function Contact() {
           </p>
 
           <div className="bottom-cta-actions">
-
             <a
               href="tel:+918879333393"
               className="appointment-call"
@@ -771,13 +746,9 @@ function Contact() {
               <span>☎</span>
               Call +91 88793 33393
             </a>
-
           </div>
-
         </div>
-
       </section>
-
     </main>
   );
 }

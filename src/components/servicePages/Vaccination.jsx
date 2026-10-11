@@ -1,19 +1,11 @@
 import { useState } from "react";
-import "../../styles/servicePages/NewbornCare.css";
+import { Link } from "react-router-dom";
+import "../../styles/servicePages/Vaccination.css";
 
-// ========================================
-// IMAGES
-// ========================================
-
-import heroImage from "../../assets/services/NewbornCare/newborn-hero.png";
-import examinationImage from "../../assets/services/NewbornCare/newborn-examination.png";
-import feedingImage from "../../assets/services/NewbornCare/newborn-feeding.png";
-import growthImage from "../../assets/services/NewbornCare/newborn-growth.png";
-import consultationImage from "../../assets/services/NewbornCare/newborn-consultation.png";
-
-// ========================================
-// ICONS
-// ========================================
+import VACCINATION1 from "../../assets/VACCINATION/VACCINATION 1.png";
+import VACCINATION2 from "../../assets/VACCINATION/VACCINATION 2.png";
+import VACCINATION3 from "../../assets/VACCINATION/VACCINATION 3.png";
+import VACCINATION4 from "../../assets/VACCINATION/VACCINATION 4.png";
 
 import {
   FaBaby,
@@ -25,163 +17,134 @@ import {
   FaChevronDown,
 } from "react-icons/fa";
 
-// ========================================
-// COMPONENT
-// ========================================
-
-function NewbornCare() {
+function Vaccination() {
   const [openFaq, setOpenFaq] = useState(null);
+
+  const examinationImage = VACCINATION2;
+  const feedingImage = VACCINATION3;
+  const growthImage = VACCINATION4;
+
+  const faqs = [
+    {
+      question: "When should my baby receive the first vaccines?",
+      answer:
+        "Some vaccines are recommended at birth, while others are given during infancy and childhood. Your pediatrician can guide you according to the applicable immunization schedule and your baby's vaccination records.",
+    },
+    {
+      question: "Which vaccines does my child need?",
+      answer:
+        "Recommended vaccines depend on your child's age, vaccination history, health, and the immunization schedule being followed. Your pediatrician can help determine which doses are due.",
+    },
+    {
+      question: "Are childhood vaccines safe?",
+      answer:
+        "Approved vaccines are evaluated for safety and effectiveness. Mild reactions, such as soreness at the injection site or a low-grade fever, may occur. Discuss any concerns or previous vaccine reactions with your pediatrician.",
+    },
+    {
+      question: "What should I do if my child misses a vaccine?",
+      answer:
+        "Contact your pediatrician to review your child's vaccination record and determine the appropriate catch-up schedule. In most cases, a missed dose does not mean the entire vaccination series must be restarted.",
+    },
+    {
+      question: "What care does my child need after vaccination?",
+      answer:
+        "Follow your healthcare professional's advice and monitor your child for unusual symptoms. Seek urgent medical attention for signs of a serious allergic reaction, such as difficulty breathing or swelling of the face or throat.",
+    },
+  ];
 
   const toggleFaq = (index) => {
     setOpenFaq(openFaq === index ? null : index);
   };
 
-  // ========================================
-  // FAQ DATA
-  // ========================================
-
-  const faqs = [
-    {
-      question: "What happens during a newborn check-up?",
-      answer:
-        "A newborn check-up includes a detailed assessment of your baby's feeding, weight, growth, physical health and overall development. Parents can also discuss feeding, sleep, hygiene and other newborn-care concerns.",
-    },
-    {
-      question: "How often should my newborn be checked?",
-      answer:
-        "Newborn follow-up visits depend on your baby's age, health, feeding and individual needs. Your pediatrician will recommend an appropriate schedule and guide you about the next visit.",
-    },
-    {
-      question: "How can I know if my newborn is feeding well?",
-      answer:
-        "Your baby's feeding pattern, urine output, weight gain and overall behaviour can provide useful clues. If your baby is feeding poorly, seems unusually sleepy or is not gaining weight as expected, consult your pediatrician.",
-    },
-    {
-      question: "When should I be concerned about jaundice?",
-      answer:
-        "Mild newborn jaundice can be common, but increasing yellow discoloration, poor feeding, unusual sleepiness or other concerning symptoms should be evaluated by a pediatrician.",
-    },
-    {
-      question: "When should I seek urgent medical attention for my newborn?",
-      answer:
-        "Breathing difficulty, bluish skin, seizures, significant lethargy, persistent vomiting, fever or difficulty feeding can require prompt medical evaluation.",
-    },
-  ];
-
   return (
     <main className="newborn-page">
 
-      {/* ========================================
-          HERO
-      ======================================== */}
+      {/* HERO SECTION */}
 
       <section className="newborn-hero">
-
         <div className="section-container newborn-hero-inner">
 
           <div className="newborn-hero-content">
-
             <span className="newborn-eyebrow">
-              NEWBORN CARE
+              CHILD VACCINATION
             </span>
 
-            <h1>
-              Gentle care for
-              <span> your little one.</span>
+            <h1 className="hero-title">
+              <span>A Healthy Start</span>
+              <span className="highlight">Through Vaccination</span>
             </h1>
 
             <p>
-              The first days of life are filled with important changes.
-              Our newborn care focuses on your baby's health, growth,
-              feeding and wellbeing while giving parents the guidance
-              they need with confidence.
+              Childhood vaccination helps protect children against
+              several preventable infectious diseases. At One Care
+              Children's Clinic, we provide pediatric vaccination
+              guidance, age-appropriate immunization, and support
+              for parents throughout their child's growing years.
             </p>
 
             <div className="newborn-hero-buttons">
-
-              <a
-                href="#appointment"
-                className="newborn-primary-btn"
-              >
+              <Link to="/contact" className="newborn-primary-btn">
                 Book an Appointment
                 <FaArrowRight />
-              </a>
-
-              <a
-                href="#newborn-care"
-                className="newborn-secondary-btn"
-              >
-                Explore Newborn Care
-              </a>
-
+              </Link>
             </div>
-
-            
-
           </div>
 
           <div className="newborn-hero-image">
-
             <div className="hero-image-shape">
               <img
-                src={heroImage}
-                alt="Newborn baby receiving pediatric care"
+                src={VACCINATION1}
+                alt="Baby receiving gentle pediatric care"
               />
             </div>
-
           </div>
 
         </div>
-
       </section>
 
+      {/* INTRODUCTION */}
 
-           
-      {/* ========================================
-          INTRODUCTION — STARTING STRONG
-      ======================================== */}
-
-      <section className="newborn-intro" id="newborn-care">
+      <section className="newborn-intro" id="vaccination">
         <div className="section-container newborn-intro-inner">
 
           <div className="newborn-intro-image">
             <img
               src={examinationImage}
-              alt="Pediatrician examining a newborn baby"
+              alt="Pediatrician assessing a child before vaccination"
             />
           </div>
 
           <div className="newborn-intro-content">
             <span className="section-label">
-              STARTING STRONG
+              A HEALTHIER FUTURE
             </span>
 
             <h2>
-              Why newborn care
-              <span> matters</span>
+              Why Is Childhood Vaccination
+              <span> Important?</span>
             </h2>
 
             <p>
-              The newborn period is an important stage when babies
-              need careful observation and gentle support. Regular
-              pediatric care helps monitor feeding, weight, growth
-              and overall wellbeing.
+              Childhood vaccination helps build immunity against
+              serious infectious diseases and plays an essential
+              role in protecting your child's health. Following
+              the recommended immunization schedule helps ensure
+              vaccines are given at the appropriate ages.
             </p>
 
             <p>
-              At One Care Children's Clinic, we also help parents
-              understand their baby's changing needs and provide
-              practical guidance for everyday newborn care.
+              At One Care Children's Clinic, we guide parents
+              through recommended childhood vaccines, explain
+              their benefits, and help them understand what to
+              expect before and after vaccination.
             </p>
 
             <div className="intro-highlight">
-              
-
               <div>
-                <strong>Every newborn is different.Care is tailored to your baby's individual needs.</strong>
-                <span>
-                  
-                </span>
+                <strong>
+                  Every vaccine matters. Give your child a
+                  healthier start with age-appropriate immunization.
+                </strong>
               </div>
             </div>
           </div>
@@ -189,421 +152,225 @@ function NewbornCare() {
         </div>
       </section>
 
-      {/* ========================================
-          WHAT WE COVER
-      ======================================== */}
+      {/* VACCINATION SERVICES */}
 
       <section className="newborn-services">
-
         <div className="section-container">
 
           <div className="section-heading">
-
             <span className="section-label">
               OUR CARE
             </span>
 
             <h2>
-              Complete care for your
-              <span> newborn's early days</span>
+              Comprehensive Vaccination
+              <span> Care for Children</span>
             </h2>
 
             <p>
-              From routine assessments to parent guidance, we
-              support you through the important early stages
-              of your baby's life.
+              Our pediatric vaccination services focus on
+              age-appropriate immunization, vaccination guidance,
+              and support throughout your child's growing years.
             </p>
-
           </div>
-
 
           <div className="newborn-care-grid">
 
             <div className="newborn-care-card">
-
               <div className="care-icon">
                 <FaStethoscope />
               </div>
 
-              <h3>
-                Newborn Check-ups
-              </h3>
+              <h3>Newborn & Infant Vaccination</h3>
 
               <p>
-                Routine assessments to monitor your baby's
-                overall health and wellbeing.
+                Guidance on vaccines recommended during the
+                early months of life according to the applicable
+                immunization schedule.
               </p>
-
             </div>
 
-
             <div className="newborn-care-card">
-
               <div className="care-icon">
                 <FaBaby />
               </div>
 
-              <h3>
-                Feeding Support
-              </h3>
+              <h3>Childhood Immunization</h3>
 
               <p>
-                Guidance for breastfeeding, feeding patterns
-                and common feeding concerns.
+                Support with routine childhood vaccines to
+                help protect against vaccine-preventable diseases.
               </p>
-
             </div>
 
-
             <div className="newborn-care-card">
-
               <div className="care-icon">
                 <FaWeight />
               </div>
 
-              <h3>
-                Weight & Growth
-              </h3>
+              <h3>Vaccination Schedule Guidance</h3>
 
               <p>
-                Regular monitoring of weight, growth and
-                important developmental changes.
+                Help understanding recommended vaccine timings,
+                upcoming doses, and follow-up appointments.
               </p>
-
             </div>
 
-
             <div className="newborn-care-card">
-
               <div className="care-icon">
                 <FaHeartbeat />
               </div>
 
-              <h3>
-                Health Monitoring
-              </h3>
+              <h3>Catch-Up Vaccination Guidance</h3>
 
               <p>
-                Assessment of common newborn concerns and
-                guidance on when medical attention is needed.
+                Review of vaccination records and guidance on
+                recommended next steps when a child has missed
+                a scheduled dose.
               </p>
-
             </div>
 
           </div>
-
         </div>
-
       </section>
 
-
-      {/* ========================================
-          FEEDING SECTION
-      ======================================== */}
+      {/* VACCINATION AND PROTECTION */}
 
       <section className="newborn-feature">
-
         <div className="section-container newborn-feature-content">
 
           <div className="newborn-feature-text">
-
             <span className="section-label">
-              FEEDING & WELLBEING
+              VACCINATION & PROTECTION
             </span>
 
             <h2>
-              Supporting healthy
-              <span> feeding habits</span>
+              Helping Protect Your Child
+              <span> at Every Stage</span>
             </h2>
 
             <p>
-              Feeding is one of the most important parts of
-              newborn care. We help parents understand feeding
-              patterns and recognize signs that may need attention.
+              Vaccination is an important part of preventive
+              pediatric care. Our team helps parents understand
+              recommended vaccines, prepare for vaccination visits,
+              and recognize common reactions that may occur afterward.
             </p>
 
             <ul className="feature-list">
-
               <li>
                 <FaCheck />
-                <span>Breastfeeding guidance</span>
+                <span>Guidance on age-appropriate vaccines</span>
               </li>
 
               <li>
                 <FaCheck />
-                <span>Feeding pattern support</span>
+                <span>Support with vaccination records</span>
               </li>
 
               <li>
                 <FaCheck />
-                <span>Monitoring weight gain</span>
+                <span>Information about common post-vaccination reactions</span>
               </li>
 
               <li>
                 <FaCheck />
-                <span>Guidance for common feeding concerns</span>
+                <span>Advice on follow-up doses and missed vaccinations</span>
               </li>
-
             </ul>
-
           </div>
 
-
           <div className="newborn-feature-image">
-
             <img
               src={feedingImage}
-              alt="Newborn feeding support"
+              alt="Baby receiving attentive pediatric care"
             />
-
           </div>
 
         </div>
-
       </section>
 
-
-      {/* ========================================
-          GROWTH SECTION
-      ======================================== */}
+      {/* VACCINATION SCHEDULE */}
 
       <section className="newborn-growth-section">
-
         <div className="section-container newborn-growth-inner">
 
           <div className="newborn-growth-image">
-
             <img
               src={growthImage}
-              alt="Newborn growth and weight monitoring"
+              alt="Pediatric care supporting a child's healthy development"
             />
-
           </div>
 
-
           <div className="newborn-growth-content">
-
             <span className="section-label">
-              GROWTH MONITORING
+              VACCINATION SCHEDULE
             </span>
 
             <h2>
-              Small changes matter
-              <span> in the early days</span>
+              Staying on Track With
+              <span> Your Child's Vaccines</span>
             </h2>
 
             <p>
-              Tracking your baby's growth helps your pediatrician
-              understand how your baby is progressing and whether
-              additional support may be needed.
+              Following an appropriate vaccination schedule helps
+              children receive recommended protection at the right
+              time. Your pediatrician can review your child's
+              vaccination history and advise you on upcoming doses.
             </p>
 
             <div className="growth-points">
-
               <div>
-                <strong>01.  </strong>
-                <span>Weight monitoring</span>
+                <strong>01.</strong>
+                <span>Review Vaccination Records</span>
               </div>
 
               <div>
-                <strong>02.  </strong>
-                <span>Feeding assessment</span>
+                <strong>02.</strong>
+                <span>Follow Recommended Timings</span>
               </div>
 
               <div>
-                <strong>03. </strong>
-                <span>Overall wellbeing</span>
+                <strong>03.</strong>
+                <span>Plan Follow-Up Doses</span>
               </div>
-
             </div>
-
           </div>
 
         </div>
-
       </section>
 
+      {/* FINAL APPOINTMENT CTA */}
 
-      
-
-      {/* ========================================
-          PARENT EXPERIENCE
-      ======================================== */}
-
-      <section className="newborn-parent-section">
-
-        <div className="section-container parent-care-grid">
-
-          <div className="parent-care-content">
-
-            <span className="section-label">
-              PARENT-CENTRED CARE
-            </span>
-
-            <h2>
-              Care that gives
-              <span> parents confidence</span>
-            </h2>
-
-            <p>
-              Newborn care is not only about examining the baby.
-              It is also about helping parents understand what
-              their little one needs at every stage.
-            </p>
-
-            <div className="parent-care-list">
-
-              <div>
-                <FaCheck />
-                <span>Gentle and thorough examination</span>
-              </div>
-
-              <div>
-                <FaCheck />
-                <span>Clear explanations for parents</span>
-              </div>
-
-              <div>
-                <FaCheck />
-                <span>Personalized care guidance</span>
-              </div>
-
-              <div>
-                <FaCheck />
-                <span>Follow-up recommendations</span>
-              </div>
-
-            </div>
-
-          </div>
-
-
-          <div className="parent-care-image">
-
-            <img
-              src={consultationImage}
-              alt="Parents discussing newborn care with pediatrician"
-            />
-
-          </div>
-
-        </div>
-
-      </section>
-
-
-      {/* ========================================
-          FAQ
-      ======================================== */}
-
-      <section className="newborn-faq">
-
-        <div className="section-container">
-
-          <div className="section-heading">
-
-            <span className="section-label">
-              COMMON QUESTIONS
-            </span>
-
-            <h2>
-              Newborn care
-              <span> FAQs</span>
-            </h2>
-
-          </div>
-
-
-          <div className="faq-list">
-
-            {faqs.map((faq, index) => (
-
-              <div
-                className={`faq-item ${
-                  openFaq === index ? "active" : ""
-                }`}
-                key={index}
-              >
-
-                <button
-                  className="faq-question"
-                  onClick={() => toggleFaq(index)}
-                >
-
-                  <span>
-                    {faq.question}
-                  </span>
-
-                  <FaChevronDown />
-
-                </button>
-
-
-                {openFaq === index && (
-                  <div className="faq-answer">
-
-                    <p>
-                      {faq.answer}
-                    </p>
-
-                  </div>
-                )}
-
-              </div>
-
-            ))}
-
-          </div>
-
-        </div>
-
-      </section>
-
-
-      {/* ========================================
-          APPOINTMENT CTA
-      ======================================== */}
-
-      <section
-        className="newborn-cta"
-        id="appointment"
-      >
-
+      <section className="newborn-cta" id="appointment">
         <div className="section-container newborn-cta-inner">
 
           <div className="newborn-cta-content">
-
             <span className="section-label">
               ONE CARE CHILDREN'S CLINIC
             </span>
 
             <h2>
-              Give your little one
-              <span> the right start.</span>
+              Every Dose Is a Step
+              <span> Towards Better Protection</span>
             </h2>
 
             <p>
-              Have questions about your newborn's health,
-              feeding or growth? Schedule a consultation
-              with our pediatric care team.
+              Book a pediatric vaccination consultation to
+              discuss your child's immunization schedule and
+              upcoming vaccine requirements.
             </p>
-
           </div>
 
-          <a
-            href="#"
-            className="newborn-cta-button"
-          >
+          <Link to="/contact" className="newborn-cta-button">
             Book an Appointment
             <FaArrowRight />
-          </a>
+          </Link>
 
         </div>
-
       </section>
 
     </main>
   );
 }
 
-export default NewbornCare;
+export default Vaccination;

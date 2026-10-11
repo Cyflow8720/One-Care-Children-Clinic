@@ -19,7 +19,7 @@ import HealthcareCTA from "./components/HealthcareCTA";
 import GoogleReviews from "./components/GoogleReviews";
 import Footer from "./components/Footer";
 import Attachments from "./components/Attachments";
-
+import Gallery from "./components/Gallery";
 import Contact from "./components/Contact";
 import BookAppointment from "./components/BookAppointment";
 
@@ -139,6 +139,11 @@ function App() {
           path="/attachments"
           element={<Attachments />}
         />
+        {/* ==================================
+            Gallery
+        ================================== */}
+
+        <Route path="/gallery" element={<Gallery />} />
 
         {/* ==================================
             SERVICE PAGES

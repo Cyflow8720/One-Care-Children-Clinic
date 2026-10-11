@@ -10,32 +10,32 @@ import "../styles/GoogleReviews.css";
 const GoogleReviews = () => {
   const reviews = [
     {
-      name: "Emma Wilson",
+      name: "Susmita Jaigade",
       review:
         "Highly recommend! The entire experience was smooth, professional and caring.",
     },
     {
-      name: "Grace Miller",
+      name: "Anand Pawar",
       review:
         "I left with a very positive impression overall. From beginning to end, the experience felt smooth, well organized, and easy to follow.",
     },
     {
-      name: "Sofia Martinez",
+      name: "Saby Sabu",
       review:
         "Better than I imagined. The staff was extremely helpful and professional throughout the entire experience.",
     },
     {
-      name: "Olivia Anderson",
+      name: "Sakshi Singh",
       review:
         "Excellent service and very supportive staff. Everything was handled professionally and with great care.",
     },
     {
-      name: "Daniel Thomas",
+      name: "Ramesh Pal",
       review:
         "Very happy with the overall experience. The team was kind, helpful and attentive throughout.",
     },
     {
-      name: "Michael Brown",
+      name: "Sanvi Solnkhi",
       review:
         "A wonderful experience from start to finish. The staff was courteous, professional and supportive.",
     },
@@ -123,7 +123,7 @@ const GoogleReviews = () => {
           </span>
 
           <h2>
-            Our Happy <span>Clients!</span>
+            Our Happy <span>Patients!</span>
           </h2>
 
           <p>
@@ -133,59 +133,7 @@ const GoogleReviews = () => {
         </div>
 
 
-        {/* =====================================
-            GOOGLE SUMMARY
-        ===================================== */}
-
-        <div className="google-summary">
-
-          <div className="google-info">
-
-            <div className="google-logo">
-              <span className="google-g">G</span>
-            </div>
-
-            <div className="google-details">
-
-              <h3>
-                Google Reviews
-              </h3>
-
-              <div className="rating-row">
-
-                <strong>
-                  4.3
-                </strong>
-
-                <div className="stars">
-
-                  {[1, 2, 3, 4, 5].map((star) => (
-                    <FaStar key={star} />
-                  ))}
-
-                </div>
-
-                <span className="review-count">
-                  (191)
-                </span>
-
-              </div>
-
-            </div>
-
-          </div>
-
-
-          <a
-            href="https://www.google.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="feedback-button"
-          >
-            Share your feedback
-          </a>
-
-        </div>
+        
 
 
         {/* =====================================

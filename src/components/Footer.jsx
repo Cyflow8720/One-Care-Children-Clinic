@@ -200,7 +200,7 @@ const Footer = () => {
 
               <li>
                 <a href="#testimonial">
-                  Testimonial
+                  Contact Us
                 </a>
               </li>
 
@@ -287,7 +287,7 @@ const Footer = () => {
                 </span>
 
                 <a href="mailto:">
-                  Email Us
+                  onecarechildrensclinic@gmail.com
                 </a>
 
               </div>

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "../../styles/servicePages/NewbornCare.css";
+import { Link } from "react-router-dom";
 
 // ========================================
 // IMAGES
@@ -36,37 +37,6 @@ function NewbornCare() {
     setOpenFaq(openFaq === index ? null : index);
   };
 
-  // ========================================
-  // FAQ DATA
-  // ========================================
-
-  const faqs = [
-    {
-      question: "What happens during a newborn check-up?",
-      answer:
-        "A newborn check-up includes a detailed assessment of your baby's feeding, weight, growth, physical health and overall development. Parents can also discuss feeding, sleep, hygiene and other newborn-care concerns.",
-    },
-    {
-      question: "How often should my newborn be checked?",
-      answer:
-        "Newborn follow-up visits depend on your baby's age, health, feeding and individual needs. Your pediatrician will recommend an appropriate schedule and guide you about the next visit.",
-    },
-    {
-      question: "How can I know if my newborn is feeding well?",
-      answer:
-        "Your baby's feeding pattern, urine output, weight gain and overall behaviour can provide useful clues. If your baby is feeding poorly, seems unusually sleepy or is not gaining weight as expected, consult your pediatrician.",
-    },
-    {
-      question: "When should I be concerned about jaundice?",
-      answer:
-        "Mild newborn jaundice can be common, but increasing yellow discoloration, poor feeding, unusual sleepiness or other concerning symptoms should be evaluated by a pediatrician.",
-    },
-    {
-      question: "When should I seek urgent medical attention for my newborn?",
-      answer:
-        "Breathing difficulty, bluish skin, seizures, significant lethargy, persistent vomiting, fever or difficulty feeding can require prompt medical evaluation.",
-    },
-  ];
 
   return (
     <main className="newborn-page">
@@ -85,27 +55,27 @@ function NewbornCare() {
               NEWBORN CARE
             </span>
 
-            <h1>
-              Gentle care for
-              <span> your little one.</span>
-            </h1>
+            <h1 className="hero-title">
+  <span>Gentle, Expert Care</span>
+  <span className="highlight">for Your Newborn</span>
+</h1>
 
             <p>
-              The first days of life are filled with important changes.
-              Our newborn care focuses on your baby's health, growth,
-              feeding and wellbeing while giving parents the guidance
-              they need with confidence.
+              The first weeks of life are essential for your baby's health and development. 
+              Our newborn care focuses on regular health check-ups, feeding support, healthy
+               weight gain, and early identification of common newborn concerns, 
+               helping parents feel informed and confident.
             </p>
 
             <div className="newborn-hero-buttons">
 
-              <a
-                href="#appointment"
-                className="newborn-primary-btn"
-              >
-                Book an Appointment
-                <FaArrowRight />
-              </a>
+              <Link
+  to="/contact"
+  className="newborn-primary-btn"
+>
+  Consult Peaditrician
+  <FaArrowRight />
+</Link>
 
               
 
@@ -157,23 +127,21 @@ function NewbornCare() {
             </h2>
 
             <p>
-              The newborn period is an important stage when babies
-              need careful observation and gentle support. Regular
-              pediatric care helps monitor feeding, weight, growth
-              and overall wellbeing.
+              Newborn care plays an important role in ensuring your baby gets a healthy start in life. 
+              Regular newborn check-ups help monitor weight gain, 
+              feeding patterns, physical development, and overall health.
             </p>
 
             <p>
-              At One Care Children's Clinic, we also help parents
-              understand their baby's changing needs and provide
-              practical guidance for everyday newborn care.
+              At One Care Children's Clinic, we guide parents through essential newborn care practices, 
+              address common concerns, and help them understand their baby's changing needs during the early weeks of life.
             </p>
 
             <div className="intro-highlight">
               
 
               <div>
-                <strong>Every newborn is different.Care is tailored to your baby's individual needs.</strong>
+                <strong>Every baby is unique. Our newborn care is tailored to your baby's individual needs.</strong>
                 <span>
                   
                 </span>
@@ -199,14 +167,12 @@ function NewbornCare() {
             </span>
 
             <h2>
-              Complete care for your
-              <span> newborn's early days</span>
+              Essential Care
+              <span> for Your Newborn Baby</span>
             </h2>
 
             <p>
-              From routine assessments to parent guidance, we
-              support you through the important early stages
-              of your baby's life.
+              Our newborn care services focus on your baby's health, growth, feeding, and wellbeing during the first weeks of life.
             </p>
 
           </div>
@@ -243,8 +209,7 @@ function NewbornCare() {
               </h3>
 
               <p>
-                Guidance for breastfeeding, feeding patterns
-                and common feeding concerns.
+               Helping Your Newborn Feed and Grow Well
               </p>
 
             </div>
@@ -312,9 +277,10 @@ function NewbornCare() {
             </h2>
 
             <p>
-              Feeding is one of the most important parts of
-              newborn care. We help parents understand feeding
-              patterns and recognize signs that may need attention.
+              Healthy feeding supports your newborn's growth and development.
+               Our pediatric team helps parents understand feeding cues,
+               recognize common feeding difficulties, and monitor signs
+                that their baby is getting adequate nourishment.
             </p>
 
             <ul className="feature-list">
@@ -383,14 +349,14 @@ function NewbornCare() {
             </span>
 
             <h2>
-              Small changes matter
-              <span> in the early days</span>
+              Monitoring Your Baby's
+              <span> Early Growth</span>
             </h2>
 
             <p>
-              Tracking your baby's growth helps your pediatrician
-              understand how your baby is progressing and whether
-              additional support may be needed.
+              Newborn growth monitoring helps track your baby's progress during the first weeks of life.
+               Regular assessments allow your pediatrician to
+                evaluate weight gain, feeding effectiveness, and overall wellbeing.
             </p>
 
             <div className="growth-points">
@@ -417,144 +383,6 @@ function NewbornCare() {
         </div>
 
       </section>
-
-
-      
-
-      {/* ========================================
-          PARENT EXPERIENCE
-      ======================================== */}
-
-      <section className="newborn-parent-section">
-
-        <div className="section-container parent-care-grid">
-
-          <div className="parent-care-content">
-
-            <span className="section-label">
-              PARENT-CENTRED CARE
-            </span>
-
-            <h2>
-              Care that gives
-              <span> parents confidence</span>
-            </h2>
-
-            <p>
-              Newborn care is not only about examining the baby.
-              It is also about helping parents understand what
-              their little one needs at every stage.
-            </p>
-
-            <div className="parent-care-list">
-
-              <div>
-                <FaCheck />
-                <span>Gentle and thorough examination</span>
-              </div>
-
-              <div>
-                <FaCheck />
-                <span>Clear explanations for parents</span>
-              </div>
-
-              <div>
-                <FaCheck />
-                <span>Personalized care guidance</span>
-              </div>
-
-              <div>
-                <FaCheck />
-                <span>Follow-up recommendations</span>
-              </div>
-
-            </div>
-
-          </div>
-
-
-          <div className="parent-care-image">
-
-            <img
-              src={consultationImage}
-              alt="Parents discussing newborn care with pediatrician"
-            />
-
-          </div>
-
-        </div>
-
-      </section>
-
-
-      {/* ========================================
-          FAQ
-      ======================================== */}
-
-      <section className="newborn-faq">
-
-        <div className="section-container">
-
-          <div className="section-heading">
-
-            <span className="section-label">
-              COMMON QUESTIONS
-            </span>
-
-            <h2>
-              Newborn care
-              <span> FAQs</span>
-            </h2>
-
-          </div>
-
-
-          <div className="faq-list">
-
-            {faqs.map((faq, index) => (
-
-              <div
-                className={`faq-item ${
-                  openFaq === index ? "active" : ""
-                }`}
-                key={index}
-              >
-
-                <button
-                  className="faq-question"
-                  onClick={() => toggleFaq(index)}
-                >
-
-                  <span>
-                    {faq.question}
-                  </span>
-
-                  <FaChevronDown />
-
-                </button>
-
-
-                {openFaq === index && (
-                  <div className="faq-answer">
-
-                    <p>
-                      {faq.answer}
-                    </p>
-
-                  </div>
-                )}
-
-              </div>
-
-            ))}
-
-          </div>
-
-        </div>
-
-      </section>
-
-
       {/* ========================================
           APPOINTMENT CTA
       ======================================== */}
@@ -585,13 +413,15 @@ function NewbornCare() {
 
           </div>
 
-          <a
-            href="#"
-            className="newborn-cta-button"
-          >
-            Book an Appointment
-            <FaArrowRight />
-          </a>
+          
+<Link
+  to="/contact"
+  className="newborn-cta-button"
+>
+  Book an Appointment
+  <FaArrowRight />
+</Link>
+
 
         </div>
 

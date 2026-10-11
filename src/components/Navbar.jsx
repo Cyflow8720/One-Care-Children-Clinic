@@ -191,25 +191,25 @@ function Navbar() {
 
 
           {/* TESTIMONIALS */}
-          <li>
+          {/* <li>
             <a
               href="#"
               onClick={(e) => e.preventDefault()}
             >
               Testimonials
             </a>
-          </li>
+          </li> */}
 
 
           {/* GALLERY */}
-          <li>
-            <a
-              href="#"
-              onClick={(e) => e.preventDefault()}
-            >
-              Gallery
-            </a>
-          </li>
+<li>
+  <Link
+    to="/gallery"
+    onClick={closeMenu}
+  >
+    Gallery
+  </Link>
+</li>
 
 
           {/* CONTACT US */}

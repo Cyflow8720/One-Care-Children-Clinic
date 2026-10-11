@@ -1,4 +1,6 @@
+
 import { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../styles/About.css";
 import aboutMain from "../assets/about-us-main.jpg";
 import aboutSecondary from "../assets/about-us-secondary.jpg";
@@ -9,11 +11,11 @@ function About() {
 
   // Active feature
   const [activeFeature, setActiveFeature] = useState(0);
-
+const navigate = useNavigate();
   // Replay animation every time About enters the screen
   useEffect(() => {
     const section = aboutRef.current;
-
+    
     if (!section) return;
 
     const observer = new IntersectionObserver(
@@ -65,20 +67,20 @@ function About() {
           <span className="about-label">About us</span>
 
           <h2>
-            Caring for little ones with{" "}
-            <span>compassion, trust & expertise</span>
+            Expert Pediatric Care for{" "}
+            <span>Healthy Growth and Happy Childhood</span>
           </h2>
 
           <p>
-            At One Care Children's Clinic, we believe every child deserves
-            thoughtful, personalized care. From everyday health concerns to
-            growing-up milestones, we are here to support children and
-            parents at every step.
+            At One Care Children’s Clinic, we provide expert pediatric care focused on your child’s health, growth, and development. From newborn care and vaccinations to nutrition guidance and childhood illness management, our experienced pediatric team is dedicated to ensuring every child receives personalized, compassionate, and comprehensive healthcare.
           </p>
 
-          <button className="about-btn">
-            Explore more
-          </button>
+          <button
+  className="about-btn"
+  onClick={() => navigate("/about")}
+>
+  Explore more
+</button>
 
           {/* FEATURES */}
           <div className="about-features">

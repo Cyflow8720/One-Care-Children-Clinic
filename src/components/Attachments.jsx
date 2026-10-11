@@ -27,33 +27,39 @@ const hospitalLocations = [
 
 const previousHospitals = [
   {
-    name: "Hospital Name 1",
-    location: "Hospital Location 1",
+    name: "Ankura Hospital, Hyderabad",
+    location: "Hyderabad, Telangana, India",
+    mapLink: "PASTE_ANKURA_GOOGLE_MAPS_LINK_HERE",
     logo: hospital1,
   },
   {
-    name: "Hospital Name 2",
-    location: "Hospital Location 2",
+    name: "Nanavati Hospital, Mumbai",
+    location: "Vile Parle West, Mumbai, Maharashtra, India",
+    mapLink: "PASTE_NANAVATI_GOOGLE_MAPS_LINK_HERE",
     logo: hospital2,
   },
   {
-    name: "Hospital Name 3",
-    location: "Hospital Location 3",
+    name: "Kokilaben Hospital, Mumbai",
+    location: "Andheri West, Mumbai, Maharashtra, India",
+    mapLink: "PASTE_KOKILABEN_GOOGLE_MAPS_LINK_HERE",
     logo: hospital3,
   },
   {
-    name: "Hospital Name 4",
-    location: "Hospital Location 4",
+    name: "Apollo Hospital, Navi Mumbai",
+    location: "Navi Mumbai, Maharashtra, India",
+    mapLink: "PASTE_APOLLO_GOOGLE_MAPS_LINK_HERE",
     logo: hospital4,
   },
   {
-    name: "Hospital Name 5",
-    location: "Hospital Location 5",
+    name: "Hiranandani Hospital, Powai",
+    location: "Powai, Mumbai, Maharashtra, India",
+    mapLink: "PASTE_HIRANANDANI_GOOGLE_MAPS_LINK_HERE",
     logo: hospital5,
   },
   {
-    name: "Hospital Name 6",
-    location: "Hospital Location 6",
+    name: "Yewale Hospital, Vashi",
+    location: "Vashi, Navi Mumbai, Maharashtra, India",
+    mapLink: "PASTE_YEWALE_GOOGLE_MAPS_LINK_HERE",
     logo: hospital6,
   },
 ];
@@ -108,30 +114,13 @@ const Attachments = () => {
         ))}
       </div>
 
-      {/* EXISTING EXPERIENCE SECTION */}
-      <div className="experience-card">
-        <div className="experience-content">
-          <span className="experience-label">
-            OUR EXPERIENCE
-          </span>
-
-          <h2>
-            Compassionate Care Backed by Experience
-          </h2>
-
-          <p>
-            With years of experience in women's and children's healthcare,
-            our team is committed to providing trusted, personalized and
-            compassionate medical care for every family.
-          </p>
-        </div>
-      </div>
+      
 
       {/* PREVIOUS PROFESSIONAL ENGAGEMENTS */}
       <section className="engagements-section">
         <div className="engagements-heading">
           <span className="engagements-eyebrow">
-            PROFESSIONAL JOURNEY
+            professional engagements
           </span>
 
           <h2>
@@ -140,9 +129,7 @@ const Attachments = () => {
             <span>Professional Engagements</span>
           </h2>
 
-          <p>
-            Child Specialist
-          </p>
+          
 
           <div className="engagements-heading-line" />
         </div>

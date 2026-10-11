@@ -1623,3 +1623,367 @@
     padding: 24px;
   }
 }
+
+
+/* =========================================
+   APPOINTMENT HERO WITH GALLERY
+========================================= */
+
+.appointment-hero {
+  min-height: 520px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.appointment-hero-content {
+  width: min(1180px, calc(100% - 80px));
+  margin: 0 auto;
+  padding: 65px 0;
+  position: relative;
+  z-index: 2;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+  align-items: center;
+  gap: 50px;
+}
+
+.appointment-hero-text {
+  min-width: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.appointment-hero h1 {
+  max-width: 760px;
+  font-size: clamp(42px, 4.6vw, 70px);
+  line-height: 1.08;
+  letter-spacing: -2px;
+}
+
+.appointment-hero p {
+  max-width: 560px;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+/* Gallery illustration area */
+
+.appointment-hero-gallery {
+  min-width: 0;
+  min-height: 340px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-gallery-decoration {
+  position: absolute;
+  width: 290px;
+  height: 290px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  right: 0;
+  top: 5px;
+}
+
+.hero-gallery-image {
+  position: absolute;
+  width: 68%;
+  height: 235px;
+  overflow: hidden;
+  border-radius: 18px;
+  background: #fff;
+  border: 5px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.17);
+  transition: transform 0.35s ease;
+}
+
+.hero-gallery-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.hero-gallery-image-back {
+  transform: translate(38px, 18px) rotate(9deg);
+  opacity: 0.75;
+}
+
+.hero-gallery-image-middle {
+  transform: translate(19px, 5px) rotate(4deg);
+}
+
+.hero-gallery-image-front {
+  transform: translate(-10px, -8px) rotate(-3deg);
+  z-index: 2;
+}
+
+.appointment-hero-gallery:hover .hero-gallery-image-back {
+  transform: translate(48px, 24px) rotate(12deg);
+}
+
+.appointment-hero-gallery:hover .hero-gallery-image-middle {
+  transform: translate(24px, 3px) rotate(6deg);
+}
+
+.appointment-hero-gallery:hover .hero-gallery-image-front {
+  transform: translate(-14px, -12px) rotate(-4deg);
+}
+
+/* Gallery caption */
+
+.hero-gallery-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+
+  width: min(310px, 90%);
+  min-height: 76px;
+  padding: 15px 18px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+.hero-gallery-label-icon {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 10px;
+  background: #f5e8e1;
+  color: #b86a4d;
+  font-size: 25px;
+}
+
+.hero-gallery-label strong,
+.hero-gallery-label div > span {
+  display: block;
+}
+
+.hero-gallery-label strong {
+  color: #0b2c6b;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.hero-gallery-label div > span {
+  color: #687386;
+  font-size: 11px;
+}
+
+.hero-gallery-arrow {
+  margin-left: auto;
+  color: #b86a4d;
+  font-size: 23px;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+  .appointment-hero-content {
+    grid-template-columns: minmax(0, 1fr) minmax(260px, 0.8fr);
+    gap: 20px;
+    width: calc(100% - 50px);
+  }
+
+  .appointment-hero h1 {
+    font-size: clamp(38px, 5vw, 52px);
+    letter-spacing: -1.5px;
+  }
+
+  .appointment-hero-gallery {
+    min-height: 290px;
+  }
+
+  .hero-gallery-image {
+    height: 190px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+  .appointment-hero {
+    min-height: auto;
+  }
+
+  .appointment-hero-content {
+    width: calc(100% - 40px);
+    padding: 55px 0 45px;
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .appointment-hero h1 {
+    font-size: clamp(38px, 10vw, 48px);
+    letter-spacing: -1.5px;
+  }
+
+  .appointment-hero p {
+    font-size: 15px;
+    line-height: 1.75;
+    margin-top: 18px;
+  }
+
+  .appointment-hero-line {
+    margin-top: 25px;
+  }
+
+  .appointment-hero-gallery {
+    width: 100%;
+    max-width: 420px;
+    min-height: 290px;
+    margin: 0 auto;
+  }
+
+  .hero-gallery-image {
+    width: 68%;
+    height: 190px;
+  }
+
+  .hero-gallery-label {
+    bottom: 0;
+    left: 0;
+  }
+
+  .hero-gallery-decoration {
+    width: 230px;
+    height: 230px;
+    right: 5px;
+  }
+}
+
+@media (max-width: 380px) {
+  .appointment-hero-content {
+    width: calc(100% - 30px);
+  }
+
+  .appointment-hero h1 {
+    font-size: 36px;
+  }
+
+  .hero-gallery-image {
+    height: 165px;
+  }
+
+  .appointment-hero-gallery {
+    min-height: 255px;
+  }
+
+  .hero-gallery-label {
+    padding: 12px;
+  }
+}
+
+
+/* Gallery button */
+.appointment-hero a.hero-gallery-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  width: min(350px, 90%);
+  min-height: 82px;
+  padding: 16px 20px;
+
+  background: #ffffff;
+  border: 1px solid #eee8e4;
+  border-radius: 15px;
+
+  color: #0b2c6b;
+  text-decoration: none;
+
+  box-shadow: 0 12px 32px rgba(11, 44, 107, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.appointment-hero a.hero-gallery-label:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 38px rgba(11, 44, 107, 0.22);
+}
+
+/* Gallery icon */
+.hero-gallery-label-icon {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f7ebe5;
+  color: #b86a4d;
+  border-radius: 12px;
+}
+
+/* Gallery text */
+.hero-gallery-label-copy {
+  flex: 1;
+  min-width: 0;
+}
+
+.hero-gallery-label-copy strong {
+  display: block;
+  margin-bottom: 5px;
+  color: #0b2c6b;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.hero-gallery-label-copy > span {
+  display: block;
+  color: #687386;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* Arrow */
+.hero-gallery-arrow {
+  flex-shrink: 0;
+  color: #b86a4d;
+  font-size: 24px;
+  transition: transform 0.3s ease;
+}
+
+.appointment-hero a.hero-gallery-label:hover .hero-gallery-arrow {
+  transform: translate(3px, -3px);
+}
+
+/* Mobile responsive */
+@media (max-width: 700px) {
+  .appointment-hero a.hero-gallery-label {
+    width: min(330px, 90%);
+    min-height: 76px;
+    padding: 13px 15px;
+  }
+
+  .hero-gallery-label-icon {
+    width: 42px;
+    height: 42px;
+  }
+}

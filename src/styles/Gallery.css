@@ -1,0 +1,344 @@
+
+/* ===== GALLERY PAGE ===== */
+
+.clinic-gallery-page {
+  background: #fafaf8;
+  color: #0b2c6b;
+  min-height: 100vh;
+}
+
+/* Hero */
+.gallery-page-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 90px 24px 75px;
+  background:
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(184, 106, 77, 0.12),
+      transparent 30%
+    ),
+    linear-gradient(135deg, #f5f7fb, #fafaf8);
+}
+
+.gallery-page-hero::after {
+  content: "";
+  position: absolute;
+  right: -70px;
+  bottom: -130px;
+  width: 300px;
+  height: 300px;
+  border: 1px solid rgba(11, 44, 107, 0.1);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.gallery-page-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.gallery-eyebrow {
+  display: inline-block;
+  color: #b86a4d;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  line-height: 1.7;
+}
+
+.gallery-page-hero h1 {
+  margin: 16px 0;
+  font-size: clamp(40px, 5vw, 64px);
+  line-height: 1.12;
+  letter-spacing: -2px;
+  font-weight: 750;
+}
+
+.gallery-page-hero-content > p {
+  max-width: 650px;
+  margin: 0;
+  color: #667085;
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.gallery-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 28px;
+  color: #667085;
+  font-size: 13px;
+}
+
+.gallery-breadcrumb a {
+  color: #0b2c6b;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.gallery-breadcrumb a:hover {
+  color: #b86a4d;
+}
+
+/* Main gallery */
+.gallery-page-section {
+  max-width: 1240px;
+  width: calc(100% - 64px);
+  margin: 0 auto;
+  padding: 75px 0 90px;
+}
+
+.gallery-section-heading {
+  margin-bottom: 38px;
+  text-align: center;
+}
+
+.gallery-section-heading h2,
+.gallery-contact-note h2 {
+  margin: 12px 0;
+  color: #0b2c6b;
+  font-size: clamp(28px, 3vw, 40px);
+  letter-spacing: -1px;
+  line-height: 1.25;
+}
+
+.gallery-section-heading p,
+.gallery-contact-note p {
+  color: #697386;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* Image grid */
+.clinic-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.clinic-gallery-card {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  min-width: 0;
+  padding: 0;
+  aspect-ratio: 4 / 4.5;
+  background: #e8edf5;
+  border: none;
+  border-radius: 18px;
+  cursor: pointer;
+  text-align: left;
+  box-shadow: 0 8px 25px rgba(11, 44, 107, 0.08);
+}
+
+.clinic-gallery-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.clinic-gallery-card:hover img {
+  transform: scale(1.06);
+}
+
+.gallery-card-overlay {
+  position: absolute;
+  inset: auto 0 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 50px 22px 22px;
+  color: #fff;
+  background: linear-gradient(
+    to top,
+    rgba(7, 23, 54, 0.85),
+    rgba(7, 23, 54, 0)
+  );
+}
+
+.gallery-card-overlay small,
+.gallery-card-overlay strong {
+  display: block;
+}
+
+.gallery-card-overlay small {
+  margin-bottom: 7px;
+  color: #f1c8b7;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.gallery-card-overlay strong {
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.gallery-view-icon {
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  font-size: 20px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.clinic-gallery-card:hover .gallery-view-icon {
+  background: #fff;
+  color: #0b2c6b;
+}
+
+/* Appointment call to action */
+.gallery-contact-note {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 75px;
+  padding: 38px 42px;
+  border: 1px solid #e9e9e4;
+  border-radius: 20px;
+  background: #fff;
+}
+
+.gallery-contact-note h2 {
+  font-size: clamp(24px, 3vw, 32px);
+}
+
+.gallery-contact-note p {
+  margin-bottom: 0;
+}
+
+.gallery-contact-button {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding: 16px 23px;
+  border-radius: 9px;
+  background: #0b2c6b;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.gallery-contact-button:hover {
+  background: #b86a4d;
+  transform: translateY(-2px);
+}
+
+/* Full-size image viewer */
+.gallery-lightbox {
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 60px 24px 24px;
+  background: rgba(4, 15, 36, 0.92);
+}
+
+.gallery-lightbox img {
+  display: block;
+  max-width: min(900px, 100%);
+  max-height: 78vh;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+.gallery-lightbox p {
+  margin: 0;
+  color: #fff;
+  font-size: 15px;
+}
+
+.gallery-lightbox-close {
+  position: absolute;
+  top: 18px;
+  right: 25px;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  background: transparent;
+  color: #fff;
+  font-size: 32px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .clinic-gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .gallery-contact-note {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 30px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .gallery-page-hero {
+    padding: 62px 22px 52px;
+  }
+
+  .gallery-page-hero h1 {
+    letter-spacing: -1.3px;
+  }
+
+  .gallery-page-hero-content > p {
+    font-size: 14px;
+  }
+
+  .gallery-page-section {
+    width: calc(100% - 36px);
+    padding: 52px 0 65px;
+  }
+
+  .gallery-section-heading {
+    margin-bottom: 26px;
+  }
+
+  .clinic-gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .clinic-gallery-card {
+    aspect-ratio: 4 / 3.5;
+  }
+
+  .gallery-card-overlay {
+    padding: 45px 18px 18px;
+  }
+
+  .gallery-contact-note {
+    margin-top: 48px;
+    padding: 24px 20px;
+  }
+
+  .gallery-contact-button {
+    width: 100%;
+  }
+}

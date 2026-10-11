@@ -1,5 +1,7 @@
+
 import React, { useState } from "react";
 import "../styles/PediatricServices.css";
+import { Link } from "react-router-dom";
 
 // Direct imports ensure Vite resolves asset paths correctly
 import newbornImg from "../assets/newborn-care.jpg";
@@ -7,67 +9,79 @@ import vaccinationImg from "../assets/vaccination.jpg";
 import growthImg from "../assets/growth-development.jpg";
 import nutritionImg from "../assets/nutrition.jpg";
 import illnessImg from "../assets/childhood-illness.jpg";
-import adolescentImg from "../assets/adolescent-cares.jpg"; // exact filename match
+import adolescentImg from "../assets/adolescent-cares.jpg";
 
 const services = [
   {
     id: "newborn",
     name: "Newborn Care",
     image: newbornImg,
+    pageLink: "/services/newborn-care",
     description:
-      "Comprehensive newborn care focused on healthy growth, feeding, development, and early detection of common newborn concerns. Our pediatric experts ensure your baby receives gentle, attentive care right from day one.",
+      "Give your baby the healthiest start with expert newborn care at One Care Children’s Clinic. Our pediatric team provides gentle, personalized care focused on newborn growth and development, breastfeeding and feeding support, routine health checkups, and early identification of common newborn health concerns.",
     linkText: "Learn more about newborn care",
-    ctaTitle: "If you need trusted newborn care, we'll help support your journey.",
+    ctaTitle:
+      "Trusted newborn care for a healthy, happy start.",
     buttonText: "Book a consultation ›",
   },
   {
     id: "vaccination",
     name: "Vaccination",
     image: vaccinationImg,
+    pageLink: "/services/vaccination",
     description:
       "Stay on track with age-appropriate vaccinations and get expert guidance about your child's immunisation schedule. Protect your little ones against preventable illnesses with safe, timely care.",
     linkText: "Learn more about vaccinations",
-    ctaTitle: "Keep immunisations up to date with our dedicated care team.",
+    ctaTitle:
+      "Keep immunisations up to date with our dedicated care team.",
     buttonText: "View vaccination schedule ›",
   },
   {
     id: "growth",
     name: "Growth & Development",
     image: growthImg,
+    pageLink: "/services/growth-development",
     description:
       "Regular monitoring of height, weight, milestones, and physical development helps ensure your child is growing as expected. Early evaluation supports long-term health and wellbeing.",
     linkText: "Learn more about growth & development",
-    ctaTitle: "Track every milestone with guidance from top pediatricians.",
+    ctaTitle:
+      "Track every milestone with guidance from top pediatricians.",
     buttonText: "Book a growth check ›",
   },
   {
     id: "nutrition",
     name: "Child Nutrition",
     image: nutritionImg,
+    pageLink: "/services/child-nutrition",
     description:
       "Personalised nutrition guidance to support healthy eating habits, immunity, physical growth, and overall development in children from infancy through adolescence.",
     linkText: "Learn more about child nutrition",
-    ctaTitle: "Ensure balanced nutrition tailored to your child's needs.",
+    ctaTitle:
+      "Ensure balanced nutrition tailored to your child's needs.",
     buttonText: "Talk to our pediatrician ›",
   },
   {
     id: "illness",
     name: "Childhood Illness",
     image: illnessImg,
+    pageLink: "/services/childhood-illness",
     description:
       "Accurate diagnosis and evidence-based treatment for common childhood illnesses including fevers, coughs, colds, ear infections, seasonal allergies, and digestive issues.",
     linkText: "Learn more about childhood illness",
-    ctaTitle: "When your child isn't feeling well, we provide fast, loving care.",
+    ctaTitle:
+      "When your child isn't feeling well, we provide fast, loving care.",
     buttonText: "Book a pediatric visit ›",
   },
   {
     id: "adolescent",
     name: "Adolescent Care",
     image: adolescentImg,
+    pageLink: "/services/adolescent-care",
     description:
       "Age-appropriate healthcare and guidance addressing physical growth, mental health, nutritional needs, and developmental changes during teenage and pre-teen years.",
     linkText: "Learn more about adolescent care",
-    ctaTitle: "Guiding growing young adults toward lifelong health and wellness.",
+    ctaTitle:
+      "Guiding growing young adults toward lifelong health and wellness.",
     buttonText: "Schedule adolescent visit ›",
   },
 ];
@@ -143,7 +157,7 @@ const PediatricServices = () => {
   return (
     <section className="pediatric-services-section">
       <div className="services-container">
-        
+
         {/* Top Heading */}
         <h2 className="services-headline">
           Here are some of the pediatric services we offer
@@ -171,29 +185,45 @@ const PediatricServices = () => {
 
         {/* Active Tab Panel Content */}
         <div className="tab-panel-content">
-          
+
           {/* Left Side: Image + Description Text */}
           <div className="panel-main-info">
             <div className="panel-image-wrapper">
-              <img src={activeService.image} alt={activeService.name} />
+              <img
+                src={activeService.image}
+                alt={activeService.name}
+              />
             </div>
 
             <div className="panel-text-content">
-              <p className="panel-description">{activeService.description}</p>
-              <a href="#services" className="panel-link">
-                {activeService.linkText}
-              </a>
+              <p className="panel-description">
+                {activeService.description}
+              </p>
+               <Link
+  to={activeService.pageLink}
+  className="panel-link"
+>
+  {activeService.linkText}
+</Link>
             </div>
           </div>
 
           {/* Right Side: CTA Box with Divider */}
           <div className="panel-cta-sidebar">
-            <h3 className="cta-headline">{activeService.ctaTitle}</h3>
-            <button className="cta-yellow-btn">{activeService.buttonText}</button>
+            <h3 className="cta-headline">
+              {activeService.ctaTitle}
+            </h3>
+
+            {/* All service buttons open the Contact Us page */}
+            <Link
+              to="/contact"
+              className="cta-yellow-btn"
+            >
+              {activeService.buttonText}
+            </Link>
           </div>
 
         </div>
-
       </div>
     </section>
   );

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../styles/AboutPage.css";
 import doctorImage from "../assets/doctor.png";
-
+import { Link } from "react-router-dom";
 function AboutPage() {
   const [openFaq, setOpenFaq] = useState(null);
 
@@ -68,27 +68,26 @@ function AboutPage() {
               </p>
 
               <p className="about-intro">
-                Caring for little ones with knowledge, compassion
-                and a personalised approach to every child's needs.
+                Dr. Priyanka Reejhsinghani (MBBS, DCH, DNB – Pediatrics) is a Consultant 
+                Pediatrician and Neonatologist with advanced certifications in 
+                Pediatric Diabetology and Pediatric Rheumatology.
               </p>
 
               <p>
-                At One Care Children's Clinic, we believe that every
-                child deserves thoughtful healthcare in a warm,
-                comfortable and reassuring environment.
+                Currently associated with Criticare Asia Hospital, Andheri East,
+                 and Yewale Hospital, with previous affiliations at Nanavati Max
+                  Super Speciality Hospital, Kokilaben Dhirubhai Ambani Hospital, 
+                  Apollo Hospitals, and Dr. L. H. Hiranandani Hospital, Powai, bringing 
+                  experience from leading healthcare institutions. At OneCare Children’s Clinic,
+                   comprehensive pediatric care includes newborn and neonatal care, well-baby check-ups, 
+                   childhood vaccinations, growth and developmental assessments, child nutrition, respiratory 
+                   disorders, childhood infections, pediatric diabetes, pediatric rheumatology, NICU follow-up,
+                    pediatric emergency care, and preventive healthcare. The clinic focuses on evidence-based treatment, 
+                    personalized attention, and family-centered guidance to support children’s healthy growth and development
+                     at every stage.
               </p>
 
-              <p>
-                From newborn care and childhood illnesses to growth,
-                development and preventive healthcare, our approach
-                focuses on understanding the child as a whole.
-              </p>
-
-              <p>
-                We believe parents should feel heard, informed and
-                confident about their child's healthcare journey.
-              </p>
-
+              
               <div className="doctor-signature">
                 <strong>Dr. Priyanka Reejhsinghani</strong>
                 <span>Consultant Pediatrician & Neonatologist</span>
@@ -119,10 +118,10 @@ function AboutPage() {
                 ABOUT ONE CARE CHILDREN'S CLINIC
               </div>
 
-              <h2>
-                A caring space for
-                <span> growing children.</span>
-              </h2>
+              <h2 className="about-heading">
+  <span className="heading-main">Compassionate Pediatric Care</span>
+  <span className="heading-highlight">for Every Stage of Childhood</span>
+</h2>
 
               <p className="clinic-about-intro">
                 One Care Children's Clinic is dedicated to providing
@@ -166,8 +165,8 @@ function AboutPage() {
                   <h3>Personalised Care</h3>
 
                   <p>
-                    Every child is different. Our approach is tailored
-                    to their individual health and developmental needs.
+                    Every child receives personalised pediatric care tailored
+                     to their unique health, growth, and developmental needs.
                   </p>
                 </div>
               </div>
@@ -180,8 +179,8 @@ function AboutPage() {
                   <h3>Child-Friendly Environment</h3>
 
                   <p>
-                    A welcoming and reassuring space designed to make
-                    healthcare visits more comfortable for children.
+                    We create a warm, welcoming, and comfortable 
+                    environment where children feel safe and parents feel reassured.
                   </p>
                 </div>
               </div>
@@ -194,8 +193,8 @@ function AboutPage() {
                   <h3>Complete Pediatric Support</h3>
 
                   <p>
-                    From newborn care to everyday childhood health,
-                    we support families through every stage of growth.
+                    From newborn care to vaccinations, nutrition, and childhood illnesses,
+                     we provide comprehensive pediatric care to support your child’s health at every stage.
                   </p>
                 </div>
               </div>
@@ -206,8 +205,8 @@ function AboutPage() {
                   <h3>Vaccination Prevention Caret</h3>
 
                   <p>
-                    From newborn care to everyday childhood health,
-                    we support families through every stage of growth.
+                    We provide age-appropriate childhood vaccinations to help 
+                    protect your child against preventable diseases and support long-term health.
                   </p>
                 </div>
               </div>
@@ -244,13 +243,13 @@ function AboutPage() {
             </div>
 
 
-            <a
-              href="/book-appointment"
-              className="about-cta-button"
-            >
-              Book an Appointment
-              <span>→</span>
-            </a>
+            <Link
+  to="/contact"
+  className="about-cta-button"
+>
+  Book an Appointment
+  <span>→</span>
+</Link>
 
           </div>
 
@@ -275,8 +274,8 @@ function AboutPage() {
               </div>
 
               <h2>
-                Healthcare that puts
-                <span> children first.</span>
+                Nurturing Little Lives with
+                <span> Expert Pediatric Care</span>
               </h2>
 
               <p>

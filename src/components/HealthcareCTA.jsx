@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import "../styles/HealthcareCTA.css";
+import { useNavigate } from "react-router-dom";
 
 import photoOne from "../assets/healthcare/photo-one.png";
 import photoTwo from "../assets/healthcare/photo-two.png";
@@ -11,7 +12,7 @@ import photoSix from "../assets/healthcare/photo-six.png";
 const HealthcareCTA = () => {
   const sectionRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
-
+const navigate = useNavigate();
   useEffect(() => {
     const section = sectionRef.current;
 
@@ -73,19 +74,7 @@ const HealthcareCTA = () => {
         <img src={photoSix} alt="Doctor consultation" />
       </div>
 
-      {/* Decorative Lines */}
-
-      <div className="decorative-lines lines-left">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-
-      <div className="decorative-lines lines-right">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+      
 
       {/* Main Content */}
 
@@ -101,13 +90,11 @@ const HealthcareCTA = () => {
         </p>
 
         <button
-          className="healthcare-cta-button"
-          onClick={() => {
-            window.location.href = "#appointment";
-          }}
-        >
-          Appointment now
-        </button>
+  className="healthcare-cta-button"
+  onClick={() => navigate("/contact")}
+>
+  Appointment now
+</button>
       </div>
     </section>
   );

@@ -2,7 +2,7 @@ import "../styles/Hero.css";
 
 import doctor from "../assets/doctor.png";
 import heroBackground from "../assets/hero-background.png";
-
+import { useNavigate } from "react-router-dom";
 import gallery1 from "../assets/gallery/gallery1.png";
 import gallery2 from "../assets/gallery/gallery2.png";
 import gallery3 from "../assets/gallery/gallery3.png";
@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 function Hero() {
   const featuresRef = useRef(null);
   const [featuresVisible, setFeaturesVisible] = useState(false);
-
+const navigate = useNavigate();
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -50,21 +50,22 @@ function Hero() {
           Trusted Pediatric Care
         </span>
 
-        <h1>
-          Helping Little Ones
-          <br />
-          <span>Grow Healthy & Happy</span>
-        </h1>
+<h1 className="hero-title">
+  <span className="title-first">Expert Pediatric Care for</span>
+  <span className="title-second">Healthier &amp; Happier Childhood</span>
+</h1>
+
 
         <p>
-          Understanding every little health concern.
-          Finding the right path to better health.
-          Nurturing happier, healthier tomorrows.
+          Compassionate healthcare for newborns, infants, and children, supporting healthy growth and development at every stage.
         </p>
 
-        <button className="hero-btn">
-          Book an Appointment
-        </button>
+        <button
+  className="hero-btn"
+  onClick={() => navigate("/contact")}
+>
+  Book an Appointment
+</button>
 
 
         {/* =========================
@@ -91,20 +92,7 @@ function Hero() {
           </div>
 
 
-          {/* CARD 2 */}
-          <div className="trust-card">
-
-            <strong className="trust-number">
-              98%
-            </strong>
-
-            <span>
-              Parents recommend
-              <br />
-              our care
-            </span>
-
-          </div>
+          
 
 
           {/* CARD 3 */}
