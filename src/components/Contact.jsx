@@ -21,8 +21,6 @@ function Contact() {
   });
 
   const [submitted, setSubmitted] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitError, setSubmitError] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -32,67 +30,69 @@ function Contact() {
       [name]: value,
     }));
 
-    setSubmitError("");
     setSubmitted(false);
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (isSubmitting) return;
-
-    setIsSubmitting(true);
     setSubmitted(false);
-    setSubmitError("");
 
-    try {
-      const apiBaseUrl =
-        import.meta.env.VITE_API_BASE_URL ||
-        "http://localhost:5000";
+    const {
+      parentName,
+      childName,
+      childAge,
+      phone,
+      email,
+      date,
+      time,
+      reason,
+      message,
+    } = formData;
 
-      const response = await fetch(
-        `${apiBaseUrl}/api/appointments`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        }
-      );
+    const reasonLabels = {
+      "newborn-care": "Newborn Care",
+      vaccination: "Vaccination",
+      "growth-development": "Growth & Development",
+      nutrition: "Child Nutrition",
+      illness: "Childhood Illness",
+      "adolescent-care": "Adolescent Care",
+      "routine-checkup": "Routine Check-up",
+      other: "Other",
+    };
 
-      const result = await response.json().catch(() => ({}));
+    const whatsappMessage = [
+      "Hello One Care Children's Clinic! 👋",
+      "",
+      "I would like to request an appointment.",
+      "",
+      "PARENT / GUARDIAN DETAILS",
+      `Parent Name: ${parentName}`,
+      `Phone Number: ${phone}`,
+      `Email: ${email.trim() || "Not provided"}`,
+      "",
+      "CHILD'S DETAILS",
+      `Child's Name: ${childName}`,
+      `Child's Age: ${childAge}`,
+      "",
+      "PREFERRED APPOINTMENT",
+      `Preferred Date: ${date}`,
+      `Preferred Time: ${time}`,
+      "",
+      "REASON FOR VISIT",
+      `Reason: ${reasonLabels[reason] || reason}`,
+      `Additional Information: ${message.trim() || "Not provided"}`,
+      "",
+      "Thank you!",
+    ].join("\n");
 
-      if (!response.ok || !result.success) {
-        throw new Error(
-          result.error ||
-            "Unable to submit your appointment request. Please try again."
-        );
-      }
+    const whatsappURL =
+      `https://wa.me/918879333393?text=${encodeURIComponent(
+        whatsappMessage
+      )}`;
 
-      setSubmitted(true);
-
-      setFormData({
-        parentName: "",
-        childName: "",
-        childAge: "",
-        phone: "",
-        email: "",
-        date: "",
-        time: "",
-        reason: "",
-        message: "",
-      });
-    } catch (error) {
-      console.error("Appointment submission failed:", error);
-
-      setSubmitError(
-        error.message ||
-          "Something went wrong. Please try again."
-      );
-    } finally {
-      setIsSubmitting(false);
-    }
+    window.open(whatsappURL, "_blank", "noopener,noreferrer");
+    setSubmitted(true);
   };
 
   return (
@@ -206,37 +206,16 @@ function Contact() {
               <div className="success-icon">✓</div>
 
               <div>
-                <strong>Appointment request submitted!</strong>
+                <strong>Appointment details are ready!</strong>
 
                 <p>
-                  Your request was accepted by the appointment
-                  system. Our clinic team will contact you to
-                  confirm your appointment.
+                  WhatsApp has opened with your appointment details.
+                  Please review the information and tap Send to share
+                  your request with our clinic team.
                 </p>
               </div>
             </div>
           )}
-
-          {/* ERROR MESSAGE */}
-          {submitError && (
-            <div
-              className="appointment-error"
-              role="alert"
-              aria-live="assertive"
-            >
-              <strong>Unable to submit your request.</strong>
-
-              <p>{submitError}</p>
-
-              <p>
-                Please try again or call{" "}
-                <a href="tel:+918879333393">
-                  +91 88793 33393
-                </a>.
-              </p>
-            </div>
-          )}
-
           <form onSubmit={handleSubmit}>
             {/* PARENT / GUARDIAN DETAILS */}
             <div className="form-section">
@@ -462,17 +441,10 @@ function Contact() {
               <button
                 type="submit"
                 className="appointment-submit"
-                disabled={isSubmitting}
               >
-                <span>
-                  {isSubmitting
-                    ? "Submitting Request..."
-                    : "Request an Appointment"}
-                </span>
+                <span>Request an Appointment</span>
 
-                <span className="submit-arrow">
-                  {isSubmitting ? "…" : "→"}
-                </span>
+                <span className="submit-arrow">→</span>
               </button>
             </div>
           </form>
