@@ -73,10 +73,10 @@ function Vaccination() {
             </h1>
 
             <p>
-              Good nutrition lays the foundation for a healthy childhood. 
-              At One Care Children's Clinic, we provide pediatric nutrition guidance
-               to support your child's physical growth, brain development, healthy eating habits,
-                and changing nutritional needs at every stage of childhood.
+              Good nutrition lays the foundation for a healthy childhood. At OneCare Children’s 
+              Clinic, we provide paediatric nutrition guidance to support your child’s physical growth, 
+              brain development, healthy eating habits and changing nutritional needs at every stage of childhood.
+
             </p>
 
             <div className="newborn-hero-buttons">
@@ -123,9 +123,11 @@ function Vaccination() {
             </h2>
 
             <p>
-              Child nutrition plays an essential role in physical growth, brain development, 
-              immunity, and overall wellbeing. A balanced diet provides the nutrients 
-              children need to stay active, support healthy development, and build positive eating habits from an early age.
+              Child nutrition plays an essential role in physical growth, brain development, immunity and overall well-being.
+
+A balanced diet provides the essential nutrients children need to stay active, build strong bones and muscles, support cognitive development and maintain overall health.
+
+Healthy eating habits developed early in life can positively influence a child’s health and well-being in the long term.
             </p>
 
             <p>

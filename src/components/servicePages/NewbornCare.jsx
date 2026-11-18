@@ -73,7 +73,7 @@ function NewbornCare() {
   to="/contact"
   className="newborn-primary-btn"
 >
-  Consult Peaditrician
+  Book Newborn Check-up
   <FaArrowRight />
 </Link>
 
@@ -127,14 +127,13 @@ function NewbornCare() {
             </h2>
 
             <p>
-              Newborn care plays an important role in ensuring your baby gets a healthy start in life. 
-              Regular newborn check-ups help monitor weight gain, 
-              feeding patterns, physical development, and overall health.
+              The first 28 days of life are an important period for your baby’s health and well-being. Regular newborn check-ups help assess feeding, weight gain, jaundice and overall health, allowing concerns to be identified early and addressed appropriately.
+
             </p>
 
             <p>
-              At One Care Children's Clinic, we guide parents through essential newborn care practices, 
-              address common concerns, and help them understand their baby's changing needs during the early weeks of life.
+              At OneCare Children’s Clinic, we guide parents through essential newborn care and help them feel confident in caring for their little one.
+
             </p>
 
             <div className="intro-highlight">
@@ -187,7 +186,7 @@ function NewbornCare() {
               </div>
 
               <h3>
-                Newborn Check-ups
+                Newborn health check-ups and examination
               </h3>
 
               <p>
@@ -204,8 +203,7 @@ function NewbornCare() {
                 <FaBaby />
               </div>
 
-              <h3>
-                Feeding Support
+              <h3>Breastfeeding and feeding support
               </h3>
 
               <p>
@@ -222,7 +220,7 @@ function NewbornCare() {
               </div>
 
               <h3>
-                Weight & Growth
+                Weight monitoring and assessment of weight gain
               </h3>
 
               <p>
@@ -240,7 +238,7 @@ function NewbornCare() {
               </div>
 
               <h3>
-                Health Monitoring
+                Newborn jaundice assessment
               </h3>
 
               <p>
@@ -272,15 +270,13 @@ function NewbornCare() {
             </span>
 
             <h2>
-              Supporting healthy
-              <span> feeding habits</span>
+              Supporting Your Baby’s 
+              <span> Feeding and Well-being</span>
             </h2>
 
             <p>
-              Healthy feeding supports your newborn's growth and development.
-               Our pediatric team helps parents understand feeding cues,
-               recognize common feeding difficulties, and monitor signs
-                that their baby is getting adequate nourishment.
+              Feeding is an essential part of your newborn’s early growth. We guide parents on breastfeeding, feeding cues, common feeding difficulties and signs of adequate feeding, with individualised advice to support the baby’s health and well-being.
+
             </p>
 
             <ul className="feature-list">
@@ -354,9 +350,7 @@ function NewbornCare() {
             </h2>
 
             <p>
-              Newborn growth monitoring helps track your baby's progress during the first weeks of life.
-               Regular assessments allow your pediatrician to
-                evaluate weight gain, feeding effectiveness, and overall wellbeing.
+              Regular newborn assessments help monitor weight gain, feeding adequacy and overall well-being. Our paediatric team guides parents on their baby’s progress and recommends further evaluation when needed.
             </p>
 
             <div className="growth-points">

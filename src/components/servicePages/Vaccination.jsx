@@ -75,12 +75,13 @@ function Vaccination() {
             </h1>
 
             <p>
-              Childhood vaccination helps protect children against
-              several preventable infectious diseases. At One Care
-              Children's Clinic, we provide pediatric vaccination
-              guidance, age-appropriate immunization, and support
-              for parents throughout their child's growing years.
+              Your child’s vaccination needs change with every stage of growth. 
+              Knowing which vaccines are due, when they should be given, 
+              and what to expect can help you make informed decisions about your child’s health.
+              
             </p>
+            <p> At OneCare Children’s Clinic, we offer personalised vaccination guidance based on your child’s age, 
+              immunisation history, and individual needs, helping you navigate each stage of childhood with clarity and confidence.</p>
 
             <div className="newborn-hero-buttons">
               <Link to="/contact" className="newborn-primary-btn">
@@ -125,25 +126,21 @@ function Vaccination() {
             </h2>
 
             <p>
-              Childhood vaccination helps build immunity against
-              serious infectious diseases and plays an essential
-              role in protecting your child's health. Following
-              the recommended immunization schedule helps ensure
-              vaccines are given at the appropriate ages.
+              Vaccination helps the body develop protection against specific 
+              infectious diseases, reducing the risk of serious illness and related complications. Receiving recommended vaccines
+               at the appropriate ages is an important part of your child’s preventive healthcare.
             </p>
 
             <p>
-              At One Care Children's Clinic, we guide parents
-              through recommended childhood vaccines, explain
-              their benefits, and help them understand what to
-              expect before and after vaccination.
+              At OneCare Children’s Clinic, we help parents understand 
+              recommended childhood vaccines, their benefits, and what to expect before and after vaccination.
+               We also provide guidance on common post-vaccination reactions and when medical advice may be needed.
             </p>
 
             <div className="intro-highlight">
               <div>
                 <strong>
-                  Every vaccine matters. Give your child a
-                  healthier start with age-appropriate immunization.
+                  Every vaccine has a purpose. Timely, age-appropriate immunisation helps protect your child’s health.
                 </strong>
               </div>
             </div>
@@ -168,9 +165,11 @@ function Vaccination() {
             </h2>
 
             <p>
-              Our pediatric vaccination services focus on
-              age-appropriate immunization, vaccination guidance,
-              and support throughout your child's growing years.
+              Every child’s vaccination needs evolve with
+               age and medical history. We guide parents through recommended 
+               immunisations, help them keep track of upcoming doses, 
+               and provide advice when a scheduled vaccine has been missed.
+
             </p>
           </div>
 
@@ -184,9 +183,8 @@ function Vaccination() {
               <h3>Newborn & Infant Vaccination</h3>
 
               <p>
-                Guidance on vaccines recommended during the
-                early months of life according to the applicable
-                immunization schedule.
+                Guidance on vaccines recommended 
+                during the newborn period and infancy, in accordance with the applicable immunisation schedule.
               </p>
             </div>
 
@@ -195,11 +193,10 @@ function Vaccination() {
                 <FaBaby />
               </div>
 
-              <h3>Childhood Immunization</h3>
+              <h3>Childhood Immunisation</h3>
 
               <p>
-                Support with routine childhood vaccines to
-                help protect against vaccine-preventable diseases.
+                Support with routine childhood vaccinations to help protect against vaccine-preventable diseases throughout the growing years.
               </p>
             </div>
 
@@ -211,8 +208,9 @@ function Vaccination() {
               <h3>Vaccination Schedule Guidance</h3>
 
               <p>
-                Help understanding recommended vaccine timings,
-                upcoming doses, and follow-up appointments.
+                Clear guidance on recommended vaccine timings, upcoming doses,
+                 and immunisation requirements based on your child’s age and vaccination history.
+
               </p>
             </div>
 
@@ -224,9 +222,8 @@ function Vaccination() {
               <h3>Catch-Up Vaccination Guidance</h3>
 
               <p>
-                Review of vaccination records and guidance on
-                recommended next steps when a child has missed
-                a scheduled dose.
+                If your child has missed a scheduled dose, 
+                we can review the vaccination records and advise on an appropriate catch-up plan.
               </p>
             </div>
 
@@ -250,10 +247,9 @@ function Vaccination() {
             </h2>
 
             <p>
-              Vaccination is an important part of preventive
-              pediatric care. Our team helps parents understand
-              recommended vaccines, prepare for vaccination visits,
-              and recognize common reactions that may occur afterward.
+              Vaccination is an essential part of preventive pediatric care. 
+              Understanding the recommended schedule and keeping vaccination records
+               up to date can help parents plan their child’s immunisations with confidence.
             </p>
 
             <ul className="feature-list">
@@ -312,11 +308,12 @@ function Vaccination() {
             </h2>
 
             <p>
-              Following an appropriate vaccination schedule helps
-              children receive recommended protection at the right
-              time. Your pediatrician can review your child's
-              vaccination history and advise you on upcoming doses.
+              Vaccines are recommended at specific ages to provide protection when
+               children need it. Your child’s 
+              vaccination history, age, and previous doses help determine which vaccines are due.
             </p>
+            <p>Our pediatric vaccination guidance can help you understand the recommended schedule and plan your child’s upcoming doses.
+</p>
 
             <div className="growth-points">
               <div>
@@ -355,9 +352,8 @@ function Vaccination() {
             </h2>
 
             <p>
-              Book a pediatric vaccination consultation to
-              discuss your child's immunization schedule and
-              upcoming vaccine requirements.
+              Book a pediatric vaccination consultation at OneCare Children’s Clinic to review your child’s immunisation history, discuss recommended vaccines, and plan the next steps in their vaccination journey.
+
             </p>
           </div>
 

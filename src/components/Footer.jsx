@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import {
   FaInstagram,
   FaFacebookF,
@@ -125,7 +126,7 @@ const Footer = () => {
 
             <p className="footer-description">
 
-              Care Today For Healther Tommorow 
+              Care today for a healthier tomorrow.
              
 
             </p>
@@ -161,52 +162,63 @@ const Footer = () => {
           </div>
 
 
-          {/* ===============================================
-              QUICK LINKS
-          =============================================== */}
+          
+{/* QUICK LINKS */}
 
-          <div className="footer-column">
+<div className="footer-column">
 
-            <h3>
-              Quick Links
-            </h3>
+  <h3>
+    Quick Links
+  </h3>
+
+  <ul>
+
+    <li>
+      <Link
+        to="/"
+        onClick={() => {
+          if (window.location.pathname === "/") {
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth"
+            });
+          }
+        }}
+      >
+        Home
+      </Link>
+    </li>
+
+    <li>
+      <Link to="/about">
+        About Us
+      </Link>
+    </li>
+
+    <li>
+      <Link to="/#services">
+        Services
+      </Link>
+    </li>
+
+    <li>
+      <Link to="/attachments">
+        Attachment
+      </Link>
+    </li>
+
+    <li>
+      <Link to="/contact">
+        Contact Us
+      </Link>
+    </li>
+
+  </ul>
+
+</div>
 
 
-            <ul>
 
-              <li>
-                <a href="#home">
-                  Home
-                </a>
-              </li>
-
-              <li>
-                <a href="#about">
-                  About Us
-                </a>
-              </li>
-
-              <li>
-                <a href="#services">
-                  Services
-                </a>
-              </li>
-
-              <li>
-                <a href="#attachment">
-                  Attachment
-                </a>
-              </li>
-
-              <li>
-                <a href="#testimonial">
-                  Contact Us
-                </a>
-              </li>
-
-            </ul>
-
-          </div>
 
 
           {/* ===============================================
@@ -235,11 +247,11 @@ const Footer = () => {
                 </span>
 
                 <p>
-                  OneCare Children Clinic,
+                  OneCare Children’s Clinic,
                   <br />
-                  Sanskriti Park, Mahakali Caves Road,
+                  Ground Floor, Sanskriti Park, 
                   <br />
-                  Opp Conosa School,
+                  Mahakali Caves Road, Opp Conosa School,
                   <br />
                   Andheri East - 40093
                 </p>
@@ -339,7 +351,7 @@ const Footer = () => {
           <div className="footer-legal">
 
             <a href="#privacy">
-             © 2026 One Care Children's Clinic Privacy
+             © 2026 OneCare Children's Clinic 
             </a>
 
             <span>

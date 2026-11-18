@@ -76,14 +76,14 @@ function Vaccination() {
             </h1>
 
             <p>
-              Every child grows and develops at their own pace. At One Care Children's Clinic, 
-              we focus on monitoring your child's physical growth, developmental milestones,
-               communication skills, and overall wellbeing to help support healthy childhood development.
+              Every child grows and develops at their own pace.
+               At OneCare Children’s Clinic, we focus on monitoring your child’s physical growth, developmental milestones, 
+              communication skills, and overall wellbeing to support healthy childhood development.
             </p>
 
             <div className="newborn-hero-buttons">
               <Link to="/contact" className="newborn-primary-btn">
-                Book an Appointment
+                Book a Growth Check
                 <FaArrowRight />
               </Link>
             </div>
@@ -181,8 +181,7 @@ function Vaccination() {
               <h3>Physical Growth Monitoring</h3>
 
               <p>
-                Regular assessment of height,
-                 weight, and growth patterns to understand your child's physical development.
+                Regular assessment of height, weight, and growth patterns to understand your child’s physical development over time.
               </p>
             </div>
 
@@ -194,8 +193,7 @@ function Vaccination() {
               <h3>Developmental Milestone Assessment</h3>
 
               <p>
-                Monitoring age-appropriate milestones related to movement,
-                 learning, communication, and social interaction.
+                Assessment of age-appropriate milestones related to movement, learning, communication, and social interaction.
               </p>
             </div>
 
@@ -207,8 +205,8 @@ function Vaccination() {
               <h3>Behaviour & Development Guidance</h3>
 
               <p>
-                Discussion of behavioural changes, developmental concerns, 
-                and age-related challenges to help parents understand their child better.
+                Discussion of behavioural changes, developmental concerns, and age-related challenges to help parents better understand their child.
+
               </p>
             </div>
 
@@ -220,8 +218,7 @@ function Vaccination() {
               <h3>Early Identification of Developmental Concerns</h3>
 
               <p>
-               Assessment of concerns related to speech,
-                movement, learning, or social interaction, with guidance on further evaluation when needed.
+               Assessment of concerns related to speech, movement, learning, or social interaction, with guidance on further evaluation when indicated.
               </p>
             </div>
 
@@ -246,11 +243,12 @@ function Vaccination() {
             </h2>
 
             <p>
-              Developmental milestones offer useful insights into how children 
-              learn, communicate, move, and interact with the world around them. Our pediatric 
-              team helps parents understand age-appropriate milestones and recognize
-               when additional assessment may be beneficial.
+              Developmental milestones offer useful insights into how children learn, 
+              communicate, move, and interact with the world around them. Understanding these milestones can help parents recognise their
+               child’s progress and identify when further assessment may be beneficial.
             </p>
+            <p>At OneCare Children’s Clinic, we guide parents through age-appropriate developmental expectations and help address concerns about their child’s progress.
+</p>
 
             <ul className="feature-list">
               <li>
@@ -352,7 +350,7 @@ function Vaccination() {
             </h2>
 
             <p>
-              Book a pediatric consultation to discuss your child's growth, developmental milestones, and overall wellbeing.
+              Book a consultation at OneCare Children’s Clinic for guidance on your child’s growth, developmental milestones, and overall wellbeing.
             </p>
           </div>
 

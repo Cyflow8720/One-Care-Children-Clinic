@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "../styles/Navbar.css";
 import logo from "../assets/logo.png";
-import { FaChevronDown } from "react-icons/fa";
+import { FaChevronDown, FaBars, FaTimes } from "react-icons/fa";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -24,150 +24,71 @@ function Navbar() {
   return (
     <header className="navbar">
 
-      {/* Logo */}
+      {/* LOGO */}
       <div className="logo">
         <Link to="/" onClick={closeMenu}>
-          <img
-            src={logo}
-            alt="One Care Children's Clinic"
-          />
+          <img src={logo} alt="One Care Children's Clinic" />
         </Link>
       </div>
 
+      {/* MOBILE HAMBURGER BUTTON */}
+      <button
+        type="button"
+        className="menu-toggle"
+        onClick={() => setMenuOpen(!menuOpen)}
+        aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+        aria-expanded={menuOpen}
+        aria-controls="main-navigation"
+      >
+        {menuOpen ? <FaTimes /> : <FaBars />}
+      </button>
 
-      {/* Navigation */}
-      <nav className={menuOpen ? "mobile-nav-open" : ""}>
-
+      {/* NAVIGATION */}
+      <nav
+        id="main-navigation"
+        className={menuOpen ? "mobile-nav-open" : ""}
+      >
         <ul className="nav-menu">
 
-          {/* HOME */}
           <li>
-            <Link
-              to="/"
-              onClick={closeMenu}
-            >
-              Home
-            </Link>
+            <Link to="/" onClick={closeMenu}>Home</Link>
           </li>
 
-
-          {/* ABOUT */}
           <li>
-            <Link
-              to="/about"
-              onClick={closeMenu}
-            >
-              About Us
-            </Link>
+            <Link to="/about" onClick={closeMenu}>About Us</Link>
           </li>
 
-
-          {/* SERVICES DROPDOWN */}
+          {/* SERVICES */}
           <li className="services-dropdown">
-
             <div className="services-link">
-
-              <a
-                href="#"
-                onClick={(e) => e.preventDefault()}
-              >
+              <a href="#" onClick={(e) => e.preventDefault()}>
                 Services
               </a>
 
               <button
                 type="button"
-                className={`dropdown-arrow ${
-                  servicesOpen ? "open" : ""
-                }`}
-                onClick={() =>
-                  setServicesOpen(!servicesOpen)
-                }
+                className={`dropdown-arrow ${servicesOpen ? "open" : ""}`}
+                onClick={() => setServicesOpen(!servicesOpen)}
                 aria-label="Open services menu"
               >
                 <FaChevronDown />
               </button>
-
             </div>
 
-
-            {/* SERVICES MENU */}
             {servicesOpen && (
               <ul className="services-menu">
-
-                {/* NEWBORN CARE */}
-                <li>
-                  <Link
-                    to="/services/newborn-care"
-                    onClick={closeMenu}
-                  >
-                    Newborn Care
-                  </Link>
-                </li>
-
-
-                {/* VACCINATION */}
-                <li>
-                  <Link
-                    to="/services/vaccination"
-                    onClick={closeMenu}
-                  >
-                    Vaccination
-                  </Link>
-                </li>
-
-
-                {/* GROWTH & DEVELOPMENT */}
-                <li>
-                  <Link
-                    to="/services/growth-development"
-                    onClick={closeMenu}
-                  >
-                    Growth & Development
-                  </Link>
-                </li>
-
-
-                {/* CHILD NUTRITION */}
-                <li>
-                  <Link
-                    to="/services/child-nutrition"
-                    onClick={closeMenu}
-                  >
-                    Child Nutrition
-                  </Link>
-                </li>
-
-
-                {/* CHILDHOOD ILLNESS */}
-                <li>
-                  <Link
-                    to="/services/childhood-illness"
-                    onClick={closeMenu}
-                  >
-                    Childhood Illness
-                  </Link>
-                </li>
-
-
-                {/* ADOLESCENT CARE */}
-                <li>
-                  <Link
-                    to="/services/adolescent-care"
-                    onClick={closeMenu}
-                  >
-                    Adolescent Care
-                  </Link>
-                </li>
-
+                <li><Link to="/services/newborn-care" onClick={closeMenu}>Newborn Care</Link></li>
+                <li><Link to="/services/vaccination" onClick={closeMenu}>Vaccination</Link></li>
+                <li><Link to="/services/growth-development" onClick={closeMenu}>Growth & Development</Link></li>
+                <li><Link to="/services/child-nutrition" onClick={closeMenu}>Child Nutrition</Link></li>
+                <li><Link to="/services/childhood-illness" onClick={closeMenu}>Childhood Illness</Link></li>
+                <li><Link to="/services/adolescent-care" onClick={closeMenu}>Adolescent Care</Link></li>
               </ul>
             )}
-
           </li>
-
 
           {/* MOBILE APPOINTMENT */}
           <li className="mobile-appointment">
-
             <button
               type="button"
               className="btn"
@@ -175,61 +96,25 @@ function Navbar() {
             >
               Schedule Appointment
             </button>
-
           </li>
 
-
-          {/* ATTACHMENTS */}
           <li>
-            <Link
-              to="/attachments"
-              onClick={closeMenu}
-            >
-              Attachments
-            </Link>
+            <Link to="/attachments" onClick={closeMenu}>Attachments</Link>
           </li>
 
-
-          {/* TESTIMONIALS */}
-          {/* <li>
-            <a
-              href="#"
-              onClick={(e) => e.preventDefault()}
-            >
-              Testimonials
-            </a>
-          </li> */}
-
-
-          {/* GALLERY */}
-<li>
-  <Link
-    to="/gallery"
-    onClick={closeMenu}
-  >
-    Gallery
-  </Link>
-</li>
-
-
-          {/* CONTACT US */}
           <li>
-            <Link
-              to="/contact"
-              onClick={closeMenu}
-            >
-              Contact Us
-            </Link>
+            <Link to="/gallery" onClick={closeMenu}>Gallery</Link>
+          </li>
+
+          <li>
+            <Link to="/contact" onClick={closeMenu}>Contact Us</Link>
           </li>
 
         </ul>
-
       </nav>
-
 
     </header>
   );
 }
 
 export default Navbar;
-
