@@ -73,9 +73,13 @@ function Vaccination() {
             </h1>
 
             <p>
-             Childhood illnesses can affect your child's comfort,
-              energy, and daily activities. At One Care Children's Clinic, we focus on assessing common childhood symptoms,
-              guiding appropriate treatment, and helping parents support their child's recovery with attentive pediatric care.
+             Helping little ones feel better, one step at a time.
+
+Childhood illnesses are a natural part of growing up, but every parent wants their child to feel better as soon as possible.
+
+At OneCare Children’s Clinic, we provide comprehensive paediatric care for common childhood illnesses, 
+infections and health concerns. From accurate diagnosis and evidence-based treatment to guidance on home care and recovery, we ensure your child receives the right care at every step.
+ter.
             </p>
 
             <div className="newborn-hero-buttons">
@@ -122,14 +126,18 @@ function Vaccination() {
             </h2>
 
             <p>
-              Children commonly experience illnesses such as fever, 
-              cough, cold, stomach infections, and seasonal infections. Recognising symptoms 
-              early and seeking appropriate medical advice can help identify health concerns and support timely treatment.
+              Children may experience a variety of illnesses as their immune systems develop.
+               Fever, cough, cold, infections, stomach upsets and seasonal allergies are among
+                the common concerns parents encounter.
+
             </p>
 
             <p>
-              At One Care Children's Clinic, we help parents understand their 
-              child's symptoms, manage common illnesses, and recognise when further medical attention may be needed.
+              Recognising symptoms early and seeking appropriate medical advice can help ensure
+               timely diagnosis, effective treatment and a smoother recovery.
+
+At OneCare Children’s Clinic, we believe in treating every child with individual attention
+ while helping parents understand their child’s symptoms, treatment and recovery needs.
             </p>
 
             <div className="intro-highlight">
@@ -162,8 +170,7 @@ function Vaccination() {
             </h2>
 
             <p>
-             Our pediatric services focus on assessing common childhood health concerns,
-              understanding symptoms, and guiding parents towards appropriate treatment and recovery.
+             We offer evaluation, treatment and guidance for a wide range of common childhood health concerns.
             </p>
           </div>
 
@@ -177,8 +184,9 @@ function Vaccination() {
               <h3>Fever Assessment & Management</h3>
 
               <p>
-               Assessment of fever and associated symptoms 
-               to help identify possible causes and guide appropriate care.
+               Evaluation of fever and associated symptoms to identify possible 
+               causes, assess the child’s condition and guide appropriate treatment.
+
               </p>
             </div>
 
@@ -190,8 +198,8 @@ function Vaccination() {
               <h3>Cough, Cold & Respiratory Infections</h3>
 
               <p>
-                Evaluation of common respiratory symptoms, 
-                including cough, cold, sore throat, and other breathing-related concerns.
+                Care for common respiratory illnesses, including cough, 
+                cold, sore throat, flu, breathing difficulties and wheezing.
               </p>
             </div>
 
@@ -203,8 +211,9 @@ function Vaccination() {
               <h3>Stomach & Digestive Problems</h3>
 
               <p>
-               Assessment and guidance for common concerns such as vomiting, 
-               diarrhoea, stomach discomfort, and constipation.
+               Assessment and management of vomiting, diarrhoea, 
+               stomach pain, constipation and other digestive concerns.
+
               </p>
             </div>
 
@@ -242,30 +251,30 @@ function Vaccination() {
             </h2>
 
             <p>
-              When a child becomes unwell, parents need clear 
-              information and appropriate medical guidance. Our pediatric team focuses on understanding symptoms,
-               assessing your child's condition, and helping families make informed decisions about care and recovery.
+              When your child is unwell, knowing what to do can sometimes be overwhelming.
+               We believe parents deserve clear information, reassurance and the right medical guidance.
             </p>
 
             <ul className="feature-list">
               <li>
                 <FaCheck />
-                <span>Assessment of common childhood symptoms and health concerns</span>
+                <span>Careful assessment of symptoms and your child’s overall health.
+</span>
               </li>
 
               <li>
                 <FaCheck />
-                <span>Guidance on managing illnesses and supporting recovery</span>
+                <span>Accurate diagnosis and evidence-based treatment.</span>
               </li>
 
               <li>
                 <FaCheck />
-                <span>Advice on hydration, nutrition, rest, and home care</span>
+                <span>Individualised treatment plans based on your child’s age and needs.</span>
               </li>
 
               <li>
                 <FaCheck />
-                <span>Information about warning signs that require urgent medical attention</span>
+                <span>Guidance on hydration, nutrition, rest and home care.</span>
               </li>
             </ul>
           </div>
@@ -304,25 +313,24 @@ function Vaccination() {
             </h2>
 
             <p>
-             Every child responds differently to illness.
-              A pediatric assessment helps evaluate symptoms, understand your child's needs, 
-             and determine appropriate next steps for treatment and recovery.
+             Every child responds differently to an illness. Our approach goes beyond treating symptoms 
+             we focus on understanding your child’s needs and supporting a healthy recovery.
             </p>
 
             <div className="growth-points">
               <div>
                 <strong>01.</strong>
-                <span> Symptom Assessment</span>
+                <span> Thorough Symptom Assessment</span>
               </div>
 
               <div>
                 <strong>02.</strong>
-                <span> Personalised Treatment Guidance</span>
+                <span> Accurate Diagnosis & Personalised Treatment</span>
               </div>
 
               <div>
                 <strong>03.</strong>
-                <span> Personalised Treatment Guidance</span>
+                <span> Recovery Guidance & Follow-up</span>
               </div>
             </div>
           </div>
@@ -347,8 +355,8 @@ function Vaccination() {
             </h2>
 
             <p>
-             Book a pediatric consultation to discuss your child's
-              symptoms, common illnesses, and appropriate treatment and recovery guidance.
+             Whether it is a common fever, a recurring infection or an illness
+              that needs closer attention, we are here to guide you through it.
             </p>
           </div>
 

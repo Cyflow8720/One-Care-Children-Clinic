@@ -64,7 +64,8 @@ function Vaccination() {
 
           <div className="newborn-hero-content">
             <span className="newborn-eyebrow">
-             ADOLESCENT CARE
+              Adolescent Care
+
             </span>
 
             <h1 className="hero-title">
@@ -73,10 +74,10 @@ function Vaccination() {
             </h1>
 
             <p>
-             Adolescence is an important stage of physical,
-              emotional, and social development. At One Care Children's Clinic, 
-              we focus on monitoring growth, supporting nutritional needs, discussing puberty-related changes,
-              and helping teenagers build healthy habits for a confident transition into adulthood.
+             Adolescence is an important phase of physical, hormonal, emotional and social development. 
+             At OneCare Children’s Clinic, we provide comprehensive, age-appropriate healthcare for teenagers, 
+             focusing on healthy growth, nutrition, puberty-related changes and overall well-being.
+             Our aim is to help teenagers understand their changing bodies, develop healthy habits and transition confidently into adulthood.
             </p>
 
             <div className="newborn-hero-buttons">
@@ -118,22 +119,21 @@ function Vaccination() {
             </span>
 
             <h2>
-             Why Is Adolescent Healthcare 
-              <span> Important? </span>
+             Understanding 
+              <span> Adolescent Health  </span>
             </h2>
 
             <p>
-              Adolescence brings significant changes in height, weight, hormones, 
-              emotions, and social relationships. Regular health assessments help monitor
-               physical development, address common teenage health concerns, 
-              and support healthy habits during these important years.
+              The teenage years bring significant changes in height, weight, hormones,
+               emotions and social relationships. This phase also comes with new questions, concerns and health needs.
+               Regular health assessments help monitor growth and development, identify 
+               nutritional concerns, address puberty-related changes and recognise common adolescent health issues.
+
             </p>
 
             <p>
-              and support healthy habits during these important years.
-At One Care Children's Clinic, we provide age-appropriate healthcare 
-guidance to help teenagers and parents understand developmental
- changes, discuss health concerns, and make informed decisions about wellbeing.
+              At OneCare Children’s Clinic, we provide supportive and age-appropriate healthcare, helping teenagers 
+              and parents navigate these changes with confidence, understanding and the right medical guidance.
             </p>
 
             <div className="intro-highlight">
@@ -166,9 +166,9 @@ guidance to help teenagers and parents understand developmental
             </h2>
 
             <p>
-            Our adolescent care services focus on physical development, nutritional health,
-             puberty-related changes, and common 
-            concerns that may arise during the teenage years.
+            Our adolescent healthcare services focus on physical development,
+             nutritional health, puberty-related changes and
+              common health concerns that may arise during the teenage years.
             </p>
           </div>
 
@@ -182,7 +182,8 @@ guidance to help teenagers and parents understand developmental
               <h3>Growth & Puberty Assessment</h3>
 
               <p>
-               Monitoring height, weight, growth patterns, and age-appropriate physical changes during adolescence.
+               Monitoring height, weight, BMI, growth patterns and age-appropriate physical
+                development. Evaluation of early, delayed or unusual pubertal changes.
               </p>
             </div>
 
@@ -191,11 +192,12 @@ guidance to help teenagers and parents understand developmental
                 <FaBaby />
               </div>
 
-              <h3>Nutrition & Healthy Lifestyle Guidance</h3>
+              <h3>Menstrual Health & Adolescent Girls’ Health</h3>
 
               <p>
-                Guidance on balanced nutrition, physical activity, sleep routines, 
-                and healthy habits that support teenage growth.
+                Evaluation and guidance for menstrual irregularities, painful periods,
+                 heavy menstrual bleeding and other common concerns during adolescence.
+
               </p>
             </div>
 
@@ -204,12 +206,11 @@ guidance to help teenagers and parents understand developmental
                 <FaWeight />
               </div>
 
-              <h3>Puberty & Hormonal Health Guidance</h3>
+              <h3>Skin Health & Acne Management</h3>
 
               <p>
-              Age-appropriate discussions about puberty,
-               hormonal changes, menstrual health concerns, and 
-               other developmental changes.
+              Assessment and management of common
+               teenage skin concerns, including acne, pimples, oily skin, rashes and other skin conditions.
               </p>
             </div>
 
@@ -311,10 +312,9 @@ guidance to help teenagers and parents understand developmental
             </h2>
 
             <p>
-            Every teenager develops at an individual pace. 
-            Regular health assessments help monitor physical
-             growth, review lifestyle habits, and identify concerns 
-             that may benefit from further evaluation.
+            Adolescence is more than just growing taller — it is about building the foundation for a healthy adulthood.
+            At OneCare Children’s Clinic, we are here to support teenagers through every 
+            stage of this journey with the right medical care, guidance and understanding.
             </p>
 
 
