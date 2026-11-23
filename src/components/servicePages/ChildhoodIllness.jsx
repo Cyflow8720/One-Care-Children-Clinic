@@ -346,7 +346,7 @@ At OneCare Children’s Clinic, we believe in treating every child with individu
 
           <div className="newborn-cta-content">
             <span className="section-label">
-              ONE CARE CHILDREN'S CLINIC
+              ONECARE CHILDREN'S CLINIC
             </span>
 
             <h2>

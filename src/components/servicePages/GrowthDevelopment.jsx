@@ -341,7 +341,7 @@ function Vaccination() {
 
           <div className="newborn-cta-content">
             <span className="section-label">
-              ONE CARE CHILDREN'S CLINIC
+              ONECARE CHILDREN'S CLINIC
             </span>
 
             <h2>
