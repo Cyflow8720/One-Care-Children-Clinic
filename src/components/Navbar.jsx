@@ -58,34 +58,59 @@ function Navbar() {
             <Link to="/about" onClick={closeMenu}>About Us</Link>
           </li>
 
-          {/* SERVICES */}
-          <li className="services-dropdown">
-            <div className="services-link">
-              <a href="#" onClick={(e) => e.preventDefault()}>
-                Services
-              </a>
+          
+{/* SERVICES */}
+<li className={`services-dropdown ${servicesOpen ? "active" : ""}`}>
+  <div className="services-link">
+    <button
+      type="button"
+      className="services-toggle"
+      onClick={() => setServicesOpen(!servicesOpen)}
+      aria-expanded={servicesOpen}
+    >
+      Services
+      <FaChevronDown
+        className={`dropdown-arrow ${servicesOpen ? "open" : ""}`}
+      />
+    </button>
+  </div>
 
-              <button
-                type="button"
-                className={`dropdown-arrow ${servicesOpen ? "open" : ""}`}
-                onClick={() => setServicesOpen(!servicesOpen)}
-                aria-label="Open services menu"
-              >
-                <FaChevronDown />
-              </button>
-            </div>
+  {servicesOpen && (
+    <ul className="services-menu">
+      <li>
+        <Link to="/services/newborn-care" onClick={closeMenu}>
+          Newborn Care
+        </Link>
+      </li>
+      <li>
+        <Link to="/services/vaccination" onClick={closeMenu}>
+          Vaccination
+        </Link>
+      </li>
+      <li>
+        <Link to="/services/growth-development" onClick={closeMenu}>
+          Growth & Development
+        </Link>
+      </li>
+      <li>
+        <Link to="/services/child-nutrition" onClick={closeMenu}>
+          Child Nutrition
+        </Link>
+      </li>
+      <li>
+        <Link to="/services/childhood-illness" onClick={closeMenu}>
+          Childhood Illness
+        </Link>
+      </li>
+      <li>
+        <Link to="/services/adolescent-care" onClick={closeMenu}>
+          Adolescent Care
+        </Link>
+      </li>
+    </ul>
+  )}
+</li>
 
-            {servicesOpen && (
-              <ul className="services-menu">
-                <li><Link to="/services/newborn-care" onClick={closeMenu}>Newborn Care</Link></li>
-                <li><Link to="/services/vaccination" onClick={closeMenu}>Vaccination</Link></li>
-                <li><Link to="/services/growth-development" onClick={closeMenu}>Growth & Development</Link></li>
-                <li><Link to="/services/child-nutrition" onClick={closeMenu}>Child Nutrition</Link></li>
-                <li><Link to="/services/childhood-illness" onClick={closeMenu}>Childhood Illness</Link></li>
-                <li><Link to="/services/adolescent-care" onClick={closeMenu}>Adolescent Care</Link></li>
-              </ul>
-            )}
-          </li>
 
           {/* MOBILE APPOINTMENT */}
           <li className="mobile-appointment">

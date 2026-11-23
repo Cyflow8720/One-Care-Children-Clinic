@@ -968,3 +968,35 @@ nav {
   color: #0b2c6b;
   stroke-width: 1.5;
 }
+
+
+
+.services-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    border: none;
+    color: #0B2E6D;
+    font-family: inherit;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.services-toggle:hover {
+    color: #B8735A;
+}
+
+.services-toggle .dropdown-arrow {
+    color: inherit;
+    font-size: 9px;
+    transition: transform 0.3s ease;
+}
+
+.services-toggle .dropdown-arrow.open {
+    transform: rotate(180deg);
+}

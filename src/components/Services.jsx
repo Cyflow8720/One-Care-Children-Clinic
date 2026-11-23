@@ -5,7 +5,7 @@ import "../styles/Services.css";
 function Services() {
   const videos = [
     {
-      id: "KjNJbAOEjPQ",
+      id: "https://youtube.com/shorts/JoksYSItcFo?si=IhQR-geI_aOda84j",
       category: "Expert Advice",
       title: "3 Signs Your Child Needs a Doctor Immediately!",
       description:
@@ -17,7 +17,7 @@ function Services() {
       ],
     },
     {
-      id: "KjNJbAOEjPQ",
+      id: "https://youtube.com/shorts/mXq7aOkHkWo?si=g5zIBmLp8Eatb9sl",
       category: "Health Awareness",
       title: "Understanding your health and wellbeing",
       description:
@@ -29,7 +29,7 @@ function Services() {
       ],
     },
     {
-      id: "KjNJbAOEjPQ",
+      id: "https://youtube.com/shorts/4YMoGNQcpYU?si=it3RDjyAp45LyhnN",
       category: "Patient Stories",
       title: "Real experiences and stories of care",
       description:
@@ -40,6 +40,7 @@ function Services() {
         "Our hospital team",
       ],
     },
+    
   ];
 
   const sliderVideos = [...videos, ...videos];
