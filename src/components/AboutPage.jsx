@@ -68,17 +68,19 @@ function AboutPage() {
               </p>
 
               <p className="about-intro">
-                Dr. Priyanka Reejhsinghani (MBBS, DCH, DNB – Pediatrics) is a Consultant 
-                Pediatrician and Neonatologist with advanced certifications in 
-                Pediatric Diabetology and Pediatric Rheumatology.
+                Dr. Priyanka Reejhsinghani (MBBS, DCH, DNB – Pediatrics) is a Consultant Pediatrician and 
+                Neonatologist with additional certifications in Pediatric Diabetology and Pediatric Rheumatology.
               </p>
 
               <p>
-                Currently associated with Criticare Asia Hospital, Andheri East,
-                 and Yewale Hospital, with previous affiliations at Nanavati Max
-                  Super Speciality Hospital, Kokilaben Dhirubhai Ambani Hospital, 
-                  Apollo Hospitals, and Dr. L. H. Hiranandani Hospital, Powai, bringing 
-                  experience from leading healthcare institutions. At OneCare Children’s Clinic,
+                Currently associated with Criticare Asia Hospital, Andheri East, and Yewale Hospital,
+                 she has previously been affiliated with Nanavati Max Super Speciality Hospital, Kokilaben Dhirubhai 
+                 Ambani Hospital, Apollo Hospitals, and Dr. L. H. Hiranandani Hospital,
+                 Powai, bringing experience from leading healthcare institutions.
+                 <br />
+                  <br />
+                  At OneCare Children’s Clinic,
+                  
                    comprehensive pediatric care includes newborn and neonatal care, well-baby check-ups, 
                    childhood vaccinations, growth and developmental assessments, child nutrition, respiratory 
                    disorders, childhood infections, pediatric diabetes, pediatric rheumatology, NICU follow-up,
@@ -124,31 +126,29 @@ function AboutPage() {
 </h2>
 
               <p className="clinic-about-intro">
-                One Care Children's Clinic is dedicated to providing
-                thoughtful, personalised and child-centred healthcare
-                for infants, children and adolescents.
+                One Care Children’s Clinic is dedicated to providing thoughtful, 
+                personalized and child-centered healthcare for infants, children, and adolescents.
               </p>
 
               <p>
-                We understand that visiting a doctor can sometimes feel
-                overwhelming for both children and parents. That's why
-                we aim to create a warm, comfortable and reassuring
-                environment where every child feels cared for and every
-                parent feels heard.
+                We understand that visiting a doctor can sometimes feel overwhelming for
+                 both children and parents. That’s why we aim to create a warm,
+                 comfortable, and reassuring environment where every child feels cared for and every parent feels heard.
               </p>
 
               <p>
                 From newborn and infant care to childhood illnesses,
                 growth and development, nutrition and preventive
                 healthcare, our focus is on supporting your child's
-                health at every stage.
+                health at every stage.From newborn and infant care to childhood illnesses,
+                 growth and development, 
+                nutrition, and preventive healthcare, our focus is on supporting your child’s health at every stage.
               </p>
 
               <p>
-                At One Care Children's Clinic, we believe good pediatric
-                care is not only about treating illness. It is also
-                about understanding your child, answering your questions
-                and helping you make confident healthcare decisions.
+                At OneCare Children’s Clinic, we believe good pediatric care is not only about
+                 treating illness. It is also about understanding your child,
+                 answering your questions, and helping you make confident healthcare decisions.
               </p>
 
             </div>
@@ -166,7 +166,7 @@ function AboutPage() {
 
                   <p>
                     Every child receives personalised pediatric care tailored
-                     to their unique health, growth, and developmental needs.
+                     to their unique health, growth and developmental needs.
                   </p>
                 </div>
               </div>
@@ -179,7 +179,7 @@ function AboutPage() {
                   <h3>Child-Friendly Environment</h3>
 
                   <p>
-                    We create a warm, welcoming, and comfortable 
+                    We create a warm, welcoming and comfortable 
                     environment where children feel safe and parents feel reassured.
                   </p>
                 </div>
@@ -193,7 +193,7 @@ function AboutPage() {
                   <h3>Complete Pediatric Support</h3>
 
                   <p>
-                    From newborn care to vaccinations, nutrition, and childhood illnesses,
+                    From newborn care to vaccinations, nutrition and childhood illnesses,
                      we provide comprehensive pediatric care to support your child’s health at every stage.
                   </p>
                 </div>
@@ -202,7 +202,7 @@ function AboutPage() {
                 <div className="clinic-highlight-number">04</div>
 
                 <div>
-                  <h3>Vaccination Prevention Caret</h3>
+                  <h3>Vaccination Prevention Care</h3>
 
                   <p>
                     We provide age-appropriate childhood vaccinations to help 
@@ -270,7 +270,7 @@ function AboutPage() {
             <div className="why-about-content">
 
               <div className="about-label">
-                WHY ONE CARE
+                WHY ONECARE
               </div>
 
               <h2>

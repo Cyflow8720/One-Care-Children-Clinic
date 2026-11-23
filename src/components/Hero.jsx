@@ -57,7 +57,9 @@ const navigate = useNavigate();
 
 
         <p>
-          Compassionate healthcare for newborns, infants, and children, supporting healthy growth and development at every stage.
+          Compassionate, comprehensive and personalised healthcare for newborns, infants, children and adolescents.
+
+From newborn care and vaccinations to growth, development and specialised paediatric care, we are here to support your child’s health at every stage.
         </p>
 
         <button

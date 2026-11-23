@@ -7,6 +7,7 @@ import {
   FaWhatsapp,
   FaAmbulance,
   FaMapMarkerAlt,
+  FaYoutube,
 } from "react-icons/fa";
 
 const TopBar = () => {
@@ -60,6 +61,17 @@ const TopBar = () => {
         >
           <FaFacebookF />
         </a>
+
+        {/* YouTube */}
+<a
+  href="https://youtube.com/@onecarechildrensclinic?si=V1KfjMGmDaolPGkX"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="clinic-social-link"
+  aria-label="YouTube"
+>
+  <FaYoutube />
+</a>
 
         {/* Location */}
         <a

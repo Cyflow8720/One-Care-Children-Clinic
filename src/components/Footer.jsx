@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import {
   FaInstagram,
   FaFacebookF,
+  FaYoutube,
   FaPhoneAlt,
   FaEnvelope,
   FaMapMarkerAlt,
@@ -156,6 +157,16 @@ const Footer = () => {
               >
                 <FaFacebookF />
               </a>
+
+              <a
+  href="https://youtube.com/@onecarechildrensclinic?si=V1KfjMGmDaolPGkX"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="YouTube"
+  className="social-link youtube"
+>
+  <FaYoutube />
+</a>
               
 
             </div>
@@ -248,13 +259,13 @@ const Footer = () => {
                 </span>
 
                 <p>
-                  OneCare Children’s Clinic,
+                  Ground Floor, S1B, Sanskriti Park,
                   <br />
-                  Ground Floor, Sanskriti Park, 
+                  Mahakali Caves Road,
                   <br />
-                  Mahakali Caves Road, Opp Conosa School,
+                  Opposite Canossa School, Near Sacred Heart Church,
                   <br />
-                  Andheri East - 40093
+                  Andheri East, Mumbai – 400093.
                 </p>
 
               </div>
