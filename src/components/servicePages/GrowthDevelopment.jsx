@@ -131,7 +131,7 @@ function Vaccination() {
             </p>
 
             <p>
-              At One Care Children's Clinic, we help parents understand
+              At OneCare Children's Clinic, we help parents understand
                childhood developmental milestones, discuss their concerns,
                 and support their child's individual growth journey.
             </p>

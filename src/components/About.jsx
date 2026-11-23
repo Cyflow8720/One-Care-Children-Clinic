@@ -72,7 +72,7 @@ const navigate = useNavigate();
           </h2>
 
           <p>
-            At One Care Children’s Clinic, we provide expert pediatric care focused on your child’s health, growth, and development. From newborn care and vaccinations to nutrition guidance and childhood illness management, our experienced pediatric team is dedicated to ensuring every child receives personalized, compassionate, and comprehensive healthcare.
+            At OneCare Children’s Clinic, we provide expert pediatric care focused on your child’s health, growth, and development. From newborn care and vaccinations to nutrition guidance and childhood illness management, our experienced pediatric team is dedicated to ensuring every child receives personalized, compassionate, and comprehensive healthcare.
           </p>
 
           <button

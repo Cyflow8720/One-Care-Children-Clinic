@@ -75,13 +75,13 @@ function Vaccination() {
             </h1>
 
             <p>
-              Your child’s vaccination needs change with every stage of growth. 
-              Knowing which vaccines are due, when they should be given, 
-              and what to expect can help you make informed decisions about your child’s health.
+             Vaccination is an important part of preventive healthcare during childhood. It helps protect children against several 
+             serious infectious diseases and supports their health as they grow.
               
             </p>
-            <p> At OneCare Children’s Clinic, we offer personalised vaccination guidance based on your child’s age, 
-              immunisation history, and individual needs, helping you navigate each stage of childhood with clarity and confidence.</p>
+            <p>
+             At OneCare Children’s Clinic, we provide personalised vaccination guidance based on your child’s age, immunisation history, and individual needs, helping you navigate each stage of childhood
+              with clarity and confidence.</p>
 
             <div className="newborn-hero-buttons">
               <Link to="/contact" className="newborn-primary-btn">

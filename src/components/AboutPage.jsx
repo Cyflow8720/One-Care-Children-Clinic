@@ -117,7 +117,7 @@ function AboutPage() {
             <div className="clinic-about-content">
 
               <div className="about-label">
-                ABOUT ONE CARE CHILDREN'S CLINIC
+                ABOUT ONECARE CHILDREN'S CLINIC
               </div>
 
               <h2 className="about-heading">
@@ -126,7 +126,7 @@ function AboutPage() {
 </h2>
 
               <p className="clinic-about-intro">
-                One Care Children’s Clinic is dedicated to providing thoughtful, 
+                OneCare Children’s Clinic is dedicated to providing thoughtful, 
                 personalized and child-centered healthcare for infants, children, and adolescents.
               </p>
 

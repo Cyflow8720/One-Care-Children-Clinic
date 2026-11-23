@@ -18,7 +18,7 @@ const services = [
     image: newbornImg,
     pageLink: "/services/newborn-care",
     description:
-      "Give your baby the healthiest start with expert newborn care at One Care Children’s Clinic. Our pediatric team provides gentle, personalized care focused on newborn growth and development, breastfeeding and feeding support, routine health checkups, and early identification of common newborn health concerns.",
+      "Give your baby the healthiest start with expert newborn care at OneCare Children’s Clinic. Our pediatric team provides gentle, personalized care focused on newborn growth and development, breastfeeding and feeding support, routine health checkups, and early identification of common newborn health concerns.",
     linkText: "Learn more about newborn care",
     ctaTitle:
       "Trusted newborn care for a healthy, happy start.",

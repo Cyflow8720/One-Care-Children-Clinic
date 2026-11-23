@@ -76,6 +76,8 @@ function Vaccination() {
               Good nutrition lays the foundation for a healthy childhood. At OneCare Children’s 
               Clinic, we provide paediatric nutrition guidance to support your child’s physical growth, 
               brain development, healthy eating habits and changing nutritional needs at every stage of childhood.
+              <br />
+              From breastfeeding and complementary feeding to balanced diets for growing children, we guide parents at every step.
 
             </p>
 
@@ -130,16 +132,11 @@ A balanced diet provides the essential nutrients children need to stay active, b
 Healthy eating habits developed early in life can positively influence a child’s health and well-being in the long term.
             </p>
 
-            <p>
-              At One Care Children's Clinic, we help parents understand age-appropriate nutrition,
-               balanced food choices, infant feeding, and common concerns such as picky eating or changes in appetite.
-            </p>
-
+           
             <div className="intro-highlight">
               <div>
                 <strong>
-                 Healthy eating starts early. Give your child the nutritional foundation for a healthier future.
-                  
+                 Healthy eating habits developed early in life can positively influence a child’s health and well-being in the long term.
                 </strong>
               </div>
             </div>
