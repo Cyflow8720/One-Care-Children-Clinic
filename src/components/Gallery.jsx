@@ -19,10 +19,10 @@ const Gallery = () => {
   const images = [
     { src: gallery1, title: "Clinic Exterior View",  },
     { src: gallery2, title: "Clinic Entrance",  },
-    { src: gallery3, title: "Waiting Area 1",  },
+    { src: gallery3, title: "Clinic Reception Area",  },
     { src: gallery4, title: "Playing Area 1", },
-     { src: gallery5, title: "Waiting Area 2",  },
-  { src: gallery6, title: "Clinic Reception Area",  },
+     { src: gallery5, title: "Waiting Area 1",  },
+  { src: gallery6, title: "Waiting Area 2",  },
   { src: gallery7, title: "Pediatric Consultation Room", },
   { src: gallery8, title: "Playing Area 2",  },
   { src: gallery9, title: "Pediatric Consultation Room 2",  },
