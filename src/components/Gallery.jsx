@@ -40,7 +40,7 @@ const Gallery = () => {
           <h1>Explore Our Gallery</h1>
 
           <p>
-            Take a glimpse inside One Care Children’s Clinic, where
+            Take a glimpse inside OneCare Children’s Clinic, where
             thoughtful care and a welcoming environment come together
             for every child.
           </p>
@@ -89,7 +89,7 @@ const Gallery = () => {
         <div className="gallery-contact-note">
           <div>
             <span className="gallery-eyebrow">WE’RE HERE FOR YOU</span>
-            <h2>Visit One Care Children’s Clinic</h2>
+            <h2>Visit OneCare Children’s Clinic</h2>
             <p>
               We look forward to welcoming you and your little one.
             </p>
