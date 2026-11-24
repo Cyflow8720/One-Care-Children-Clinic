@@ -319,29 +319,31 @@ const Footer = () => {
             </div>
 
 
-            {/* TIMINGS */}
+           {/* TIMINGS */}
 
-            <div className="contact-item">
+<div className="contact-item">
 
-              <div className="contact-icon">
-                <FaClock />
-              </div>
+  <div className="contact-icon">
+    <FaClock />
+  </div>
 
-              <div className="contact-text">
+  <div className="contact-text">
 
-                <span className="contact-label">
-                  Timings
-                </span>
+    <span className="contact-label">
+      Timings
+    </span>
 
-                <p>
-                  Please contact the clinic
-                  <br />
-                  for consultation timings.
-                </p>
+    <p>
+       Mon – Sat: 10 AM – 1 PM  &amp;  5 PM – 7 PM
+      <br />
+      Sunday : 10 AM – 1 PM
+    </p>
 
-              </div>
+  </div>
 
-            </div>
+</div>
+
+            
 
           </div>
 

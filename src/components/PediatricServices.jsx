@@ -54,7 +54,7 @@ const services = [
     image: nutritionImg,
     pageLink: "/services/child-nutrition",
     description:
-      "Personalised nutrition guidance to support healthy eating habits, immunity, physical growth, and overall development in children from infancy through adolescence.",
+      "Personalised nutrition guidance to support healthy eating habits, optimal growth, immunity and overall development in children from infancy through adolescence.",
     linkText: "Learn more about child nutrition",
     ctaTitle:
       "Ensure balanced nutrition tailored to your child's needs.",
@@ -66,10 +66,10 @@ const services = [
     image: illnessImg,
     pageLink: "/services/childhood-illness",
     description:
-      "Accurate diagnosis and evidence-based treatment for common childhood illnesses including fevers, coughs, colds, ear infections, seasonal allergies, and digestive issues.",
+      "From fever, cough and cold to infections, allergies and digestive problems, OneCare Children’s Clinic provides compassionate paediatric care, accurate diagnosis and evidence-based treatment to help your child feel better.",
     linkText: "Learn more about childhood illness",
     ctaTitle:
-      "When your child isn't feeling well, we provide fast, loving care.",
+      "When your little one isn’t feeling well, we’re here to help.",
     buttonText: "Book a pediatric visit ›",
   },
   {
@@ -78,10 +78,10 @@ const services = [
     image: adolescentImg,
     pageLink: "/services/adolescent-care",
     description:
-      "Age-appropriate healthcare and guidance addressing physical growth, mental health, nutritional needs, and developmental changes during teenage and pre-teen years.",
+      "From puberty and growth monitoring to nutrition, menstrual health and emotional well-being, OneCare Children’s Clinic provides comprehensive, age appropriate healthcare and guidance to support healthy teenage development.",
     linkText: "Learn more about adolescent care",
     ctaTitle:
-      "Guiding growing young adults toward lifelong health and wellness.",
+      "Supporting your teenager through every stage of growth and development.",
     buttonText: "Schedule adolescent visit ›",
   },
 ];

@@ -6,14 +6,26 @@ import "../styles/Gallery.css";
 import gallery1 from "../assets/gallery/gallery1.png";
 import gallery2 from "../assets/gallery/gallery2.png";
 import gallery3 from "../assets/gallery/gallery3.png";
+import gallery4 from "../assets/gallery/gallery4.png";
+import gallery5 from "../assets/gallery/gallery5.png";
+import gallery6 from "../assets/gallery/gallery6.png";
+import gallery7 from "../assets/gallery/gallery7.png";
+import gallery8 from "../assets/gallery/gallery8.png";
+import gallery9 from "../assets/gallery/gallery9.png";
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
   const images = [
-    { src: gallery1, title: "Our Clinic", category: "Inside One Care" },
-    { src: gallery2, title: "A Caring Environment", category: "Our Space" },
-    { src: gallery3, title: "Care for Every Child", category: "Our Clinic" },
+    { src: gallery1, title: "Clinic Exterior View",  },
+    { src: gallery2, title: "Clinic Entrance",  },
+    { src: gallery3, title: "Waiting Area 1",  },
+    { src: gallery4, title: "Playing Area 1", },
+     { src: gallery5, title: "Waiting Area 2",  },
+  { src: gallery6, title: "Clinic Reception Area",  },
+  { src: gallery7, title: "Pediatric Consultation Room", },
+  { src: gallery8, title: "Playing Area 2",  },
+  { src: gallery9, title: "Pediatric Consultation Room 2",  },
   ];
 
   return (
@@ -45,7 +57,7 @@ const Gallery = () => {
       <section className="gallery-page-section">
         <div className="gallery-section-heading">
           <span className="gallery-eyebrow">OUR SPACE, YOUR TRUST</span>
-          <h2>A Closer Look at One Care</h2>
+          <h2>A Closer Look at OneCare</h2>
           <p>
             Discover the space where your child’s comfort and care
             come first.

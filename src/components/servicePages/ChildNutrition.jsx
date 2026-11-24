@@ -126,10 +126,10 @@ function Vaccination() {
 
             <p>
               Child nutrition plays an essential role in physical growth, brain development, immunity and overall well-being.
+              <br />
 
 A balanced diet provides the essential nutrients children need to stay active, build strong bones and muscles, support cognitive development and maintain overall health.
 
-Healthy eating habits developed early in life can positively influence a childâ€™s health and well-being in the long term.
             </p>
 
            
@@ -174,7 +174,7 @@ Healthy eating habits developed early in life can positively influence a childâ€
                 <FaStethoscope />
               </div>
 
-              <h3>Infant & Baby Feeding Guidance</h3>
+              <h3>Breastfeeding & Infant Feeding Guidance</h3>
 
               <p>
                 Guidance on age-appropriate infant feeding, breastfeeding concerns, 
@@ -187,11 +187,12 @@ Healthy eating habits developed early in life can positively influence a childâ€
                 <FaBaby />
               </div>
 
-              <h3>Balanced Diet Planning</h3>
+              <h3>Balanced Diet Planning
+</h3>
 
               <p>
-                Learn about nutritious food choices, balanced meals, 
-                and essential nutrients that support your child's everyday health and development.
+                Learn about nutritious food choices, balanced meals and essential nutrients that support 
+                your childâ€™s everyday health and development.
               </p>
             </div>
 
@@ -200,11 +201,14 @@ Healthy eating habits developed early in life can positively influence a childâ€
                 <FaWeight />
               </div>
 
-              <h3>Healthy Growth & Weight Monitoring</h3>
+              <h3>Complementary Feeding & Weaning Guidance</h3>
 
               <p>
-                Monitor your child's growth patterns
-                 and discuss nutritional concerns related to weight, appetite, or physical development.
+                Practical guidance on starting solids, introducing 
+                different food groups, age-appropriate food textures,
+                 meal frequency and developing healthy feeding habits.
+
+
               </p>
             </div>
 
@@ -217,7 +221,8 @@ Healthy eating habits developed early in life can positively influence a childâ€
 
               <p>
                Practical guidance for parents dealing with selective eating, 
-               food preferences, and common mealtime challenges in children.
+               food preferences and common mealtime challenges in children.
+
               </p>
             </div>
 
@@ -242,9 +247,10 @@ Healthy eating habits developed early in life can positively influence a childâ€
             </h2>
 
             <p>
-              Healthy eating habits established during childhood can support 
-              long-term wellbeing. Offering a variety of nutritious foods, maintaining consistent meal routines, and creating 
-              positive mealtime experiences can help children explore different foods and develop balanced eating patterns.
+              Healthy eating habits established during childhood can support long-term well-being.
+Offering a variety of nutritious foods, maintaining consistent
+ meal routines and creating positive mealtime experiences can help 
+children explore different foods and develop balanced eating patterns.
             </p>
 
             <ul className="feature-list">
@@ -304,10 +310,13 @@ Healthy eating habits developed early in life can positively influence a childâ€
             </h2>
 
             <p>
-             Children's nutritional needs change as they grow. Regular pediatric 
-             check-ups help monitor growth patterns, discuss eating habits, and identify 
-             concerns that may require additional nutritional guidance. 
-             Understanding your child's individual needs helps you make informed decisions about their diet and development.
+             Childrenâ€™s nutritional needs change as they grow.
+
+Regular paediatric check-ups help monitor growth patterns, assess nutritional status, discuss eating habits and identify concerns that may require additional nutritional guidance.
+
+From infancy to adolescence, appropriate nutritional guidance helps support every stage of your childâ€™s growth and development.
+
+Understanding your childâ€™s individual needs helps you make informed decisions about their diet and development.
             </p>
 
             <div className="growth-points">
@@ -324,6 +333,11 @@ Healthy eating habits developed early in life can positively influence a childâ€
               <div>
                 <strong>03.</strong>
                 <span> Personalised Nutrition Recommendations</span>
+              </div>
+              <div>
+                <strong>04.</strong>
+                <span> Nutritional Deficiency Assessment
+</span>
               </div>
             </div>
           </div>

@@ -12,7 +12,7 @@ const hospitalLocations = [
   {
     name: "OneCare Children’s Clinic",
     address:
-      "Sanskriti Park, Mahakali Caves Road, Opp. Canossa School, Andheri East, Mumbai - 400093",
+      "Ground Floor, S1B, Sanskriti Park, Mahakali Caves Road, Opposite Canossa School, Near Sacred Heart Church, Andheri East, Mumbai - 400093",
     mapLink:
       "https://www.google.com/maps?q=OneCare+Children's+Clinic,+Sanskriti+Park,+Mahakali+Caves+Road,+Andheri+East,+Mumbai&output=embed",
   },

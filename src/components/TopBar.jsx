@@ -75,7 +75,7 @@ const TopBar = () => {
 
         {/* Location */}
         <a
-          href="https://www.google.com/maps/place/Sanskriti+Park/@19.1251109,72.8662295,17z/data=!3m1!4b1!4m6!3m5!1s0x3be7c83ab41b43b5:0xec30a4af385587eb!8m2!3d19.1251109!4d72.8662295!16s%2Fg%2F1tjz6d_0?entry=ttu&g_ep=EgoyMDI2MTAwNy4wIKXMDSoASAFQAw%3D%3D"
+          href="https://maps.app.goo.gl/5Z4UpT4eg71AVdfE8"
           target="_blank"
           rel="noopener noreferrer"
           className="clinic-social-link"

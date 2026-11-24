@@ -77,6 +77,7 @@ function Vaccination() {
              Adolescence is an important phase of physical, hormonal, emotional and social development. 
              At OneCare Children’s Clinic, we provide comprehensive, age-appropriate healthcare for teenagers, 
              focusing on healthy growth, nutrition, puberty-related changes and overall well-being.
+             <br />
              Our aim is to help teenagers understand their changing bodies, develop healthy habits and transition confidently into adulthood.
             </p>
 
