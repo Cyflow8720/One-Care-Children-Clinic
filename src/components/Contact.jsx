@@ -126,11 +126,11 @@ function Contact() {
             </div>
 
             <div className="hero-gallery-image hero-gallery-image-middle">
-              <img src={gallery2} alt="Clinic care" />
+              <img src={gallery1} alt="Clinic care" />
             </div>
 
             <div className="hero-gallery-image hero-gallery-image-front">
-              <img src={gallery1} alt="One Care clinic gallery" />
+              <img src={gallery2} alt="One Care clinic gallery" />
             </div>
 
             <Link to="/gallery" className="hero-gallery-label">

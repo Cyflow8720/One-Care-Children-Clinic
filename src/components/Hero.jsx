@@ -131,56 +131,47 @@ From newborn care and vaccinations to growth, development and specialised paedia
       </div>
 
 
-      {/* =========================
-          GALLERY
-      ========================= */}
-
-      <div className="hero-gallery">
-
-        <div className="gallery-photo gallery-photo-one">
-          <img
-            src={gallery1}
-            alt="Clinic"
-          />
-        </div>
-
-        <div className="gallery-photo gallery-photo-two">
-          <img
-            src={gallery2}
-            alt="Clinic"
-          />
-        </div>
-
-        <div className="gallery-photo gallery-photo-three">
-          <img
-            src={gallery3}
-            alt="Clinic"
-          />
-        </div>
-
-
-        {/* GALLERY LABEL */}
-
-        <div className="gallery-info">
-
-          <div>
-            <span>OUR CLINIC</span>
-
-            <h3>
-              Explore Our Space
-            </h3>
-          </div>
-
-          <Link
-            to="/gallery"
-            className="gallery-btn"
-          >
-            View Gallery →
-          </Link>
-
-        </div>
-
-      </div>
+      {/* Gallery visuals */}
+                <div className="appointment-hero-gallery">
+                  <div className="hero-gallery-decoration"></div>
+      
+                  <div className="hero-gallery-image hero-gallery-image-back">
+                    <img src={gallery1} alt="Children's clinic" />
+                  </div>
+      
+                  <div className="hero-gallery-image hero-gallery-image-middle">
+                    <img src={gallery2} alt="Clinic care" />
+                  </div>
+      
+                  <div className="hero-gallery-image hero-gallery-image-front">
+                    <img src={gallery3} alt="One Care clinic gallery" />
+                  </div>
+      
+                  <Link to="/gallery" className="hero-gallery-label">
+                    <span className="hero-gallery-label-icon">
+                      <svg
+                        viewBox="0 0 24 24"
+                        width="24"
+                        height="24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.8"
+                        aria-hidden="true"
+                      >
+                        <rect x="3" y="3" width="18" height="18" rx="3" />
+                        <circle cx="8.5" cy="8.5" r="1.5" />
+                        <path d="m21 15-5-5L5 21" />
+                      </svg>
+                    </span>
+      
+                    <span className="hero-gallery-label-copy">
+                      <strong>Explore Our Gallery</strong>
+                      <span>Take a look inside our clinic</span>
+                    </span>
+      
+                    <span className="hero-gallery-arrow">↗</span>
+                  </Link>
+                </div>
 
 
       

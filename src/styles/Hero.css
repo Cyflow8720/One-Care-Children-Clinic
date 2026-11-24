@@ -259,512 +259,369 @@
 }
 
 
-/* =====================================================
-   GALLERY
-===================================================== */
-
-.hero-gallery {
-  position: absolute;
-
-  /*
-     Gallery sits around the old card area
-  */
-  top: 375px;
-  right: 4%;
-
-  width: 390px;
-  height: 330px;
-
-  z-index: 5;
-
-  animation: galleryIn 0.8s ease-out 0.8s both;
-}
 
 
-/* =====================================================
-   GALLERY PHOTOS
-===================================================== */
 
-.gallery-photo {
-  position: absolute;
+/* =========================================
+   APPOINTMENT HERO WITH GALLERY
+========================================= */
 
+.appointment-hero {
+  min-height: 520px;
+  position: relative;
+  display: flex;
+  align-items: center;
   overflow: hidden;
-
-  background: #ffffff;
-
-  border: 6px solid #ffffff;
-
-  border-radius: 16px;
-
-  box-shadow: 0 14px 35px rgba(11, 44, 107, 0.18);
-
-  transition:
-    transform 0.35s ease,
-    box-shadow 0.35s ease;
 }
 
-.gallery-photo img {
-  width: 100%;
-  height: 100%;
+.appointment-hero-content {
+  width: min(1180px, calc(100% - 80px));
+  margin: 0 auto;
+  padding: 65px 0;
+  position: relative;
+  z-index: 2;
 
-  display: block;
-
-  object-fit: cover;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+  align-items: center;
+  gap: 50px;
 }
 
-
-/* BIG BACK PHOTO */
-
-.gallery-photo-one {
-  width: 225px;
-  height: 165px;
-
-  top: 0;
-  left: 82px;
-
-  transform: rotate(-4deg);
-
-  z-index: 1;
-}
-
-
-/* LEFT PHOTO */
-
-.gallery-photo-two {
-  width: 185px;
-  height: 140px;
-
-  left: 0;
-  top: 115px;
-
-  transform: rotate(5deg);
-
+.appointment-hero-text {
+  min-width: 0;
+  position: relative;
   z-index: 2;
 }
 
-
-/* RIGHT PHOTO */
-
-.gallery-photo-three {
-  width: 185px;
-  height: 140px;
-
-  right: 0;
-  top: 120px;
-
-  transform: rotate(-4deg);
-
-  z-index: 3;
+.appointment-hero h1 {
+  max-width: 760px;
+  font-size: clamp(42px, 4.6vw, 70px);
+  line-height: 1.08;
+  letter-spacing: -2px;
 }
 
-
-/* =====================================================
-   PHOTO HOVER
-===================================================== */
-
-.gallery-photo-one:hover,
-.gallery-photo-two:hover,
-.gallery-photo-three:hover {
-  transform: rotate(0deg) scale(1.06);
-
-  z-index: 20;
-
-  box-shadow: 0 20px 45px rgba(11, 44, 107, 0.25);
+.appointment-hero p {
+  max-width: 560px;
+  font-size: 17px;
+  line-height: 1.8;
 }
 
+/* Gallery illustration area */
 
-/* =====================================================
-   GALLERY INFO
-===================================================== */
+.appointment-hero-gallery {
+  min-width: 0;
+  min-height: 340px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-.gallery-info {
+.hero-gallery-decoration {
   position: absolute;
+  width: 290px;
+  height: 290px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  right: 0;
+  top: 5px;
+}
 
-  left: 42px;
-  right: 42px;
+.hero-gallery-image {
+  position: absolute;
+  width: 68%;
+  height: 235px;
+  overflow: hidden;
+  border-radius: 18px;
+  background: #fff;
+  border: 5px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.17);
+  transition: transform 0.35s ease;
+}
 
-  /*
-     This creates more space between
-     photos and the bottom card
-  */
+.hero-gallery-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.hero-gallery-image-back {
+  transform: translate(38px, 18px) rotate(9deg);
+  opacity: 0.75;
+}
+
+.hero-gallery-image-middle {
+  transform: translate(19px, 5px) rotate(4deg);
+}
+
+.hero-gallery-image-front {
+  transform: translate(-10px, -8px) rotate(-3deg);
+  z-index: 2;
+}
+
+.appointment-hero-gallery:hover .hero-gallery-image-back {
+  transform: translate(48px, 24px) rotate(12deg);
+}
+
+.appointment-hero-gallery:hover .hero-gallery-image-middle {
+  transform: translate(24px, 3px) rotate(6deg);
+}
+
+.appointment-hero-gallery:hover .hero-gallery-image-front {
+  transform: translate(-14px, -12px) rotate(-4deg);
+}
+
+/* Gallery caption */
+
+.hero-gallery-label {
+  position: absolute;
   bottom: 0;
+  left: 0;
+  z-index: 3;
 
-  padding: 13px 15px;
-
-  background: rgba(255, 255, 255, 0.98);
-
-  border-radius: 13px;
-
-  box-shadow: 0 10px 28px rgba(11, 44, 107, 0.15);
+  width: min(310px, 90%);
+  min-height: 76px;
+  padding: 15px 18px;
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 12px;
 
-  gap: 14px;
-
-  z-index: 10;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
 }
 
-.gallery-info span {
-  display: block;
-
-  color: #B86A4D;
-
-  font-size: 8px;
-  font-weight: 700;
-
-  letter-spacing: 1.3px;
-
-  margin-bottom: 3px;
-}
-
-.gallery-info h3 {
-  margin: 0;
-
-  color: #0B2C6B;
-
-  font-family: "Manrope", sans-serif;
-
-  font-size: 14px;
-  font-weight: 700;
-
-  white-space: nowrap;
-}
-
-
-/* =====================================================
-   VIEW GALLERY BUTTON
-===================================================== */
-
-.gallery-btn {
+.hero-gallery-label-icon {
+  width: 42px;
+  height: 42px;
   flex-shrink: 0;
 
-  padding: 8px 11px;
+  display: grid;
+  place-items: center;
 
-  background: #0B2C6B;
-
-  color: #ffffff;
-
-  border-radius: 7px;
-
-  text-decoration: none;
-
-  font-size: 9px;
-  font-weight: 600;
-
-  transition: all 0.3s ease;
+  border-radius: 10px;
+  background: #f5e8e1;
+  color: #b86a4d;
+  font-size: 25px;
 }
 
-.gallery-btn:hover {
-  background: #B86A4D;
+.hero-gallery-label strong,
+.hero-gallery-label div > span {
+  display: block;
+}
 
-  transform: translateY(-2px);
+.hero-gallery-label strong {
+  color: #0b2c6b;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.hero-gallery-label div > span {
+  color: #687386;
+  font-size: 11px;
+}
+
+.hero-gallery-arrow {
+  margin-left: auto;
+  color: #b86a4d;
+  font-size: 23px;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+  .appointment-hero-content {
+    grid-template-columns: minmax(0, 1fr) minmax(260px, 0.8fr);
+    gap: 20px;
+    width: calc(100% - 50px);
+  }
+
+  .appointment-hero h1 {
+    font-size: clamp(38px, 5vw, 52px);
+    letter-spacing: -1.5px;
+  }
+
+  .appointment-hero-gallery {
+    min-height: 290px;
+  }
+
+  .hero-gallery-image {
+    height: 190px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+  .appointment-hero {
+    min-height: auto;
+  }
+
+  .appointment-hero-content {
+    width: calc(100% - 40px);
+    padding: 55px 0 45px;
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .appointment-hero h1 {
+    font-size: clamp(38px, 10vw, 48px);
+    letter-spacing: -1.5px;
+  }
+
+  .appointment-hero p {
+    font-size: 15px;
+    line-height: 1.75;
+    margin-top: 18px;
+  }
+
+  .appointment-hero-line {
+    margin-top: 25px;
+  }
+
+  .appointment-hero-gallery {
+    width: 100%;
+    max-width: 420px;
+    min-height: 290px;
+    margin: 0 auto;
+  }
+
+  .hero-gallery-image {
+    width: 68%;
+    height: 190px;
+  }
+
+  .hero-gallery-label {
+    bottom: 0;
+    left: 0;
+  }
+
+  .hero-gallery-decoration {
+    width: 230px;
+    height: 230px;
+    right: 5px;
+  }
+}
+
+@media (max-width: 380px) {
+  .appointment-hero-content {
+    width: calc(100% - 30px);
+  }
+
+  .appointment-hero h1 {
+    font-size: 36px;
+  }
+
+  .hero-gallery-image {
+    height: 165px;
+  }
+
+  .appointment-hero-gallery {
+    min-height: 255px;
+  }
+
+  .hero-gallery-label {
+    padding: 12px;
+  }
 }
 
 
-/* =====================================================
-   SCROLL INDICATOR
-===================================================== */
-
-.scroll-indicator {
+/* Gallery button */
+.appointment-hero a.hero-gallery-label {
   position: absolute;
-
-  right: 4%;
-  bottom: 55px;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
 
   display: flex;
-  flex-direction: column;
   align-items: center;
+  gap: 14px;
 
-  gap: 8px;
+  width: min(350px, 90%);
+  min-height: 82px;
+  padding: 16px 20px;
 
-  z-index: 5;
+  background: #ffffff;
+  border: 1px solid #eee8e4;
+  border-radius: 15px;
+
+  color: #0b2c6b;
+  text-decoration: none;
+
+  box-shadow: 0 12px 32px rgba(11, 44, 107, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.scroll-circle {
-  width: 60px;
-  height: 60px;
+.appointment-hero a.hero-gallery-label:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 38px rgba(11, 44, 107, 0.22);
+}
+
+/* Gallery icon */
+.hero-gallery-label-icon {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  border-radius: 50%;
-
-  background: #0B2C6B;
-
-  color: #ffffff;
-
-  font-size: 28px;
+  background: #f7ebe5;
+  color: #b86a4d;
+  border-radius: 12px;
 }
 
-.scroll-indicator span {
-  color: #0B2C6B;
+/* Gallery text */
+.hero-gallery-label-copy {
+  flex: 1;
+  min-width: 0;
+}
 
+.hero-gallery-label-copy strong {
+  display: block;
+  margin-bottom: 5px;
+  color: #0b2c6b;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.hero-gallery-label-copy > span {
+  display: block;
+  color: #687386;
   font-size: 12px;
-  font-weight: 600;
+  line-height: 1.5;
 }
 
-
-/* =====================================================
-   LAPTOP
-===================================================== */
-
-@media (max-width: 1200px) {
-
-  .hero {
-    min-height: 820px;
-  }
-
-  .hero-content {
-    left: 6%;
-    width: 48%;
-  }
-
-  .hero-content h1 {
-    font-size: clamp(40px, 4.5vw, 56px);
-  }
-
-  .hero-doctor {
-    width: 50%;
-  }
-
-  .hero-gallery {
-    top: 380px;
-    right: 2%;
-
-    width: 360px;
-    height: 310px;
-  }
-
-  .gallery-photo-one {
-    width: 210px;
-    height: 155px;
-
-    left: 75px;
-  }
-
-  .gallery-photo-two {
-    width: 170px;
-    height: 130px;
-
-    top: 108px;
-  }
-
-  .gallery-photo-three {
-    width: 170px;
-    height: 130px;
-
-    top: 113px;
-  }
-
-  .gallery-info {
-    left: 35px;
-    right: 35px;
-  }
-
-  .hero-trust-cards {
-    max-width: 590px;
-    gap: 10px;
-  }
+/* Arrow */
+.hero-gallery-arrow {
+  flex-shrink: 0;
+  color: #b86a4d;
+  font-size: 24px;
+  transition: transform 0.3s ease;
 }
 
-
-/* =====================================================
-   TABLET
-===================================================== */
-
-@media (max-width: 1000px) {
-
-  .hero {
-    min-height: 850px;
-  }
-
-  .hero-content {
-    top: 65px;
-    left: 5%;
-    width: 50%;
-  }
-
-  .hero-content h1 {
-    font-size: 44px;
-  }
-
-  .hero-content p {
-    font-size: 15px;
-    max-width: 470px;
-  }
-
-  .hero-doctor {
-    width: 52%;
-  }
-
-  .hero-doctor img {
-    width: 95%;
-  }
-
-  .hero-trust-cards {
-    max-width: 520px;
-    gap: 8px;
-  }
-
-  .trust-card {
-    min-height: 95px;
-    padding: 12px;
-  }
-
-  .trust-card strong {
-    font-size: 13px;
-  }
-
-  .trust-card span {
-    font-size: 11px;
-  }
-
-  .trust-number {
-    font-size: 25px !important;
-  }
-
-  .hero-gallery {
-    top: 390px;
-    right: 0;
-
-    width: 335px;
-    height: 295px;
-  }
-
-  .gallery-photo-one {
-    width: 195px;
-    height: 148px;
-
-    left: 70px;
-  }
-
-  .gallery-photo-two {
-    width: 158px;
-    height: 122px;
-
-    top: 104px;
-  }
-
-  .gallery-photo-three {
-    width: 158px;
-    height: 122px;
-
-    top: 109px;
-  }
-
-  .gallery-info {
-    left: 30px;
-    right: 30px;
-
-    padding: 11px 12px;
-  }
-
-  .gallery-info h3 {
-    font-size: 12px;
-  }
-
-  .gallery-btn {
-    padding: 7px 9px;
-  }
-
-  .scroll-indicator {
-    right: 2%;
-  }
+.appointment-hero a.hero-gallery-label:hover .hero-gallery-arrow {
+  transform: translate(3px, -3px);
 }
 
-
-/* =====================================================
-   SMALL TABLET
-===================================================== */
-
-@media (max-width: 850px) {
-
-  .hero {
-    min-height: 930px;
+/* Mobile responsive */
+@media (max-width: 700px) {
+  .appointment-hero a.hero-gallery-label {
+    width: min(330px, 90%);
+    min-height: 76px;
+    padding: 13px 15px;
   }
 
-  .hero-content {
-    width: 48%;
-  }
-
-  .hero-content h1 {
-    font-size: 38px;
-  }
-
-  .hero-doctor {
-    width: 50%;
-  }
-
-  .hero-trust-cards {
-    gap: 7px;
-  }
-
-  .trust-card {
-    min-height: 90px;
-    padding: 10px;
-  }
-
-  .trust-card strong {
-    font-size: 12px;
-  }
-
-  .trust-card span {
-    font-size: 10px;
-  }
-
-  .trust-number {
-    font-size: 23px !important;
-  }
-
-  .hero-gallery {
-    top: 410px;
-    right: 0;
-
-    width: 305px;
-    height: 280px;
-  }
-
-  .gallery-photo-one {
-    width: 180px;
-    height: 138px;
-
-    left: 62px;
-  }
-
-  .gallery-photo-two {
-    width: 148px;
-    height: 112px;
-
-    top: 98px;
-  }
-
-  .gallery-photo-three {
-    width: 148px;
-    height: 112px;
-
-    top: 103px;
-  }
-
-  .gallery-info {
-    left: 25px;
-    right: 25px;
-    padding: 10px;
-  }
-
-  .gallery-info h3 {
-    font-size: 11px;
-  }
-
-  .gallery-btn {
-    padding: 7px 8px;
-    font-size: 8px;
-  }
-
-  .scroll-indicator {
-    display: none;
+  .hero-gallery-label-icon {
+    width: 42px;
+    height: 42px;
   }
 }
 
@@ -1310,4 +1167,317 @@
     font-size: 27px !important;
     white-space: normal;
   }
+}
+
+
+/* =========================================================
+   HERO GALLERY - DESKTOP FIX
+   Position gallery below doctor's face
+========================================================= */
+
+.hero > .appointment-hero-gallery {
+  position: absolute;
+
+  right: 8%;
+  bottom: 25px;
+
+  width: 30%;
+  height: 440px;
+  min-height: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 4;
+
+  overflow: visible;
+}
+
+/* Decorative circle */
+
+
+/* Gallery images */
+
+.hero > .appointment-hero-gallery .hero-gallery-image {
+  position: absolute;
+
+  width: 78%;
+  height: 235px;
+
+  overflow: hidden;
+
+  border: 5px solid #ffffff;
+  border-radius: 20px;
+
+  background: #ffffff;
+
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.17);
+
+  transition: transform 0.35s ease;
+}
+
+.hero > .appointment-hero-gallery .hero-gallery-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+/* Back image */
+
+.hero > .appointment-hero-gallery .hero-gallery-image-back {
+  transform: translate(35px, 18px) rotate(9deg);
+  opacity: 0.8;
+  z-index: 1;
+}
+
+/* Middle image */
+
+.hero > .appointment-hero-gallery .hero-gallery-image-middle {
+  transform: translate(18px, 5px) rotate(4deg);
+  z-index: 2;
+}
+
+/* Front image */
+
+.hero > .appointment-hero-gallery .hero-gallery-image-front {
+  transform: translate(-10px, -8px) rotate(-3deg);
+  z-index: 3;
+}
+
+/* Hover animation */
+
+.hero > .appointment-hero-gallery:hover .hero-gallery-image-back {
+  transform: translate(45px, 23px) rotate(12deg);
+}
+
+.hero > .appointment-hero-gallery:hover .hero-gallery-image-middle {
+  transform: translate(23px, 3px) rotate(6deg);
+}
+
+.hero > .appointment-hero-gallery:hover .hero-gallery-image-front {
+  transform: translate(-14px, -12px) rotate(-4deg);
+}
+
+/* Gallery label */
+
+.hero > .appointment-hero-gallery .hero-gallery-label {
+  position: absolute;
+
+  bottom: 50px;
+  left: 0;
+
+  z-index: 5;
+
+  width: min(350px, 90%);
+  min-height: 82px;
+
+  padding: 16px 20px;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border: 1px solid #eee8e4;
+  border-radius: 15px;
+
+  color: #0b2c6b;
+  text-decoration: none;
+
+  box-shadow: 0 12px 32px rgba(11, 44, 107, 0.15);
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero > .appointment-hero-gallery .hero-gallery-label:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 38px rgba(11, 44, 107, 0.22);
+}
+
+/* Icon */
+
+.hero > .appointment-hero-gallery .hero-gallery-label-icon {
+  width: 48px;
+  height: 48px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f7ebe5;
+  color: #b86a4d;
+
+  border-radius: 12px;
+}
+
+/* Text */
+
+.hero > .appointment-hero-gallery .hero-gallery-label-copy {
+  flex: 1;
+  min-width: 0;
+}
+
+.hero > .appointment-hero-gallery .hero-gallery-label-copy strong {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #0b2c6b;
+
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.hero > .appointment-hero-gallery .hero-gallery-label-copy > span {
+  display: block;
+
+  color: #687386;
+
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* Arrow */
+
+.hero > .appointment-hero-gallery .hero-gallery-arrow {
+  flex-shrink: 0;
+
+  margin-left: auto;
+
+  color: #b86a4d;
+  font-size: 24px;
+
+  transition: transform 0.3s ease;
+}
+
+.hero > .appointment-hero-gallery .hero-gallery-label:hover .hero-gallery-arrow {
+  transform: translate(3px, -3px);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) and (min-width: 769px) {
+
+  .hero > .appointment-hero-gallery {
+    width: 45%;
+    height: 290px;
+
+    right: 2%;
+    bottom: 20px;
+  }
+
+  .hero > .appointment-hero-gallery .hero-gallery-image {
+    width: 82%;
+    height: 195px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .hero > .appointment-hero-gallery {
+    position: absolute;
+
+    top: 790px;
+    bottom: auto;
+
+    left: 50%;
+    right: auto;
+
+    transform: translateX(-50%);
+
+    width: 90%;
+    max-width: 420px;
+
+    height: 285px;
+    min-height: 0;
+
+    z-index: 4;
+  }
+
+  .hero > .appointment-hero-gallery .hero-gallery-image {
+    width: 78%;
+    height: 185px;
+  }
+
+  .hero > .appointment-hero-gallery .hero-gallery-decoration {
+    width: 230px;
+    height: 230px;
+
+    right: 5%;
+  }
+
+  .hero > .appointment-hero-gallery .hero-gallery-label {
+    width: min(330px, 95%);
+    min-height: 76px;
+
+    padding: 13px 15px;
+  }
+
+  .hero > .appointment-hero-gallery .hero-gallery-label-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .hero > .appointment-hero-gallery {
+    top: 740px;
+
+    width: 92%;
+    height: 270px;
+  }
+
+  .hero > .appointment-hero-gallery .hero-gallery-image {
+    width: 82%;
+    height: 170px;
+  }
+
+  .hero > .appointment-hero-gallery .hero-gallery-label {
+    width: 95%;
+    padding: 12px;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .hero > .appointment-hero-gallery {
+    top: 710px;
+    height: 250px;
+  }
+
+  .hero > .appointment-hero-gallery .hero-gallery-image {
+    height: 150px;
+  }
+
 }

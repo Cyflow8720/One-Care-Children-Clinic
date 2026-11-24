@@ -5,7 +5,7 @@ import "../styles/Services.css";
 function Services() {
   const videos = [
     {
-      id: "https://youtube.com/shorts/JoksYSItcFo?si=IhQR-geI_aOda84j",
+      id: "4YMoGNQcpYU",
       category: "Expert Advice",
       title: "3 Signs Your Child Needs a Doctor Immediately!",
       description:
@@ -17,9 +17,9 @@ function Services() {
       ],
     },
     {
-      id: "https://youtube.com/shorts/mXq7aOkHkWo?si=g5zIBmLp8Eatb9sl",
+      id: "wi7gn2t0exA",
       category: "Health Awareness",
-      title: "Understanding your health and wellbeing",
+      title: "Understanding Your Health and Wellbeing",
       description:
         "Learn more about common health conditions and their prevention.",
       points: [
@@ -29,9 +29,9 @@ function Services() {
       ],
     },
     {
-      id: "https://youtube.com/shorts/4YMoGNQcpYU?si=it3RDjyAp45LyhnN",
+      id: "H4nw8qmgdqs",
       category: "Patient Stories",
-      title: "Real experiences and stories of care",
+      title: "Real Experiences and Stories of Care",
       description:
         "Discover patient experiences and their healthcare journeys.",
       points: [
@@ -40,10 +40,7 @@ function Services() {
         "Our hospital team",
       ],
     },
-    
   ];
-
-  const sliderVideos = [...videos, ...videos];
 
   return (
     <section className="services-section">
@@ -54,38 +51,47 @@ function Services() {
 
       <div className="services-slider">
         <div className="services-track">
-          {sliderVideos.map((video, index) => (
+
+          {videos.map((video) => (
             <article
               className="service-card"
-              key={`${video.id}-${index}`}
+              key={video.id}
             >
-              {/* CLICKABLE YOUTUBE THUMBNAIL */}
+              {/* YOUTUBE VIDEO THUMBNAIL */}
+
               <a
                 className="service-image service-video"
-                href={`https://www.youtube.com/watch?v=${video.id}`}
+                href={`https://www.youtube.com/shorts/${video.id}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={`Watch ${video.title} on YouTube`}
               >
                 <img
                   className="service-video-thumbnail"
-                  src={`https://img.youtube.com/vi/${video.id}/hqdefault.jpg`}
+                  src={`https://i.ytimg.com/vi/${video.id}/hqdefault.jpg`}
                   alt={video.title}
                   loading="lazy"
+                  onError={(e) => {
+                    e.currentTarget.onerror = null;
+                    e.currentTarget.src =
+                      `https://i.ytimg.com/vi/${video.id}/0.jpg`;
+                  }}
                 />
 
                 <span className="service-play-button">
-                  <svg
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                  >
-                    <path d="M8 5v14l11-7z" fill="currentColor" />
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M8 5v14l11-7z"
+                      fill="currentColor"
+                    />
                   </svg>
                 </span>
               </a>
 
-              {/* VIDEO INFORMATION */}
+              {/* VIDEO CONTENT */}
+
               <div className="service-content">
+
                 <span className="service-category">
                   {video.category}
                 </span>
@@ -97,23 +103,25 @@ function Services() {
                 </p>
 
                 <div className="service-points">
-                  {video.points.map((point, pointIndex) => (
-                    <p key={pointIndex}>+ {point}</p>
+                  {video.points.map((point, index) => (
+                    <p key={index}>+ {point}</p>
                   ))}
                 </div>
 
                 <div className="service-read-more">
                   <a
-                    href={`https://www.youtube.com/watch?v=${video.id}`}
+                    href={`https://www.youtube.com/shorts/${video.id}`}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     Watch on YouTube <span>→</span>
                   </a>
                 </div>
+
               </div>
             </article>
           ))}
+
         </div>
       </div>
     </section>

@@ -12,6 +12,7 @@ import gallery6 from "../assets/gallery/gallery6.png";
 import gallery7 from "../assets/gallery/gallery7.png";
 import gallery8 from "../assets/gallery/gallery8.png";
 import gallery9 from "../assets/gallery/gallery9.png";
+import gallery10 from "../assets/gallery/gallery10.png";
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -20,12 +21,13 @@ const Gallery = () => {
     { src: gallery1, title: "Clinic Exterior View",  },
     { src: gallery2, title: "Clinic Entrance",  },
     { src: gallery3, title: "Clinic Reception Area",  },
-    { src: gallery4, title: "Playing Area 1", },
      { src: gallery5, title: "Waiting Area 1",  },
   { src: gallery6, title: "Waiting Area 2",  },
   { src: gallery7, title: "Pediatric Consultation Room", },
-  { src: gallery8, title: "Playing Area 2",  },
-  { src: gallery9, title: "Pediatric Consultation Room 2",  },
+  { src: gallery8, title: "Pediatric Consultation Room 2",  },
+  { src: gallery9, title: "Pediatric Consultation Room 3",  },
+  { src: gallery4, title: "Playing Area 1", },
+  { src: gallery10, title: "Playing Area 2",  },
   ];
 
   return (

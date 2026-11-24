@@ -1683,7 +1683,7 @@
 .hero-gallery-decoration {
   position: absolute;
   width: 290px;
-  height: 290px;
+  height: 490px;
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 50%;
   right: 0;
@@ -1693,7 +1693,7 @@
 .hero-gallery-image {
   position: absolute;
   width: 68%;
-  height: 235px;
+  height: 380px;
   overflow: hidden;
   border-radius: 18px;
   background: #fff;
