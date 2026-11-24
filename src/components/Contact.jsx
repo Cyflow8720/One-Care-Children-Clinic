@@ -543,7 +543,7 @@ function Contact() {
                 medical emergencies.
               </p>
 
-              <a href="tel:112" className="emergency-link">
+              <a href="tel:91 88793 33393" className="emergency-link">
                 Call emergency services →
               </a>
             </div>

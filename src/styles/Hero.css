@@ -1481,3 +1481,66 @@
   }
 
 }
+
+
+/* MOBILE SPACING ADJUSTMENT */
+
+@media (max-width: 768px) {
+
+  .hero {
+    min-height: 1250px !important;
+  }
+
+  /* Move doctor photo upward */
+  .hero-doctor {
+    top: 600px;
+    height: 370px;
+  }
+
+  .hero-doctor img {
+    width: 90%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  /* Bring gallery closer to doctor */
+  .hero > .appointment-hero-gallery {
+    top: 890px;
+    height: 260px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .hero {
+    min-height: 1200px !important;
+  }
+
+  .hero-doctor {
+    top: 590px;
+    height: 350px;
+  }
+
+  .hero > .appointment-hero-gallery {
+    top: 850px;
+    height: 260px;
+  }
+}
+
+@media (max-width: 360px) {
+
+  .hero {
+    min-height: 1150px !important;
+  }
+
+  .hero-doctor {
+    top: 570px;
+    height: 340px;
+  }
+
+  .hero > .appointment-hero-gallery {
+    top: 820px;
+    height: 245px;
+  }
+}
+
